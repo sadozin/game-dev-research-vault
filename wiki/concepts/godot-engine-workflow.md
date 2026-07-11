@@ -92,9 +92,16 @@ Work this path in order. Each step is a skill, not a feature list.
 ### Agent operating manual
 18. **AI build playbook** — [[godot-ai-build-playbook]] (start here when implementing)
 
+### Juice, persistence, net
+19. **Audio** — [[godot-audio]]
+20. **Particles / VFX** — [[godot-particles]]
+21. **Save / load** — [[godot-save-and-load]]
+22. **Multiplayer** — [[godot-multiplayer]] (only after single-player slice)
+23. **Genre checklists** — [[godot-genre-build-checklists]]
+
 ### Practice
-19. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
-20. Next depth: multiplayer high-level multiplayer API, particles, shaders advanced, networking
+24. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
+25. Next depth: advanced shaders, navigation baking pipelines, dedicated servers, Web export quirks
 
 ## Base node families (cheat sheet)
 

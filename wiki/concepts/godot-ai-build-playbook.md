@@ -233,9 +233,16 @@ A feature is done only when:
 4. Failure modes handled (null body, double connect, freed node).
 5. If public research was updated, publish vault ([[game-dev-research-vault]] policy).
 
+## Genre shortcuts
+
+When the user names a genre, scaffold from [[godot-genre-build-checklists]] (platformer,
+top-down, twin-stick, RPG, third/first person, puzzle) instead of inventing a new tree.
+
 ## Related deep pages
 
 - Architecture: [[godot-scene-architecture]] · [[godot-autoloads]] · [[godot-resources-and-data]]
-- Systems: [[godot-input-handling]] · [[godot-physics-bodies]] · [[godot-signals]]
+- Systems: [[godot-input-handling]] · [[godot-physics-bodies]] · [[godot-signals]] ·
+  [[godot-save-and-load]] · [[godot-multiplayer]] · [[godot-audio]] · [[godot-particles]]
 - Content: [[godot-tilemaps]] · [[godot-animation-tree]] · [[godot-ui-controls]]
+- Genres: [[godot-genre-build-checklists]]
 - Hub: [[godot-engine-workflow]]
