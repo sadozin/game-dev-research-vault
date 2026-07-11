@@ -106,9 +106,15 @@ Work this path in order. Each step is a skill, not a feature list.
 27. **Web export** — [[godot-web-export]]
 28. **Dedicated servers** — [[godot-dedicated-servers]]
 
+### Platform depth
+29. **TileSet authoring** — [[godot-tilesets]]
+30. **Spatial shaders** — [[godot-spatial-shaders]]
+31. **Mobile (Android/iOS)** — [[godot-mobile-export]]
+32. **JavaScript bridge** — [[godot-javascript-bridge]]
+
 ### Practice
-29. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
-30. Next depth: advanced shaders, JavaScript bridge, platform-specific mobile export
+33. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
+34. Next depth: XR, platform plugins, custom modules / GDExtension packaging
 
 ## Base node families (cheat sheet)
 

@@ -243,9 +243,11 @@ top-down, twin-stick, RPG, third/first person, puzzle) instead of inventing a ne
 - Architecture: [[godot-scene-architecture]] · [[godot-autoloads]] · [[godot-resources-and-data]]
 - Systems: [[godot-input-handling]] · [[godot-physics-bodies]] · [[godot-signals]] ·
   [[godot-save-and-load]] · [[godot-multiplayer]] · [[godot-audio]] · [[godot-particles]]
-- Content: [[godot-tilemaps]] · [[godot-animation-tree]] · [[godot-ui-controls]] ·
-  [[godot-navmesh-baking]] · [[godot-3d-transforms]]
-- Ship/ops: [[godot-web-export]] · [[godot-dedicated-servers]] · [[godot-export-and-release]]
+- Content: [[godot-tilemaps]] · [[godot-tilesets]] · [[godot-animation-tree]] ·
+  [[godot-ui-controls]] · [[godot-navmesh-baking]] · [[godot-3d-transforms]] ·
+  [[godot-spatial-shaders]]
+- Ship/ops: [[godot-web-export]] · [[godot-mobile-export]] · [[godot-javascript-bridge]] ·
+  [[godot-dedicated-servers]] · [[godot-export-and-release]]
 - Debug: [[godot-debug-and-profiler]]
 - Genres: [[godot-genre-build-checklists]]
 - Hub: [[godot-engine-workflow]]
