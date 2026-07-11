@@ -114,6 +114,62 @@ consistent.
 - Very deep container nests are hard to debug — name nodes and use the remote scene tree while
   running.
 
+## Deep recipes for builders
+
+### Full-screen HUD pattern
+
+```
+CanvasLayer (layer=10)
+└── Control (anchors full rect, mouse_filter=IGNORE)
+    └── MarginContainer
+        └── HBoxContainer
+            ├── Label (score)
+            └── TextureProgressBar (health)
+```
+
+`CanvasLayer` keeps HUD on top of world. `mouse_filter=IGNORE` on root Control lets clicks pass
+to the game when not on widgets.
+
+### Pause menu
+
+```
+CanvasLayer
+└── Control full rect (mouse_filter=STOP when visible)
+    └── ColorRect dim
+    └── CenterContainer → VBox → Resume/Quit buttons
+```
+
+```gdscript
+func open_pause() -> void:
+    visible = true
+    get_tree().paused = true
+    $VBox/Resume.grab_focus()
+    process_mode = Node.PROCESS_MODE_ALWAYS
+```
+
+### Theme once
+
+Create `res://resources/ui_theme.tres`, assign on root GUI. Override only special widgets.
+
+### Safe dynamic text
+
+```gdscript
+score_label.text = "Score: %d" % score
+# Prefer % or string format; avoid per-frame string work in huge UIs if profiling says so
+```
+
+### Connect buttons in code for spawned UI
+
+```gdscript
+button.pressed.connect(_on_button_pressed)
+```
+
+### Resolution
+
+Use Project Settings → Display → Window stretch mode (`canvas_items` common for 2D) and aspect
+(`expand` / `keep`) deliberately; test multiple sizes early.
+
 ## Related
 
-- [[godot-nodes-and-scenes]] · [[godot-signals]] · [[godot-engine-workflow]]
+- [[godot-nodes-and-scenes]] · [[godot-signals]] · [[godot-engine-workflow]] ·
+  [[godot-input-handling]] · [[godot-ai-build-playbook]]

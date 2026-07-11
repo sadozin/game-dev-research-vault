@@ -79,9 +79,22 @@ Work this path in order. Each step is a skill, not a feature list.
 10. **Shaders basics** — [[godot-shaders-basics]]
 11. **Export and release** — [[godot-export-and-release]]
 
+### Architecture and data
+12. **Scene architecture** — [[godot-scene-architecture]]
+13. **Resources / data** — [[godot-resources-and-data]]
+14. **Autoloads** — [[godot-autoloads]]
+15. **Input Map** — [[godot-input-handling]]
+
+### Content pipelines
+16. **TileMaps (2D levels)** — [[godot-tilemaps]]
+17. **AnimationTree** — [[godot-animation-tree]]
+
+### Agent operating manual
+18. **AI build playbook** — [[godot-ai-build-playbook]] (start here when implementing)
+
 ### Practice
-12. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
-13. Next depth: AnimationTree, multiplayer high-level API, tilemaps, particle systems
+19. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
+20. Next depth: multiplayer high-level multiplayer API, particles, shaders advanced, networking
 
 ## Base node families (cheat sheet)
 

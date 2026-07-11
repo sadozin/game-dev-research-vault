@@ -114,6 +114,72 @@ typing gives speed of writing with optional safety. Built-in game types remove b
 - Holding references to freed nodes crashes; after `queue_free`, treat the instance as dead.
 - `$` paths break when names change — rename carefully or use unique names (`%Node`).
 
+## Deep recipes for builders
+
+### Static typing that helps AI and the analyzer
+
+```gdscript
+func apply_damage(target: Node, amount: int) -> void:
+    if target.has_method("take_damage"):
+        target.call("take_damage", amount)
+
+# Better when you control types:
+func apply_damage_to(target: Hurtbox, amount: int) -> void:
+    target.take_damage(amount)
+```
+
+Enable warnings as errors gradually (unused signals, unsafe access). Prefer `:=` and typed
+arrays for public APIs.
+
+### Exports for designers
+
+```gdscript
+@export_range(0, 100) var armor: int = 0
+@export_file("*.tscn") var next_level: String
+@export_group("Movement")
+@export var speed: float = 200.0
+```
+
+### Timers without Timer nodes
+
+```gdscript
+await get_tree().create_timer(0.5).timeout
+# or:
+var t := get_tree().create_timer(0.5)
+await t.timeout
+```
+
+### Tweens for one-off motion
+
+```gdscript
+var tw := create_tween().set_trans(Tween.TRANS_SINE)
+tw.tween_property(self, "modulate:a", 0.0, 0.3)
+await tw.finished
+queue_free()
+```
+
+### Coroutines and signals
+
+```gdscript
+func open_door() -> void:
+    $Anim.play("open")
+    await $Anim.animation_finished
+    opened.emit()
+```
+
+### Avoid freed references
+
+```gdscript
+if is_instance_valid(enemy):
+    enemy.take_damage(1)
+```
+
+### class_name registry
+
+`class_name Player` enables typed vars and safer casting project-wide. One class_name per file;
+name must be unique.
+
 ## Related
 
-- [[godot-nodes-and-scenes]] · [[godot-signals]] · [[godot-ui-controls]] · [[godot-engine-workflow]]
+- [[godot-nodes-and-scenes]] · [[godot-signals]] · [[godot-ui-controls]] ·
+  [[godot-engine-workflow]] · [[godot-resources-and-data]] · [[godot-ai-build-playbook]]

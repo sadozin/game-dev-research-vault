@@ -100,6 +100,60 @@ with one idea.
 - Crossing scene boundaries with long absolute paths couples systems tightly. Prefer signals
   ([[godot-signals]]) or a small API on the scene root script.
 
+## Deep recipes for builders
+
+### Own the public API on the scene root
+
+Put gameplay methods on the root script (`class_name Door`), not on deep children. External
+code should call `door.open()`, never `$Anim/Inner/Thing.play()`.
+
+### Instantiation patterns
+
+```gdscript
+# Cache packed scenes
+const ENEMY := preload("res://scenes/enemies/slime.tscn")
+
+func spawn_at(parent: Node, pos: Vector2) -> Node:
+    var n := ENEMY.instantiate()
+    parent.add_child(n)
+    n.global_position = pos
+    return n
+```
+
+Add children **before** setting some properties that depend on `NOTIFICATION_ENTER_TREE`; set
+`owner` only if you need packed-save ownership (editor tools).
+
+### Deferred tree edits
+
+When reacting to signals during physics/query callbacks, defer structural changes:
+
+```gdscript
+add_child.call_deferred(node)
+node.queue_free()  # already deferred to end of frame
+```
+
+### Groups vs paths vs unique names
+
+| Need | Tool |
+|---|---|
+| One child in *this* scene | `%HurtBox` or `@onready var x = $HurtBox` |
+| Many similar nodes | `add_to_group` / `call_group` |
+| Cross-scene coupling | signals / exports ([[godot-scene-architecture]]) |
+
+### Change scenes correctly
+
+- Simple: `get_tree().change_scene_to_file("res://levels/b.tscn")`
+- Controlled: Main/World swap ([[godot-scene-architecture]]) or Autoload switcher
+  ([[godot-autoloads]]) with **deferred** free
+
+### Pause
+
+```gdscript
+get_tree().paused = true
+# Nodes need process_mode = PROCESS_MODE_ALWAYS to run while paused (pause menu)
+```
+
 ## Related
 
-- [[godot-engine-workflow]] · [[godot-gdscript-scripting]] · [[godot-signals]] · [[godot-asset-placement]]
+- [[godot-engine-workflow]] · [[godot-gdscript-scripting]] · [[godot-signals]] ·
+  [[godot-asset-placement]] · [[godot-scene-architecture]] · [[godot-ai-build-playbook]]

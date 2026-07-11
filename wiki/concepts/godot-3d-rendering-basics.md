@@ -99,7 +99,53 @@ mesh, light, environment, and camera makes each problem testable.
 - Giant scales (buildings as 1000-unit cubes "for convenience") break physics and shadows.
 - Importing without fixing materials/culling leads to shiny or double-sided performance traps.
 
+## Deep recipes for builders
+
+### Minimum viable lit scene
+
+```
+Node3D (Level)
+├── MeshInstance3D (floor)
+├── MeshInstance3D (props…)
+├── StaticBody3D + CollisionShape3D (match floor)
+├── DirectionalLight3D (shadows on if needed)
+├── WorldEnvironment (sky + tonemap)
+└── CharacterBody3D Player
+    ├── MeshInstance3D / imported model
+    ├── CollisionShape3D
+    └── Camera3D (or SpringArm3D + Camera)
+```
+
+### Camera tips
+
+- Third person: `SpringArm3D` avoids clipping into walls.  
+- Set camera `current = true` on the active camera only.  
+- Near/far clip: too large far plane hurts depth precision.
+
+### Materials
+
+Start with **StandardMaterial3D** (albedo, roughness, metallic, normal). Move to custom shaders
+only when needed ([[godot-shaders-basics]]). Share materials; `duplicate()` when tinting one
+instance.
+
+### Lighting budget defaults
+
+- 1 directional sun with shadows  
+- Few omni/spot with shadows (shadows dominate cost)  
+- Prefer baked lightmaps for static interiors when shipping quality  
+  ([[real-time-lighting-budget]])
+
+### Environment
+
+WorldEnvironment: sky, ambient source, glow carefully, SSAO as optional quality tier. Match
+exposure so albedo 0.5 greys look mid-grey.
+
+### Prototyping
+
+CSGBox/CSGCombiner for greybox → replace with imported meshes later without rewriting gameplay
+nodes.
+
 ## Related
 
 - [[godot-asset-placement]] · [[godot-nodes-and-scenes]] · [[real-time-lighting-budget]] ·
-  [[level-of-detail]] · [[blender-game-asset-pipeline]]
+  [[level-of-detail]] · [[blender-game-asset-pipeline]] · [[godot-shaders-basics]]
