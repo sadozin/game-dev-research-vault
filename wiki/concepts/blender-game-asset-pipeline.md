@@ -41,9 +41,13 @@ PBR contract and bake unsupported procedural detail. An asset that previews perf
 but requires an engine-specific shader recreation is unfinished, and it hides both visual risk
 and performance cost until integration.
 
+## Related engines
+
+- Godot's recommended exchange format is glTF; see [[godot-asset-placement]].
+- Unity/Unreal still need their own importer and budget checks after a clean export.
+
 ## In practice here
 
-[[blender-mcp]] controls Blender but does not replace export validation. For assets intended for
-the Vulkan client in [[minecwaft]], establish its actual importer and budgets before committing to
-glTF as the shipping format; use the glTF path only as a cross-tool check until that decision is
-made.
+[[blender-mcp]] controls Blender but does not replace export validation. For any custom engine
+importer, establish its actual format and budgets before treating glTF as the shipping format;
+use the glTF path as a cross-tool check until that decision is made.

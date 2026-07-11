@@ -28,7 +28,7 @@ function Reset-PublishDirectory {
 Reset-PublishDirectory -Path $conceptTarget
 Reset-PublishDirectory -Path $sourceTarget
 
-$tagPattern = '(?im)^tags:\s*\[[^\]]*\b(game|mmo|vrchat|unity|unreal|blender|optimization|clicker|idle|assets|textures|rigging|avatars|mcp)\b'
+$tagPattern = '(?im)^tags:\s*\[[^\]]*\b(game|mmo|vrchat|unity|unreal|godot|blender|optimization|clicker|idle|assets|textures|rigging|avatars|mcp)\b'
 $publishedConcepts = @()
 
 Get-ChildItem -LiteralPath $conceptSource -File -Filter '*.md' | ForEach-Object {

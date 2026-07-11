@@ -8,7 +8,8 @@ verified: 2026-07-11
 sources:
   - "[[unity-engine-architecture]]"
   - "[[unreal-blueprint-cpp]]"
-tags: [game-engine, unity, unreal, decision]
+  - "[[godot-design-philosophy]]"
+tags: [game-engine, unity, unreal, godot, decision, game-development]
 ---
 
 # Game engine selection
@@ -20,10 +21,12 @@ visual quality claims or AI integration alone.
 ## Why it works
 
 Unity is a C#-centric workflow over a native core; Unreal is a C++ foundation designed to work
-with Blueprint extensions. Unity is a natural fit when the project benefits from C# and a
-component/editor-tool workflow. Unreal is a natural fit when the team wants C++ systems with a
-first-class visual scripting layer for content and when its rendering and production ecosystem fit
-the game. Both require profiling and target-device validation.
+with Blueprint extensions; Godot is a MIT-licensed scene-composition engine with first-class
+GDScript and separate 2D/3D renderers ([[godot-engine-workflow]]). Unity fits teams that want C#
+and a large store/ecosystem. Unreal fits teams that want C++ systems with Blueprint content tools
+and a high-end production renderer. Godot fits teams that want open-source licensing, lightweight
+tooling, scene nesting as the main reuse model, and a gentle scripting path. All three require
+profiling and target-device validation.
 
 ## The catch
 
@@ -31,9 +34,6 @@ Switching engines resets more than rendering. It changes asset import, build, UI
 testing, editor tooling, team skills, and every integration. A live project should change engines
 only for a demonstrated blocker that the existing architecture cannot reasonably solve.
 
-## In practice here
+## Related
 
-[[minecwaft]] is already native C# with a Vulkan client, so Unity or Unreal would be a new project
-decision, not an optimisation step. [[vrchat-homeworld]] necessarily follows Unity's ecosystem.
-For a new game, create a one-week vertical-slice comparison with the target art, gameplay loop,
-build target, and performance budget before committing.
+- [[unity-engine-workflow]] · [[unreal-engine-workflow]] · [[godot-engine-workflow]]
