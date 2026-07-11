@@ -99,9 +99,16 @@ Work this path in order. Each step is a skill, not a feature list.
 22. **Multiplayer** — [[godot-multiplayer]] (only after single-player slice)
 23. **Genre checklists** — [[godot-genre-build-checklists]]
 
+### Ship, ops, polish depth
+24. **3D transforms** — [[godot-3d-transforms]]
+25. **Navmesh baking** — [[godot-navmesh-baking]]
+26. **Debug / profiler** — [[godot-debug-and-profiler]]
+27. **Web export** — [[godot-web-export]]
+28. **Dedicated servers** — [[godot-dedicated-servers]]
+
 ### Practice
-24. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
-25. Next depth: advanced shaders, navigation baking pipelines, dedicated servers, Web export quirks
+29. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
+30. Next depth: advanced shaders, JavaScript bridge, platform-specific mobile export
 
 ## Base node families (cheat sheet)
 

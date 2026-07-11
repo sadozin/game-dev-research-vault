@@ -108,6 +108,78 @@ Visual root bone cancels so feet match authored steps.
 4. Code sets conditions from CharacterBody velocity and `is_on_floor()`.
 5. Attack button → `travel("Attack")` or OneShot.
 
+## Deep recipe: locomotion BlendSpace + StateMachine
+
+### Clip prep
+
+- Idle (loop), Walk (loop), Run (loop) same foot phase if possible.  
+- Jump start / fall / land separate or one Jump state At End → Idle.  
+- Attack non-loop; transition At End back.  
+- RESET animation with default pose for clean blends ([[godot-animation-player]]).  
+
+### Tree layout (recommended)
+
+```
+AnimationTree (active)
+└── root: StateMachine
+      ├── Idle  --(speed > 0.1)--> Locomotion
+      ├── Locomotion (BlendSpace1D: Walk@0.0 … Run@1.0)
+      ├── Jump
+      └── Attack
+```
+
+Or root **BlendTree**: StateMachine output → OneShot(Attack) → Output for layered attacks.
+
+### Code each physics frame
+
+```gdscript
+@onready var tree: AnimationTree = $AnimationTree
+@onready var playback: AnimationNodeStateMachinePlayback = tree["parameters/playback"]
+
+func _physics_process(delta: float) -> void:
+    var speed_xz := Vector2(velocity.x, velocity.z).length()
+    var grounded := is_on_floor()
+    tree["parameters/conditions/is_moving"] = speed_xz > 0.1
+    tree["parameters/conditions/is_grounded"] = grounded
+    # BlendSpace1D path example:
+    tree["parameters/Locomotion/blend_position"] = clampf(speed_xz / run_speed, 0.0, 1.0)
+    if not grounded and playback.get_current_node() != "Jump":
+        playback.travel("Jump")
+
+func try_attack() -> void:
+    playback.travel("Attack")
+    # or: tree["parameters/OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+```
+
+Set Advance Expression Base Node to the CharacterBody. Expressions: `is_moving`,
+`is_grounded`, `speed_xz > 0.1` (match property names / snake_case).
+
+### Sync modes for blended walks
+
+When Walk/Run lengths differ, use BlendSpace **Cyclic** sync so feet stay phase-aligned
+(docs: Cyclic Mutable / Constant). Prefer similar cycle lengths when possible.
+
+### Root motion locomotion
+
+1. Animator authors movement on root bone.  
+2. AnimationTree root motion track selected.  
+3. Each frame:
+
+```gdscript
+var motion := tree.get_root_motion_position()
+# convert to velocity / move_and_slide on CharacterBody3D
+velocity = motion / delta  # adjust to your scale and yaw
+move_and_slide()
+```
+
+Use with caution with pure code velocity — pick **either** root motion **or** code locomotion
+as the primary driver.
+
+### Facing
+
+Rotate visual yaw toward `velocity` (or camera-relative move dir) with `lerp_angle` /
+basis slerp ([[godot-3d-transforms]]), independent of blend_position.
+
 ## Why it works
 
 Tree separates **clip authoring** from **runtime choreography**. State machines match how
