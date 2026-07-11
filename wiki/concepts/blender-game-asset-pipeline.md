@@ -24,6 +24,10 @@ Use a clean low-poly render mesh; preserve high-frequency visual detail through
 validation path because it maps to standard GPU buffers and metal/roughness PBR, even if a custom
 engine ultimately consumes another format.
 
+Define the asset's [[level-of-detail]] category at the same time as its high-detail source and
+render mesh. A consistent category policy makes later reduction and transition testing possible;
+it is much harder to retrofit after every prop was authored to a different implicit standard.
+
 Count exported vertices, not just Blender mesh vertices or triangles. A vertex splits wherever it
 needs different UVs, normals, tangents, or flat-shaded attributes, so hard edges and UV seams can
 raise the runtime vertex count substantially. Apply or deliberately manage transforms, convert

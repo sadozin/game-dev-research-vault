@@ -7,6 +7,8 @@ updated: 2026-07-11
 verified: 2026-07-11
 sources:
   - "[[unreal-blueprint-cpp]]"
+  - "[[unreal-animation-blueprints]]"
+  - "[[unreal-collision-overview]]"
 tags: [unreal, game-engine, cplusplus, blueprints]
 ---
 
@@ -22,6 +24,11 @@ The split lets programmers expose stable parameters and events while artists and
 inside the editor. Keep high-frequency, data-heavy, or complex algorithms in C++; use Blueprints
 for event-driven content and rapid behavior changes. This is an architectural boundary, not a
 religious choice: profile first, then move only the proven hot or unmaintainable portion.
+
+[[character-animation-graphs]] are a good example of the split: authoritative game state can
+come from C++, while an Animation Blueprint turns that state into a skeletal pose. Apply the same
+intentionality to [[game-collision-design]] channels rather than leaving interaction rules buried
+in individual assets.
 
 ## The catch
 

@@ -9,6 +9,8 @@ sources:
   - "[[unity-profiling-target-device]]"
   - "[[android-game-optimization]]"
   - "[[blender-gltf-export]]"
+  - "[[unity-occlusion-culling]]"
+  - "[[unreal-static-mesh-lod]]"
 tags: [game-development, optimization, profiling]
 ---
 
@@ -30,6 +32,10 @@ both create and hide bottlenecks.
 Optimise the largest proven cost first, then repeat the capture. Track median and worst-frame
 times, memory high-water mark, load duration, and the affected scene; average FPS alone erases
 the spikes a player notices. See [[frame-pacing]] for presentation consistency.
+
+Treat [[visibility-culling]] and [[level-of-detail]] as hypotheses to validate, not default
+checklist items. Both trade extra data or transition complexity for less render work, so their
+net value depends on the scene topology, screen occupancy, and current bottleneck.
 
 ## The catch
 
