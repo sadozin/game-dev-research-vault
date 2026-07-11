@@ -14,9 +14,13 @@ claims against their sources.
 
 ## Publishing policy
 
-This repository contains research notes and source provenance only. It intentionally excludes
-private project notes, local paths, machine configuration, logs, chat-specific memory, and full
-copies of third-party source material.
+This repository contains **public** research notes and source provenance only. It intentionally
+excludes:
+
+- Private project notes and repo status
+- Local model / inference setup (Ollama, LiteLLM, custom GGUFs, serving config)
+- Local paths, machine configuration, agent harness details
+- Logs, chat-specific memory, and full copies of third-party source material
 
 ## Updating the vault
 
