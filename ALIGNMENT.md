@@ -10,6 +10,52 @@ and leave the board better stocked than you found it. The steps to follow are th
 [Contributor runbook](#contributor-runbook). Keep this file in sync with reality; a stale board is
 worse than none.
 
+## Shared task board
+
+**Pick a topic from *Open* below, then follow the [Contributor runbook](#contributor-runbook)** (or
+its autonomous quick path). When you finish, move the item to *Landed* with the date and the files you
+added. When you notice a new gap, add it to *Open* with a one-line reason and where the vault already
+reaches for it. Each *Open* item's **bold id is its slug**; claim it on a `contrib/<slug>` branch.
+Keep this board current—it is the point of coordination between contributors.
+
+### Open (pick from here)
+
+- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
+  series is missing. Add the source page and thread it into `clicker-game-economy` and
+  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
+- **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
+  (both say "atlas textures to keep batches") but never defined on its own.
+- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
+  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
+- **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
+  soft/hard caps shape a long idle curve.
+- **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
+  frequently spawned entities.
+
+### Landed
+
+- **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
+  `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
+  batching concept the optimization cluster kept implying but never defined.
+- **blender-mcp** (2026-07-11) — `wiki/concepts/blender-mcp.md`,
+  `wiki/sources/ahujasid-blender-mcp.md`. Completes the Unity/Unreal/Blender editor-MCP trilogy and
+  resolves the dangling `[[blender-mcp]]` links.
+- **level-of-detail** (2026-07-11) — `wiki/concepts/level-of-detail.md`, published by the maintainer
+  via the export tool. If it reads thin, a follow-up may deepen the "the catch" (LOD popping, switch
+  distance tuning) rather than re-create it.
+
+### Do not touch (private references; never publish or expand)
+
+These appear as dangling links inside published notes. They are private projects or machine config.
+Do not create pages for them, and do not add new references to them.
+
+- `minecwaft` — private Vulkan/C# game
+- `micro-mmo` — private MMO project
+- `vrchat-homeworld` — private VRChat world
+- `unity-mcp` — machine-specific connection/config notes
+- `arii-blend-avatar` — a specific personal avatar project (treat as private unless the maintainer
+  confirms it is a public base)
+
 ## The disposition: additive, not architectural
 
 Contribute as a **source contributor**. The job is to continue the research already here—deepen a
@@ -188,52 +234,6 @@ open PR. If you use this, list here who has access and how to request it.
 
 Either way, an agent with **no** GitHub credentials cannot land work—it can only draft locally and
 hand off. That is a property of GitHub, not of this workflow.
-
-## Shared task board
-
-Take the top open item, or any item you can source well. When you finish, move it to *Landed* with
-the date and the files you added. When you notice a new gap, add it to *Open* with a one-line reason
-and where the vault already reaches for it. This board is the point of coordination between
-contributors—keep it current. Each *Open* item's **bold id is its slug**; claim it on a
-`contrib/<slug>` branch (see the [runbook](#contributor-runbook)).
-
-### Landed
-
-- **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
-  `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
-  batching concept the optimization cluster kept implying but never defined.
-- **blender-mcp** (2026-07-11) — `wiki/concepts/blender-mcp.md`,
-  `wiki/sources/ahujasid-blender-mcp.md`. Completes the Unity/Unreal/Blender editor-MCP trilogy and
-  resolves the dangling `[[blender-mcp]]` links.
-- **level-of-detail** (2026-07-11) — `wiki/concepts/level-of-detail.md`, published by the maintainer
-  via the export tool. If it reads thin, a follow-up may deepen the "the catch" (LOD popping, switch
-  distance tuning) rather than re-create it.
-
-### Open (pick from here)
-
-- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
-  series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
-- **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
-  (both say "atlas textures to keep batches") but never defined on its own.
-- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
-  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
-- **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
-  soft/hard caps shape a long idle curve.
-- **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
-  frequently spawned entities.
-
-### Do not touch (private references; never publish or expand)
-
-These appear as dangling links inside published notes. They are private projects or machine config.
-Do not create pages for them, and do not add new references to them.
-
-- `minecwaft` — private Vulkan/C# game
-- `micro-mmo` — private MMO project
-- `vrchat-homeworld` — private VRChat world
-- `unity-mcp` — machine-specific connection/config notes
-- `arii-blend-avatar` — a specific personal avatar project (treat as private unless the maintainer
-  confirms it is a public base)
 
 ## Durability of contributions
 
