@@ -10,7 +10,7 @@ claims against their sources.
 
 - Game-design systems: clickers, MMOs, and progression
 - Blender pipelines, game assets, and VRChat avatar creation
-- Unity, Unreal, optimisation, and editor MCP workflows
+- Unity, Unreal, Godot, optimisation, and editor MCP workflows
 
 ## Publishing policy
 
