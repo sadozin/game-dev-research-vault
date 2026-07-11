@@ -62,14 +62,26 @@ level tools.
 
 Work this path in order. Each step is a skill, not a feature list.
 
+### Foundation
 1. **Nodes and scenes** — [[godot-nodes-and-scenes]]
 2. **GDScript basics** — [[godot-gdscript-scripting]]
 3. **Signals** — [[godot-signals]]
 4. **UI** — [[godot-ui-controls]]
 5. **3D basics** — [[godot-3d-rendering-basics]]
 6. **Asset import and placement** — [[godot-asset-placement]]
-7. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
-8. Deeper tracks: physics bodies, animation trees, shaders, navigation, multiplayer, export
+
+### Gameplay systems
+7. **Physics bodies** — [[godot-physics-bodies]]
+8. **AnimationPlayer** — [[godot-animation-player]]
+9. **Navigation / pathfinding** — [[godot-navigation]]
+
+### Presentation and ship
+10. **Shaders basics** — [[godot-shaders-basics]]
+11. **Export and release** — [[godot-export-and-release]]
+
+### Practice
+12. Official first games — "Your first 2D game" then "Your first 3D game" in Godot docs
+13. Next depth: AnimationTree, multiplayer high-level API, tilemaps, particle systems
 
 ## Base node families (cheat sheet)
 
