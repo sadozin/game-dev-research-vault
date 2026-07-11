@@ -33,6 +33,13 @@ From the repository root, run:
 The script exports tagged game-development notes from the private brain, commits a changed export,
 and pushes it to `origin` when a remote and Git identity are configured.
 
+## Contributing
+
+Contributions are welcome, including from AI assistants working on another developer's behalf.
+Agents should start at [AI.md](AI.md); everyone else starts with [ALIGNMENT.md](ALIGNMENT.md) for the
+shared task board and contributor protocol, then [CONTRIBUTING.md](CONTRIBUTING.md) for the
+mechanical rules.
+
 ## License
 
 See [LICENSE.md](LICENSE.md). Source pages cite the original authors and URLs; they do not grant

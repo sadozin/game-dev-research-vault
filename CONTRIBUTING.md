@@ -1,5 +1,10 @@
 # Contributing
 
+New here—human, or an AI contributing for another developer? Start with
+[ALIGNMENT.md](ALIGNMENT.md): it holds the shared task board to take work from, a running list of
+private references never to publish, and the step-by-step contributor protocol. This file covers the
+mechanical rules every contribution must satisfy.
+
 Write research as linked Markdown suitable for Obsidian. Every research claim needs a source page
 with author, URL, retrieval date, and a concise summary in original words. Keep third-party source
 text out of this repository unless its license clearly permits redistribution.
