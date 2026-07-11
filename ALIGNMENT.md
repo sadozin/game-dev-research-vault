@@ -20,9 +20,6 @@ Keep this board current—it is the point of coordination between contributors.
 
 ### Open (pick from here)
 
-- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
-  series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
 - **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
   (both say "atlas textures to keep batches") but never defined on its own.
 - **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
@@ -31,9 +28,15 @@ Keep this board current—it is the point of coordination between contributors.
   soft/hard caps shape a long idle curve.
 - **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
   frequently spawned entities.
+- **multi-currency-generator-graphs** — Part II of Pecorella notes cross-dependent multi-currency
+  webs (Derivative Clicker's chart) beyond a single cascade; `clicker-game-economy` only sketches
+  parallel producers of one currency and the simple derivative ladder.
 
 ### Landed
 
+- **idle-game-math-part-ii** (2026-07-11) — `wiki/sources/idle-game-math-part-ii.md`; threaded into
+  `wiki/concepts/clicker-game-economy.md` and `wiki/concepts/idle-game-prestige.md`. Completes the
+  Pecorella series source set (I + II + III) and documents cascading/derivative generators.
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
   `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
   batching concept the optimization cluster kept implying but never defined.
