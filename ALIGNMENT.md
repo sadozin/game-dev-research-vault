@@ -286,7 +286,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **texture-channel-packing** — claimed 2026-07-11 by Taylor
 - **idle-game-monetization** — claimed 2026-07-11 by Taylor
 - **player-retention-loops** — claimed 2026-07-11 by Taylor
 - **gacha-and-pity-math** — claimed 2026-07-11 by Taylor
@@ -305,6 +304,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **delta-compression-netcode** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **texture-channel-packing** (2026-07-11) — `wiki/concepts/texture-channel-packing.md`,
+  `wiki/sources/unity-channel-packed-textures.md`, `wiki/sources/unreal-texture-masks.md`. Shared
+  scalar map fetches, channel conventions, linear import, and packing failure modes.
 
 - **lightmap-baking-and-uv2** (2026-07-11) — `wiki/concepts/lightmap-baking-and-uv2.md`,
   `wiki/sources/unreal-lightmapping.md`, `wiki/sources/unreal-lightmap-uv-generation.md`. Dedicated
