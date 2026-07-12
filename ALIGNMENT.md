@@ -32,6 +32,86 @@ Keep this board current—it is the point of coordination between contributors.
 - **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
   frequently spawned entities.
 
+**Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
+Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
+
+*Rendering & optimization (cross-engine)*
+
+- **gpu-instancing** — one draw call for many copies of a mesh; neighbours `draw-call-batching`.
+- **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
+- **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
+- **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
+- **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
+- **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
+- **texture-channel-packing** — ORM/mask packing to cut samplers and memory; neighbours `texture-baking-for-games`.
+- **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
+
+*Netcode & multiplayer (engine-agnostic)*
+
+- **client-prediction-and-reconciliation** — the core of responsive netcode; neighbours `godot-multiplayer`.
+- **lag-compensation** — hit registration under latency (rewind / favor-the-shooter); neighbours `client-prediction-and-reconciliation`.
+- **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
+- **authoritative-server-and-anti-cheat** — trust boundaries and server validation; neighbours `godot-dedicated-servers`.
+- **state-synchronization-strategies** — snapshots vs deltas vs events; neighbours the multiplayer notes.
+- **matchmaking-and-mmr** — Elo/Glicko, queues, and fairness; a recurring design question.
+
+*Gameplay systems & AI (engine-agnostic)*
+
+- **entity-component-systems** — data-oriented gameplay architecture; neighbours `game-performance-profiling`.
+- **behavior-trees-for-ai** — the standard game-AI control structure; no concept yet.
+- **gameplay-state-machines** — FSM/HSM for characters and UI flow; neighbours `character-animation-graphs`.
+- **pathfinding-fundamentals** — A*/JPS and grid-vs-navmesh tradeoffs; neighbours `godot-navigation`.
+- **input-buffering-and-coyote-time** — the mechanics behind good game feel; no concept yet.
+- **third-person-camera-systems** — spring-arm, collision, and framing; neighbours `godot-3d-transforms`.
+- **save-data-versioning-and-migration** — evolving save schemas without breaking old saves; neighbours `godot-save-and-load`.
+
+*Procedural generation*
+
+- **procedural-noise-functions** — Perlin/Simplex/value noise and their uses; costly to re-derive each time.
+- **procedural-dungeon-generation** — room/BSP/graph approaches and their tradeoffs.
+
+*Game design: economy, progression, monetization*
+
+- **progression-curve-design** — XP/leveling curves and pacing; neighbours `clicker-game-economy`, `mmo-skill-loadouts`.
+- **idle-game-monetization** — ads, IAP, and time-skip design; neighbours `clicker-game-economy`.
+- **player-retention-loops** — daily rewards, streaks, session shaping; neighbours `idle-game-prestige`.
+- **gacha-and-pity-math** — drop-rate design and pity systems; probability-heavy.
+- **mmo-itemization-and-loot** — rarity tiers, affixes, power budget; neighbours `mmo-class-economics`.
+- **economy-sinks-and-faucets** — controlling virtual-economy inflation; neighbours `mmo-class-economics`.
+- **crafting-system-design** — recipes, gates, and material loops; neighbours the MMO cluster.
+- **quest-and-objective-systems** — data-driven quests and tracking; neighbours the MMO cluster.
+
+*Unity depth (under-covered vs Godot)*
+
+- **unity-input-system** — the new Input System package vs legacy input; no Unity input concept yet.
+- **unity-addressables** — async asset loading and memory control; no concept yet.
+- **unity-scriptable-objects** — data-as-asset architecture pattern; no concept yet.
+- **unity-netcode-for-gameobjects** — first-party multiplayer stack; no Unity netcode concept.
+- **unity-dots-jobs-and-burst** — the data-oriented performance path; neighbours `entity-component-systems`.
+
+*Unreal depth (under-covered vs Godot)*
+
+- **unreal-nanite** — virtualized geometry and its limits; high interest, no concept.
+- **unreal-lumen** — dynamic GI/reflections and their cost; no concept.
+- **unreal-gameplay-ability-system** — GAS structure and when to use it; no concept.
+- **unreal-replication** — properties, RPCs, and roles for multiplayer; no concept.
+- **unreal-world-partition** — large-world streaming; no concept.
+- **unreal-blueprint-vs-cpp** — performance and architecture tradeoffs; compiles the existing `unreal-blueprint-cpp` source.
+
+*Blender / assets / VRChat depth*
+
+- **blender-uv-unwrapping** — seams, packing, and texel density for games; neighbours `blender-game-asset-pipeline`.
+- **blender-retopology** — high-to-low-poly for game meshes; neighbours `texture-baking-for-games`.
+- **gltf-vs-fbx-tradeoffs** — choosing an interchange format; neighbours `blender-gltf-export`.
+- **blendshapes-for-avatars** — shape keys for faces and visemes; neighbours `vrchat-humanoid-rigging`.
+- **vrchat-avatar-shaders** — lilToon/Poiyomi cost and setup; neighbours `vrchat-avatar-optimization`.
+- **blender-to-engine-scale-and-axis** — unit and axis gotchas on import; neighbours `blender-game-asset-pipeline`.
+
+*AI-assisted gamedev / MCP*
+
+- **mcp-editor-tool-design** — safe, high-level tools over raw code execution; neighbours `editor-mcp-safety`.
+- **reviewing-ai-generated-assets** — validating AI-made meshes/materials before commit; neighbours `editor-mcp-safety`, `blender-game-asset-pipeline`.
+
 ### Landed
 
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
