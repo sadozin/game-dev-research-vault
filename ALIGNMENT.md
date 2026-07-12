@@ -212,9 +212,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unreal-mcp-blueprint-authoring** — claimed 2026-07-11 by Taylor
-- **unreal-mcp-level-scripting** — claimed 2026-07-11 by Taylor
-- **godot-mcp-integration** — claimed 2026-07-11 by Taylor
 
 
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
@@ -250,6 +247,18 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **unreal-mcp-blueprint-authoring** (2026-07-11) — `wiki/concepts/unreal-mcp-blueprint-authoring.md`,
+  `wiki/sources/unreal-blueprint-editor-and-components.md`, `wiki/sources/mcp-tools-authoring-safety.md`.
+  Typed graph edits, compilation, instance impact, and bounded authoring.
+
+- **unreal-mcp-level-scripting** (2026-07-11) — `wiki/concepts/unreal-mcp-level-scripting.md`,
+  `wiki/sources/unreal-editor-scripting-and-automation.md`, `wiki/sources/mcp-tools-authoring-safety.md`.
+  Actor targeting, level scope, checkpoints, validation, and save boundaries.
+
+- **godot-mcp-integration** (2026-07-11) — `wiki/concepts/godot-mcp-integration.md`,
+  `wiki/sources/godot-editor-plugins-and-scenes.md`, `wiki/sources/mcp-tools-authoring-safety.md`.
+  Scene/resource operations, live editor context, checkpoints, and safe mutation scope.
 
 - **blender-mcp-scene-cleanup** (2026-07-11) — `wiki/concepts/blender-mcp-scene-cleanup.md`,
   `wiki/sources/blender-collections-and-organization.md`, `wiki/sources/mcp-tools-scene-cleanup-safety.md`.
