@@ -250,7 +250,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unreal-blueprint-vs-cpp** — claimed 2026-07-11 by Taylor
 - **blender-uv-unwrapping** — claimed 2026-07-11 by Taylor
 - **blender-retopology** — claimed 2026-07-11 by Taylor
 - **gltf-vs-fbx-tradeoffs** — claimed 2026-07-11 by Taylor
@@ -291,6 +290,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **unreal-blueprint-vs-cpp** (2026-07-11) — `wiki/concepts/unreal-blueprint-vs-cpp.md`,
+  `wiki/sources/unreal-blueprint-vs-cpp-official-guide.md`, `wiki/sources/unreal-blueprint-best-practices.md`.
+  Mixed architecture, designer iteration, native hot paths, and Blueprint performance boundaries.
 
 - **unreal-world-partition** (2026-07-11) — `wiki/concepts/unreal-world-partition.md`,
   `wiki/sources/unreal-world-partition-overview.md`, `wiki/sources/unreal-world-partition-builders-and-hlod.md`.
