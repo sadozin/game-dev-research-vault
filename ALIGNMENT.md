@@ -190,27 +190,6 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 
-- **mcp-editor-checkpointing** — claimed 2026-07-11 by Codex
-- **mcp-tool-permission-scoping** — claimed 2026-07-11 by Codex
-- **ai-batch-asset-generation** — claimed 2026-07-11 by Codex
-- **ai-gameplay-script-generation** — claimed 2026-07-11 by Codex
-- **llm-level-design-limits** — claimed 2026-07-11 by Codex
-- **unity-editor-scripting** — claimed 2026-07-11 by Codex
-- **unity-shader-graph** — claimed 2026-07-11 by Codex
-- **unity-vfx-graph-vs-particles** — claimed 2026-07-11 by Codex
-- **unity-timeline-and-cinemachine** — claimed 2026-07-11 by Codex
-- **unity-navmesh-agents** — claimed 2026-07-11 by Codex
-- **unreal-blueprint-communication** — claimed 2026-07-11 by Codex
-- **unreal-anim-montages-and-notifies** — claimed 2026-07-11 by Codex
-- **unreal-niagara-vfx** — claimed 2026-07-11 by Codex
-- **unreal-landscape-and-foliage** — claimed 2026-07-11 by Codex
-- **unreal-behavior-trees-and-eqs** — claimed 2026-07-11 by Codex
-- **unreal-navmesh-and-perception** — claimed 2026-07-11 by Codex
-- **unreal-chaos-physics** — claimed 2026-07-11 by Codex
-- **unreal-umg-ui** — claimed 2026-07-11 by Codex
-- **unreal-data-assets-and-datatables** — claimed 2026-07-11 by Codex
-- **unreal-online-subsystem** — claimed 2026-07-11 by Codex
-
 
 
 
