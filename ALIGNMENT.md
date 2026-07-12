@@ -52,6 +52,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Gameplay systems & AI (engine-agnostic)*
 
+- **animation-compression** — clip memory and quality tradeoffs; the animation cluster
+  (`character-animation-graphs`, `root-motion-vs-inplace`) never states what a clip costs to store.
+- **desync-detection-and-recovery** — state checksums, divergence logging, and what to do after a
+  desync; `deterministic-lockstep` says lockstep needs this but stops at naming it.
+- **network-relevancy-and-interest-management** — engine-agnostic view of what `unreal-replication`
+  covers as relevancy/priority/dormancy: how large worlds decide who hears about what.
+
 
 *Procedural generation*
 
@@ -286,6 +293,43 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **deterministic-lockstep** (2026-07-11) — `wiki/concepts/deterministic-lockstep.md`,
+  `wiki/sources/gaffer-deterministic-lockstep.md` (plus cites `gaffer-floating-point-determinism`).
+  Inputs-not-state networking: bandwidth independent of entity count, the bit-exactness requirement
+  that makes `fixed-timestep-and-determinism` a hard precondition, the blocking playout buffer, and
+  why desync is permanent and cheating is structural.
+
+- **continuous-collision-detection** (2026-07-11) — `wiki/concepts/continuous-collision-detection.md`,
+  `wiki/sources/unity-continuous-collision-detection.md`. The tunnelling fix `game-collision-design`
+  and `fixed-timestep-and-determinism` both name but neither covers: sweep-based (linear only — it
+  cannot catch a purely rotational collision) vs speculative (cheaper, catches rotation, but ghost
+  contacts from an inaccurate normal), and why CCD is a per-body safety net rather than a global
+  setting.
+
+- **replay-and-recording-systems** (2026-07-11) — `wiki/concepts/replay-and-recording-systems.md`,
+  `wiki/sources/unreal-replay-system.md` (plus cites `gaffer-deterministic-lockstep`). The two
+  architectures — re-simulate an input log vs capture the replication stream — and why Unreal chose
+  the latter: checkpoints as a size-versus-seek dial (30 s default), amortised checkpoint writes that
+  trade slight visual errors for no hitch, and replay actors that can still perturb live `GameState`.
+
+- **unreal-replication** (2026-07-11) — `wiki/concepts/unreal-replication.md`,
+  `wiki/sources/unreal-actor-roles.md` (plus cites `epic-networking-overview`). Replicated properties
+  vs RPCs as a durable-state/event split, the `Role`/`RemoteRole` pair and why only an autonomous
+  proxy predicts, and the bandwidth tools (relevancy, priority, dormancy) to reach for before cutting
+  `NetUpdateFrequency`.
+
+- **unreal-gameplay-framework** (2026-07-11) — `wiki/concepts/unreal-gameplay-framework.md`,
+  `wiki/sources/unreal-gameplay-framework-docs.md` (plus cites `epic-networking-overview`). The
+  framework as ownership rules rather than a class list: GameMode is server-only (the classic
+  works-in-PIE, null-on-client bug), PlayerState outlives the respawned Pawn, and PlayerControllers
+  are not visible to other clients.
+
+- **root-motion-vs-inplace** (2026-07-11) — `wiki/concepts/root-motion-vs-inplace.md`,
+  `wiki/sources/unity-root-motion.md`, `wiki/sources/unreal-root-motion.md`. Who owns position — the
+  clip or the code — with foot sliding as the shared symptom; Unity's body/root transform split and
+  Bake Into Pose, Unreal's game-thread cost for enabling root motion at all, and why "montages only"
+  is the shipping compromise for predicted characters.
 
 - **unreal-lumen** (2026-07-11) — `wiki/concepts/unreal-lumen.md`,
   `wiki/sources/unreal-lumen-global-illumination.md`, `wiki/sources/unreal-lumen-technical-details.md`.
