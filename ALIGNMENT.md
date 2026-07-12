@@ -128,13 +128,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
-- **ambient-occlusion-maps** — AO baking and how engines consume it.
-- **screen-space-reflections** — SSR cost and artifacts.
-- **volumetric-fog-and-lighting** — volumetrics cost vs quality.
-- **decals-and-projection** — decal systems and their performance.
-- **vertex-animation-textures** — baking animation into textures for perf.
-- **impostors-and-billboards** — far-LOD impostor techniques.
-- **skinned-mesh-performance** — GPU skinning cost and bone limits.
 
 *Netcode & backend (high token burn)*
 
@@ -204,10 +197,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Audio*
 
 - **fmod-and-wwise-integration** — middleware setup and tradeoffs.
-- **adaptive-and-dynamic-music** — interactive music systems.
-- **spatial-audio-attenuation** — 3D audio falloff and occlusion.
 - **sfx-design-and-variation** — layering and randomization to avoid repetition.
-- **audio-memory-and-streaming** — audio compression and streaming budgets.
 
 *Platform, build, tooling*
 
@@ -261,26 +251,17 @@ Move it to Landed when you push its files. Empty is fine._
 - **accessibility-in-games** — claimed 2026-07-11 by Codex
 - **wave-function-collapse** — claimed 2026-07-11 by Codex
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
-- **animation-compression** — claimed 2026-07-11 by Codex
-- **desync-detection-and-recovery** — claimed 2026-07-11 by Codex
-- **network-relevancy-and-interest-management** — claimed 2026-07-11 by Codex
-- **unity-execution-order** — claimed 2026-07-11 by Codex
-- **unity-coroutines-and-async** — claimed 2026-07-11 by Codex
-- **unity-serialization-rules** — claimed 2026-07-11 by Codex
-- **unity-assembly-definitions** — claimed 2026-07-11 by Codex
-- **unity-render-pipelines-urp-hdrp** — claimed 2026-07-11 by Codex
-- **unity-memory-profiler** — claimed 2026-07-11 by Codex
-- **unreal-actors-and-components** — claimed 2026-07-11 by Codex
-- **unreal-enhanced-input** — claimed 2026-07-11 by Codex
-- **unreal-material-instances** — claimed 2026-07-11 by Codex
-- **unreal-save-game** — claimed 2026-07-11 by Codex
-- **specular-vs-metallic-workflow** — claimed 2026-07-11 by Codex
-- **hdr-and-tonemapping** — claimed 2026-07-11 by Codex
-- **post-processing-stack** — claimed 2026-07-11 by Codex
-- **lobby-and-session-management** — claimed 2026-07-11 by Codex
-- **goap-planning** — claimed 2026-07-11 by Codex
-- **season-and-liveops-cadence** — claimed 2026-07-11 by Codex
-- **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
+
+- **ambient-occlusion-maps** — claimed 2026-07-11 by Claude
+- **screen-space-reflections** — claimed 2026-07-11 by Claude
+- **volumetric-fog-and-lighting** — claimed 2026-07-11 by Claude
+- **decals-and-projection** — claimed 2026-07-11 by Claude
+- **vertex-animation-textures** — claimed 2026-07-11 by Claude
+- **impostors-and-billboards** — claimed 2026-07-11 by Claude
+- **skinned-mesh-performance** — claimed 2026-07-11 by Claude
+- **spatial-audio-attenuation** — claimed 2026-07-11 by Claude
+- **adaptive-and-dynamic-music** — claimed 2026-07-11 by Claude
+- **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
 
