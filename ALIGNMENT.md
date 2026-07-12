@@ -71,7 +71,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **lag-compensation** — hit registration under latency (rewind / favor-the-shooter); neighbours `client-prediction-and-reconciliation`.
 - **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
 - **authoritative-server-and-anti-cheat** — trust boundaries and server validation; neighbours `godot-dedicated-servers`.
-- **state-synchronization-strategies** — snapshots vs deltas vs events; neighbours the multiplayer notes.
 - **matchmaking-and-mmr** — Elo/Glicko, queues, and fairness; a recurring design question.
 
 *Gameplay systems & AI (engine-agnostic)*
@@ -337,6 +336,8 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **pool-warmup-and-budgeting** — claimed 2026-07-11 by sadozin (Claude)
+
+- **state-synchronization-strategies** — claimed 2026-07-11 by Codex
 
 ### Landed
 
