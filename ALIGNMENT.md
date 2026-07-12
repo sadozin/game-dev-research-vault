@@ -45,8 +45,6 @@ coordination surface—claims live here so everyone who pulls sees them; keep it
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 - **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
   soft/hard caps shape a long idle curve.
-- **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
-  frequently spawned entities.
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -332,6 +330,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **object-pooling** — claimed 2026-07-12 by grok
 
 ### Landed
 
