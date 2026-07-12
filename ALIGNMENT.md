@@ -227,7 +227,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **blender-uv-unwrapping** — claimed 2026-07-11 by Taylor
 - **blender-retopology** — claimed 2026-07-11 by Taylor
 - **gltf-vs-fbx-tradeoffs** — claimed 2026-07-11 by Taylor
 - **blendshapes-for-avatars** — claimed 2026-07-11 by Taylor
@@ -287,6 +286,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **blender-uv-unwrapping** (2026-07-11) — `wiki/concepts/blender-uv-unwrapping.md`,
+  `wiki/sources/blender-uv-operators.md`, `wiki/sources/blender-uv-layout-workflow.md`.
+  Seams, distortion, island packing, texel density, and engine-ready layout checks.
 
 - **unreal-blueprint-vs-cpp** (2026-07-11) — `wiki/concepts/unreal-blueprint-vs-cpp.md`,
   `wiki/sources/unreal-blueprint-vs-cpp-official-guide.md`, `wiki/sources/unreal-blueprint-best-practices.md`.
