@@ -45,9 +45,6 @@ having pushed your claim first—that single rule is what prevents duplicate wor
   `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
 - **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
-- **prestige-layer-pacing** — when to introduce a second/third reset currency so stacks stay
-  legible; neighbours `prestige-currency-soft-caps` and `idle-game-prestige` (soft caps cover the
-  math; this would cover content/feature gates at each layer).
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -337,6 +334,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **prestige-layer-pacing** — claimed 2026-07-11 by Taylor
 
 - **state-synchronization-strategies** — claimed 2026-07-11 by Codex
 
