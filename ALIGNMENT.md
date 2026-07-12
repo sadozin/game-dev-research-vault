@@ -189,9 +189,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **loot-table-design** — claimed 2026-07-11 by Taylor
-- **game-feel-and-juice** — claimed 2026-07-11 by Taylor
-- **difficulty-dynamic-adjustment** — claimed 2026-07-11 by Taylor
 
 - **mcp-editor-checkpointing** — claimed 2026-07-11 by Codex
 - **mcp-tool-permission-scoping** — claimed 2026-07-11 by Codex
@@ -219,6 +216,13 @@ Move it to Landed when you push its files. Empty is fine._
 
 
 ### Landed
+
+- **loot-table-design** (2026-07-11) — `wiki/concepts/loot-table-design.md` (plus cites `defining-loot-tables-arpg`, `gacha-pricing-pity-research`).
+  Weighted roll stages, variance, pity, duplicates, and reward-budget simulation.
+- **game-feel-and-juice** (2026-07-11) — `wiki/concepts/game-feel-and-juice.md`, `wiki/sources/impact-feedback-action-games-study.md`.
+  Layered impact feedback, timing, hierarchy, accessibility, and confirmed-event presentation.
+- **difficulty-dynamic-adjustment** (2026-07-11) — `wiki/concepts/difficulty-dynamic-adjustment.md`, `wiki/sources/dynamic-difficulty-adjustment-review.md`.
+  Player modeling, bounded adaptation, fairness, agency, and experience measurement.
 
 - **telemetry-and-kpis** (2026-07-11) — `wiki/concepts/telemetry-and-kpis.md`, `wiki/sources/unity-analytics-dashboards.md`.
   Decision-focused events, cohorts, dashboards, latency, and guardrail metrics.
