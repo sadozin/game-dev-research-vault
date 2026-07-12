@@ -74,19 +74,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Editor MCP & AI-assisted gamedev (Unity / Blender / Unreal / Godot)*
 
-- **mcp-editor-checkpointing** — undo/save checkpoints before agent edits; neighbours `editor-mcp-safety`.
-- **mcp-tool-permission-scoping** — least-privilege tool exposure over raw code exec; neighbours `editor-mcp-safety`.
-- **ai-batch-asset-generation** — pipelines for mass AI asset creation and triage.
-- **ai-gameplay-script-generation** — generating and reviewing gameplay scripts safely.
-- **llm-level-design-limits** — where LLM scene generation breaks down; neighbours `godot-ai-build-playbook`.
 
 *Unity — engine depth & pain points*
 
-- **unity-editor-scripting** — custom inspectors, property drawers, EditorWindow.
-- **unity-shader-graph** — node-based shaders and their limits.
-- **unity-vfx-graph-vs-particles** — GPU VFX Graph vs the built-in particle system.
-- **unity-timeline-and-cinemachine** — cutscenes and procedural cameras.
-- **unity-navmesh-agents** — baking and steering NavMesh agents in Unity.
 - **unity-controller-vs-rigidbody** — CharacterController vs Rigidbody movement tradeoffs.
 - **unity-2d-tilemap-and-sprites** — the 2D tilemap and sprite pipeline.
 - **unity-animation-rigging** — runtime IK and constraints package.
@@ -99,16 +89,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unreal — engine depth & pain points*
 
-- **unreal-blueprint-communication** — interfaces, event dispatchers, and casting.
-- **unreal-anim-montages-and-notifies** — montages, notifies, and anim slots.
-- **unreal-niagara-vfx** — Niagara systems and emitters.
-- **unreal-landscape-and-foliage** — terrain and foliage tooling.
-- **unreal-behavior-trees-and-eqs** — AI behavior trees and environment queries.
-- **unreal-navmesh-and-perception** — nav mesh and AI perception setup.
-- **unreal-chaos-physics** — Chaos physics and destruction.
-- **unreal-umg-ui** — UMG widget UI workflow.
-- **unreal-data-assets-and-datatables** — data-driven design in Unreal.
-- **unreal-online-subsystem** — sessions, friends, and platform services.
 - **unreal-packaging-and-cook** — cooking content and packaging builds.
 - **unreal-insights-profiling** — Unreal Insights traces and analysis.
 - **unreal-hlod** — hierarchical LOD for large scenes; neighbours `unreal-static-mesh-lod`.
@@ -211,6 +191,27 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **mcp-editor-checkpointing** — claimed 2026-07-11 by Codex
+- **mcp-tool-permission-scoping** — claimed 2026-07-11 by Codex
+- **ai-batch-asset-generation** — claimed 2026-07-11 by Codex
+- **ai-gameplay-script-generation** — claimed 2026-07-11 by Codex
+- **llm-level-design-limits** — claimed 2026-07-11 by Codex
+- **unity-editor-scripting** — claimed 2026-07-11 by Codex
+- **unity-shader-graph** — claimed 2026-07-11 by Codex
+- **unity-vfx-graph-vs-particles** — claimed 2026-07-11 by Codex
+- **unity-timeline-and-cinemachine** — claimed 2026-07-11 by Codex
+- **unity-navmesh-agents** — claimed 2026-07-11 by Codex
+- **unreal-blueprint-communication** — claimed 2026-07-11 by Codex
+- **unreal-anim-montages-and-notifies** — claimed 2026-07-11 by Codex
+- **unreal-niagara-vfx** — claimed 2026-07-11 by Codex
+- **unreal-landscape-and-foliage** — claimed 2026-07-11 by Codex
+- **unreal-behavior-trees-and-eqs** — claimed 2026-07-11 by Codex
+- **unreal-navmesh-and-perception** — claimed 2026-07-11 by Codex
+- **unreal-chaos-physics** — claimed 2026-07-11 by Codex
+- **unreal-umg-ui** — claimed 2026-07-11 by Codex
+- **unreal-data-assets-and-datatables** — claimed 2026-07-11 by Codex
+- **unreal-online-subsystem** — claimed 2026-07-11 by Codex
 
 
 
