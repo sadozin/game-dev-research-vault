@@ -128,6 +128,206 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **mcp-editor-tool-design** — safe, high-level tools over raw code execution; neighbours `editor-mcp-safety`.
 - **reviewing-ai-generated-assets** — validating AI-made meshes/materials before commit; neighbours `editor-mcp-safety`, `blender-game-asset-pipeline`.
 
+*Editor MCP & AI-assisted gamedev (Unity / Blender / Unreal / Godot)*
+
+- **unity-mcp-scene-authoring** — building scenes and hierarchies through MCP; neighbours `unity-mcp-integration`.
+- **unity-mcp-prefab-workflow** — creating and editing prefabs via an agent without corrupting variants.
+- **unity-mcp-material-setup** — assigning materials/shaders and property blocks through MCP.
+- **unity-mcp-test-and-playmode** — running edit/play-mode tests from an agent; neighbours `editor-mcp-safety`.
+- **unity-mcp-build-automation** — triggering builds safely via MCP.
+- **unity-mcp-import-settings** — automating texture/model import presets through MCP.
+- **blender-mcp-modeling-workflow** — primitive and mesh ops via BlenderMCP; neighbours `blender-mcp`.
+- **blender-mcp-material-nodes** — building shader-node graphs through MCP.
+- **blender-mcp-bake-and-uv** — automating UV and bake steps via MCP; neighbours `texture-baking-for-games`.
+- **blender-mcp-export-validation** — MCP-driven export plus validation; neighbours `blender-game-asset-pipeline`.
+- **blender-mcp-scene-cleanup** — batch naming, cleanup, and origin fixes via MCP.
+- **unreal-mcp-blueprint-authoring** — authoring Blueprints via MCP; neighbours `unreal-mcp-integration`.
+- **unreal-mcp-level-scripting** — placing and editing actors through MCP.
+- **godot-mcp-integration** — driving Godot from an MCP client; parallels `blender-mcp`, `unity-mcp-integration`.
+- **mcp-editor-checkpointing** — undo/save checkpoints before agent edits; neighbours `editor-mcp-safety`.
+- **mcp-tool-permission-scoping** — least-privilege tool exposure over raw code exec; neighbours `editor-mcp-safety`.
+- **ai-batch-asset-generation** — pipelines for mass AI asset creation and triage.
+- **ai-gameplay-script-generation** — generating and reviewing gameplay scripts safely.
+- **llm-level-design-limits** — where LLM scene generation breaks down; neighbours `godot-ai-build-playbook`.
+
+*Unity — engine depth & pain points*
+
+- **unity-execution-order** — Awake/OnEnable/Start/Update/FixedUpdate ordering and gotchas.
+- **unity-coroutines-and-async** — coroutines vs async/await vs UniTask; recurring confusion.
+- **unity-serialization-rules** — what serializes, references, and ScriptableObject data pitfalls.
+- **unity-editor-scripting** — custom inspectors, property drawers, EditorWindow.
+- **unity-assembly-definitions** — asmdef boundaries and compile speed.
+- **unity-render-pipelines-urp-hdrp** — choosing and converting Built-in vs URP vs HDRP.
+- **unity-shader-graph** — node-based shaders and their limits.
+- **unity-vfx-graph-vs-particles** — GPU VFX Graph vs the built-in particle system.
+- **unity-timeline-and-cinemachine** — cutscenes and procedural cameras.
+- **unity-navmesh-agents** — baking and steering NavMesh agents in Unity.
+- **unity-controller-vs-rigidbody** — CharacterController vs Rigidbody movement tradeoffs.
+- **unity-2d-tilemap-and-sprites** — the 2D tilemap and sprite pipeline.
+- **unity-animation-rigging** — runtime IK and constraints package.
+- **unity-audio-mixer** — mixer groups, snapshots, and ducking.
+- **unity-localization-package** — string tables and locale switching.
+- **unity-memory-profiler** — capturing and reading memory snapshots.
+- **unity-il2cpp-and-aot** — IL2CPP builds, AOT limits, and code stripping.
+- **unity-webgl-limits** — WebGL build constraints and threading/memory gotchas.
+- **unity-mobile-optimization** — battery, thermal, and draw-call budgets on mobile.
+- **unity-crash-and-log-diagnostics** — reading Player.log and native crash dumps.
+
+*Unreal — engine depth & pain points*
+
+- **unreal-gameplay-framework** — GameMode/GameState/PlayerController/Pawn/Character roles.
+- **unreal-actors-and-components** — the actor/component model and lifecycle.
+- **unreal-blueprint-communication** — interfaces, event dispatchers, and casting.
+- **unreal-enhanced-input** — setting up the Enhanced Input system.
+- **unreal-anim-montages-and-notifies** — montages, notifies, and anim slots.
+- **unreal-material-instances** — parameterized materials and MID performance.
+- **unreal-niagara-vfx** — Niagara systems and emitters.
+- **unreal-landscape-and-foliage** — terrain and foliage tooling.
+- **unreal-behavior-trees-and-eqs** — AI behavior trees and environment queries.
+- **unreal-navmesh-and-perception** — nav mesh and AI perception setup.
+- **unreal-chaos-physics** — Chaos physics and destruction.
+- **unreal-umg-ui** — UMG widget UI workflow.
+- **unreal-data-assets-and-datatables** — data-driven design in Unreal.
+- **unreal-save-game** — SaveGame objects and serialization.
+- **unreal-online-subsystem** — sessions, friends, and platform services.
+- **unreal-packaging-and-cook** — cooking content and packaging builds.
+- **unreal-insights-profiling** — Unreal Insights traces and analysis.
+- **unreal-hlod** — hierarchical LOD for large scenes; neighbours `unreal-static-mesh-lod`.
+- **unreal-sequencer** — cinematics and the Sequencer workflow.
+- **unreal-cpp-gameplay-basics** — UCLASS/UPROPERTY and gameplay in C++.
+- **unreal-android-build** — packaging for Android and its pitfalls.
+
+*Godot — genuine gaps (already deep elsewhere)*
+
+- **godot-csharp-vs-gdscript** — language tradeoffs and interop cost.
+- **godot-gdextension-native** — C++/GDExtension for hot paths.
+
+*Rendering & graphics (high token burn)*
+
+- **pbr-material-workflow** — the metallic/roughness PBR contract across engines.
+- **normal-mapping-explained** — tangent-space normals and common artifacts.
+- **specular-vs-metallic-workflow** — the two PBR conventions and conversions.
+- **ambient-occlusion-maps** — AO baking and how engines consume it.
+- **linear-vs-srgb-color-space** — color-space correctness; a constant source of bugs.
+- **hdr-and-tonemapping** — the HDR pipeline and tonemappers.
+- **anti-aliasing-techniques** — MSAA/TAA/FXAA/SMAA tradeoffs.
+- **deferred-vs-forward-rendering** — rendering-path tradeoffs.
+- **screen-space-reflections** — SSR cost and artifacts.
+- **volumetric-fog-and-lighting** — volumetrics cost vs quality.
+- **decals-and-projection** — decal systems and their performance.
+- **post-processing-stack** — bloom/tonemap/vignette pipeline and cost.
+- **vertex-animation-textures** — baking animation into textures for perf.
+- **impostors-and-billboards** — far-LOD impostor techniques.
+- **skinned-mesh-performance** — GPU skinning cost and bone limits.
+
+*Netcode & backend (high token burn)*
+
+- **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
+- **reliable-udp-and-ordering** — reliability layers over UDP.
+- **delta-compression-netcode** — sending diffs instead of full state.
+- **snapshot-interpolation** — buffering and interpolating remote state.
+- **entity-interpolation-extrapolation** — smoothing remote entities.
+- **nat-traversal-and-relays** — connectivity behind NATs.
+- **lobby-and-session-management** — creating and joining sessions.
+- **dedicated-server-scaling** — fleet and orchestration for game servers.
+- **cloud-save-and-leaderboards** — backend persistence basics.
+- **player-auth-and-accounts** — identity and auth for games.
+
+*Gameplay systems & AI*
+
+- **utility-ai** — scoring-based decision making.
+- **goap-planning** — goal-oriented action planning.
+- **flow-field-pathfinding** — many-agent pathing.
+- **crowd-avoidance-rvo** — local avoidance for crowds.
+- **inventory-system-design** — grids, stacks, weight, and UI binding.
+- **dialogue-system-design** — data-driven dialogue and branching.
+- **ability-and-cooldown-systems** — skills, cooldowns, and resources.
+- **status-effects-and-buffs** — stacking, duration, and ticks.
+- **damage-and-hitbox-systems** — hitboxes, hurtboxes, and the damage pipeline.
+- **inverse-kinematics** — IK for feet, hands, and aim.
+- **ragdoll-and-physics-animation** — ragdoll blending and recovery.
+- **procedural-animation** — spring and procedural motion.
+- **root-motion-vs-inplace** — animation-driven vs code-driven movement.
+- **tweening-and-easing** — easing curves and tween systems.
+- **event-bus-messaging** — decoupled gameplay messaging patterns.
+- **game-loop-and-update-order** — fixed vs variable update and determinism.
+- **replay-and-recording-systems** — deterministic replays and recordings.
+
+*Game design, economy, live-ops*
+
+- **battle-pass-design** — track, tier, and reward structure.
+- **season-and-liveops-cadence** — content cadence and events.
+- **ftue-onboarding-design** — first-time user experience.
+- **tutorial-design-patterns** — teaching without walls of text.
+- **reward-schedules-variable-ratio** — reinforcement scheduling.
+- **dual-currency-design** — soft vs hard currency balance.
+- **iap-pricing-tiers** — price points and bundles.
+- **ab-testing-for-games** — experiment design and pitfalls.
+- **telemetry-and-kpis** — the metrics that matter and how to log them.
+- **churn-and-winback** — retention analytics and re-engagement.
+- **leaderboard-design** — ranking, seasons, and anti-abuse.
+- **guild-and-social-systems** — social features and retention.
+- **auction-house-design** — player trading economies.
+- **loot-table-design** — weighted drops and pity.
+- **game-feel-and-juice** — screenshake, hitstop, and feedback.
+- **accessibility-in-games** — colorblind, remap, and subtitle standards.
+- **difficulty-dynamic-adjustment** — DDA approaches and pitfalls.
+
+*Procedural generation*
+
+- **wave-function-collapse** — constraint-based tile/level generation.
+- **terrain-heightmap-generation** — heightmaps and erosion.
+- **biome-and-climate-generation** — biome distribution.
+- **cellular-automata-caves** — cave generation.
+- **poisson-disk-sampling** — even random placement.
+- **procedural-mesh-generation** — building meshes at runtime.
+
+*Blender / assets / DCC*
+
+- **blender-hard-surface-modeling** — clean hard-surface modeling for games.
+- **blender-geometry-nodes** — procedural geometry for game assets.
+- **blender-modifiers-for-games** — the modifier stack and applying for export.
+- **blender-rigify-workflow** — Rigify rigs and baking for game export.
+- **blender-cloth-and-hair-sim** — sim-to-mesh for game assets.
+- **trim-sheets-and-modular-kits** — modular environment art.
+- **texel-density-consistency** — uniform texel density across assets.
+- **fbx-export-settings-unity** — correct FBX settings for Unity.
+- **fbx-export-settings-unreal** — correct FBX settings for Unreal.
+- **substance-to-engine-workflow** — Substance texturing into engines.
+
+*VRChat depth*
+
+- **vrchat-avatar-descriptor-setup** — configuring the VRC Avatar Descriptor.
+- **vrchat-visemes-and-lipsync** — viseme setup for lip sync.
+- **vrchat-eye-and-blink-setup** — eye tracking and blink states.
+- **vrchat-fbt-setup** — full-body-tracking calibration and proportions.
+- **vrchat-expression-menus** — expression menus and parameters.
+- **vrchat-avatar-animator-layers** — action, gesture, and FX layers.
+- **vrchat-contacts-and-interactions** — contacts colliders and senders.
+- **vrchat-quest-crossplatform** — PC vs Quest avatar variants.
+- **vrchat-world-optimization** — world perf: lightmaps, occlusion, draw calls.
+
+*Audio*
+
+- **fmod-and-wwise-integration** — middleware setup and tradeoffs.
+- **adaptive-and-dynamic-music** — interactive music systems.
+- **spatial-audio-attenuation** — 3D audio falloff and occlusion.
+- **sfx-design-and-variation** — layering and randomization to avoid repetition.
+- **audio-memory-and-streaming** — audio compression and streaming budgets.
+
+*Platform, build, tooling*
+
+- **steamworks-integration** — Steam features and shipping.
+- **mobile-store-submission** — iOS/Android store preparation.
+- **app-size-reduction** — shrinking build size.
+- **ci-cd-for-game-builds** — automated build pipelines.
+- **version-control-lfs-for-binaries** — Git LFS for large assets.
+- **perforce-vs-git-for-games** — VCS choice for teams with big binaries.
+- **crash-reporting-pipeline** — collecting and triaging crashes.
+- **feature-flags-remote-config** — runtime toggles and staged rollouts.
+- **localization-pipeline** — string extraction through to shipped locales.
+- **automated-gameplay-testing** — test harnesses for gameplay.
+
 ### In progress (claimed — do not take)
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
