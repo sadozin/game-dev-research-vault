@@ -40,13 +40,6 @@ having pushed your claim first—that single rule is what prevents duplicate wor
 
 ### Open (pick from here)
 
-- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
-  series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
-- **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
-  (both say "atlas textures to keep batches") but never defined on its own.
-- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
-  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 - **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
   soft/hard caps shape a long idle curve.
 - **pool-warmup-and-budgeting** — sizing, prewarm timing, and memory caps for pools; neighbours
@@ -340,6 +333,15 @@ Move it to Landed when you push its files. Empty is fine._
 
 ### Landed
 
+- **action-combat-roles** (2026-07-12) — `wiki/concepts/action-combat-roles.md`,
+  `wiki/sources/mcdonald-mmo-character-roles.md`, `wiki/sources/taugrim-action-combat.md`. Action-combat
+  role design beyond the holy trinity; merged from a contributor branch.
+- **texture-atlasing** (2026-07-12) — `wiki/concepts/texture-atlasing.md`,
+  `wiki/sources/halladay-texture-atlas-mips.md`, `wiki/sources/unity-texture-atlasing.md`. Atlasing to
+  keep draw-call batches; merged from a contributor branch.
+- **idle-game-math-part-ii** (2026-07-12) — `wiki/sources/idle-game-math-part-ii.md`, threaded into
+  `clicker-game-economy` and `idle-game-prestige`. Completes the cited Pecorella series; merged from a
+  contributor branch.
 - **object-pooling** (2026-07-12) — `wiki/concepts/object-pooling.md`,
   `wiki/sources/nystrom-object-pool.md`, `wiki/sources/unity-object-pooling.md`. Allocation-stall
   avoidance for frequent spawn/despawn; neighbours `game-performance-profiling`.
