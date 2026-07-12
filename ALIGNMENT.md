@@ -22,15 +22,18 @@ Keep this board current—it is the point of coordination between contributors.
 
 - **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
   series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
+  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.
+  Claimed by open PR #1 on `contrib/idle-game-math-part-ii`.)
 - **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
-  (both say "atlas textures to keep batches") but never defined on its own.
-- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
-  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
+  (both say "atlas textures to keep batches") but never defined on its own. (Claimed by open PR #2
+  on `contrib/texture-atlasing`.)
 - **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
   soft/hard caps shape a long idle curve.
 - **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
   frequently spawned entities.
+- **telegraph-encounter-readability** — when ground telegraphs help vs spam; neighbours
+  `action-combat-roles` (roles assume readable cues; this would cover pattern design, colour/timing
+  language, and accessibility).
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -114,6 +117,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 ### Landed
 
+- **action-combat-roles** (2026-07-12) — `wiki/concepts/action-combat-roles.md`,
+  `wiki/sources/mcdonald-mmo-character-roles.md`, `wiki/sources/taugrim-action-combat.md`. Neighbour
+  to `mmo-combat-roles`: protection/peel/sustain without sticky taunt; telegraphs and aim.
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
   `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
   batching concept the optimization cluster kept implying but never defined.
