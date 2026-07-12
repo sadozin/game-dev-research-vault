@@ -147,28 +147,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **ambient-occlusion-maps** — claimed 2026-07-11 by Codex
-- **screen-space-reflections** — claimed 2026-07-11 by Codex
-- **volumetric-fog-and-lighting** — claimed 2026-07-11 by Codex
-- **decals-and-projection** — claimed 2026-07-11 by Codex
-- **vertex-animation-textures** — claimed 2026-07-11 by Codex
-- **impostors-and-billboards** — claimed 2026-07-11 by Codex
-- **skinned-mesh-performance** — claimed 2026-07-11 by Codex
-- **dedicated-server-scaling** — claimed 2026-07-11 by Codex
-- **cloud-save-and-leaderboards** — claimed 2026-07-11 by Codex
-- **player-auth-and-accounts** — claimed 2026-07-11 by Codex
-- **crowd-avoidance-rvo** — claimed 2026-07-11 by Codex
-- **damage-and-hitbox-systems** — claimed 2026-07-11 by Codex
-- **ragdoll-and-physics-animation** — claimed 2026-07-11 by Codex
-- **procedural-animation** — claimed 2026-07-11 by Codex
-- **tweening-and-easing** — claimed 2026-07-11 by Codex
-- **event-bus-messaging** — claimed 2026-07-11 by Codex
-- **game-loop-and-update-order** — claimed 2026-07-11 by Codex
-- **blender-hard-surface-modeling** — claimed 2026-07-11 by Codex
-- **blender-geometry-nodes** — claimed 2026-07-11 by Codex
-- **blender-modifiers-for-games** — claimed 2026-07-11 by Codex
-
 ### Landed
+
+- **ambient-occlusion-maps**, **screen-space-reflections**, **volumetric-fog-and-lighting**, **decals-and-projection** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/rendering-effects-and-animation.md`.
+- **vertex-animation-textures**, **impostors-and-billboards**, **skinned-mesh-performance** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/rendering-effects-and-animation.md`.
+- **dedicated-server-scaling**, **cloud-save-and-leaderboards**, **player-auth-and-accounts** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/backend-services-and-dedicated-servers.md`.
+- **crowd-avoidance-rvo**, **damage-and-hitbox-systems**, **ragdoll-and-physics-animation**, **procedural-animation**, **tweening-and-easing**, **event-bus-messaging**, **game-loop-and-update-order** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/gameplay-motion-and-architecture.md`.
+- **blender-hard-surface-modeling**, **blender-geometry-nodes**, **blender-modifiers-for-games** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/blender-modeling-geometry-modifiers.md`.
 
 - **unity-controller-vs-rigidbody**, **unity-2d-tilemap-and-sprites**, **unity-animation-rigging**, **unity-audio-mixer** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-movement-content-and-audio.md`.
 - **unity-localization-package**, **unity-il2cpp-and-aot**, **unity-webgl-limits**, **unity-mobile-optimization**, **unity-crash-and-log-diagnostics** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-platform-localization-diagnostics.md`.
