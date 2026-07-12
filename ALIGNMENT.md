@@ -336,12 +336,14 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **client-prediction-and-reconciliation** — claimed 2026-07-11 by Codex
-
 - **texture-atlasing** — claimed 2026-07-11 by sadozin (Claude)
 
 ### Landed
 
+- **client-prediction-and-reconciliation** (2026-07-11) — `wiki/concepts/client-prediction-and-reconciliation.md`,
+  `wiki/sources/valve-source-multiplayer-networking.md`, `wiki/sources/gaffer-client-prediction.md`.
+  Covers sequence-numbered input prediction, authoritative correction, rewind/replay, and the
+  tradeoff between responsive local movement and shared simulation rules.
 - **prestige-currency-soft-caps** (2026-07-12) — `wiki/concepts/prestige-currency-soft-caps.md`,
   `wiki/sources/diminishing-returns-soft-caps.md` (plus cites `idle-game-math-part-iii`). Soft/hard
   caps and stacked meta currencies deepening `idle-game-prestige`.
