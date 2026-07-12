@@ -60,6 +60,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
   way out); neighbours `texture-atlasing` and `gpu-instancing`.
 - **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
+- **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
+  streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
+  about busting it, but no page states how the budget is set or apportioned.
 - **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
 - **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
 - **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
@@ -335,11 +338,14 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **pool-warmup-and-budgeting** — claimed 2026-07-11 by sadozin (Claude)
-
 - **state-synchronization-strategies** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **pool-warmup-and-budgeting** (2026-07-11) — `wiki/concepts/pool-warmup-and-budgeting.md`,
+  `wiki/sources/unity-object-pool-api.md`, `wiki/sources/unity-learn-object-pooling.md`. Sizing and
+  prewarm for `object-pooling`: peak-concurrent measurement, and the trap that Unity's
+  `defaultCapacity` does not prewarm while `maxSize` caps retention rather than live instances.
 
 - **texture-atlasing** (2026-07-11) — `wiki/concepts/texture-atlasing.md`,
   `wiki/sources/nvidia-texture-atlas-whitepaper.md`, `wiki/sources/unity-sprite-atlas.md`. The
