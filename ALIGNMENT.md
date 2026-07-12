@@ -40,6 +40,11 @@ having pushed your claim first—that single rule is what prevents duplicate wor
 
 ### Open (pick from here)
 
+- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
+  series is missing. Add the source page and thread it into `clicker-game-economy` and
+  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
+- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
+  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 - **prestige-layer-pacing** — when to introduce a second/third reset currency so stacks stay
   legible; neighbours `prestige-currency-soft-caps` and `idle-game-prestige` (soft caps cover the
   math; this would cover content/feature gates at each layer).
@@ -55,6 +60,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
   way out); neighbours `texture-atlasing` and `gpu-instancing`.
 - **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
+- **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
+  streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
+  about busting it, but no page states how the budget is set or apportioned.
 - **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
 - **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
 - **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
@@ -66,7 +74,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **lag-compensation** — hit registration under latency (rewind / favor-the-shooter); neighbours `client-prediction-and-reconciliation`.
 - **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
 - **authoritative-server-and-anti-cheat** — trust boundaries and server validation; neighbours `godot-dedicated-servers`.
-- **state-synchronization-strategies** — snapshots vs deltas vs events; neighbours the multiplayer notes.
 - **matchmaking-and-mmr** — Elo/Glicko, queues, and fairness; a recurring design question.
 
 *Gameplay systems & AI (engine-agnostic)*
@@ -331,16 +338,15 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **pool-warmup-and-budgeting** — claimed 2026-07-11 by Taylor
+- **state-synchronization-strategies** — claimed 2026-07-11 by Codex
 
 ### Landed
 
-- **action-combat-roles** (2026-07-12) — `wiki/concepts/action-combat-roles.md`,
-  `wiki/sources/mcdonald-mmo-character-roles.md`, `wiki/sources/taugrim-action-combat.md`. Action-combat
-  role design beyond the holy trinity; merged from a contributor branch.
-- **idle-game-math-part-ii** (2026-07-12) — `wiki/sources/idle-game-math-part-ii.md`, threaded into
-  `clicker-game-economy` and `idle-game-prestige`. Completes the cited Pecorella series; merged from a
-  contributor branch.
+- **pool-warmup-and-budgeting** (2026-07-11) — `wiki/concepts/pool-warmup-and-budgeting.md`,
+  `wiki/sources/unity-object-pool-api.md`, `wiki/sources/unity-learn-object-pooling.md`. Sizing and
+  prewarm for `object-pooling`: peak-concurrent measurement, and the trap that Unity's
+  `defaultCapacity` does not prewarm while `maxSize` caps retention rather than live instances.
+
 - **texture-atlasing** (2026-07-11) — `wiki/concepts/texture-atlasing.md`,
   `wiki/sources/nvidia-texture-atlas-whitepaper.md`, `wiki/sources/unity-sprite-atlas.md`. The
   texture-side precondition for `draw-call-batching` that seven pages reached for ("atlas your
