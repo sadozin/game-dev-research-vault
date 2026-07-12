@@ -287,7 +287,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
 - **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
 - **texture-channel-packing** — claimed 2026-07-11 by Taylor
 - **idle-game-monetization** — claimed 2026-07-11 by Taylor
@@ -306,6 +305,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **shadow-map-budgeting** (2026-07-11) — `wiki/concepts/shadow-map-budgeting.md`,
+  `wiki/sources/unreal-shadowing.md`, `wiki/sources/unreal-virtual-shadow-maps.md`. Cascade and
+  tiled-shadow budgets, with resolution, distance, caster, and cache-invalidation tradeoffs.
 
 - **overdraw-and-transparency-cost** (2026-07-11) — `wiki/concepts/overdraw-and-transparency-cost.md`,
   `wiki/sources/unreal-transparency-overdraw.md`, `wiki/sources/unreal-shader-complexity-view.md`.
