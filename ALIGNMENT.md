@@ -159,14 +159,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
-- **pbr-material-workflow** — the metallic/roughness PBR contract across engines.
-- **normal-mapping-explained** — tangent-space normals and common artifacts.
 - **specular-vs-metallic-workflow** — the two PBR conventions and conversions.
 - **ambient-occlusion-maps** — AO baking and how engines consume it.
-- **linear-vs-srgb-color-space** — color-space correctness; a constant source of bugs.
 - **hdr-and-tonemapping** — the HDR pipeline and tonemappers.
-- **anti-aliasing-techniques** — MSAA/TAA/FXAA/SMAA tradeoffs.
-- **deferred-vs-forward-rendering** — rendering-path tradeoffs.
 - **screen-space-reflections** — SSR cost and artifacts.
 - **volumetric-fog-and-lighting** — volumetrics cost vs quality.
 - **decals-and-projection** — decal systems and their performance.
@@ -177,9 +172,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Netcode & backend (high token burn)*
 
-- **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
-- **entity-interpolation-extrapolation** — smoothing remote entities.
-- **nat-traversal-and-relays** — connectivity behind NATs.
 - **lobby-and-session-management** — creating and joining sessions.
 - **dedicated-server-scaling** — fleet and orchestration for game servers.
 - **cloud-save-and-leaderboards** — backend persistence basics.
@@ -187,16 +179,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Gameplay systems & AI*
 
-- **utility-ai** — scoring-based decision making.
 - **goap-planning** — goal-oriented action planning.
-- **flow-field-pathfinding** — many-agent pathing.
 - **crowd-avoidance-rvo** — local avoidance for crowds.
-- **inventory-system-design** — grids, stacks, weight, and UI binding.
-- **dialogue-system-design** — data-driven dialogue and branching.
-- **ability-and-cooldown-systems** — skills, cooldowns, and resources.
-- **status-effects-and-buffs** — stacking, duration, and ticks.
 - **damage-and-hitbox-systems** — hitboxes, hurtboxes, and the damage pipeline.
-- **inverse-kinematics** — IK for feet, hands, and aim.
 - **ragdoll-and-physics-animation** — ragdoll blending and recovery.
 - **procedural-animation** — spring and procedural motion.
 - **root-motion-vs-inplace** — animation-driven vs code-driven movement.
@@ -218,9 +203,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design, economy, live-ops*
 
-- **battle-pass-design** — track, tier, and reward structure.
 - **season-and-liveops-cadence** — content cadence and events.
-- **ftue-onboarding-design** — first-time user experience.
 - **tutorial-design-patterns** — teaching without walls of text.
 - **reward-schedules-variable-ratio** — reinforcement scheduling.
 - **dual-currency-design** — soft vs hard currency balance.
@@ -233,16 +216,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **auction-house-design** — player trading economies.
 - **loot-table-design** — weighted drops and pity.
 - **game-feel-and-juice** — screenshake, hitstop, and feedback.
-- **accessibility-in-games** — colorblind, remap, and subtitle standards.
 - **difficulty-dynamic-adjustment** — DDA approaches and pitfalls.
 
 *Procedural generation*
 
-- **wave-function-collapse** — constraint-based tile/level generation.
 - **terrain-heightmap-generation** — heightmaps and erosion.
 - **biome-and-climate-generation** — biome distribution.
 - **cellular-automata-caves** — cave generation.
-- **poisson-disk-sampling** — even random placement.
 - **procedural-mesh-generation** — building meshes at runtime.
 
 *Blender / assets / DCC*
@@ -300,6 +280,26 @@ Move it to Landed when you push its files. Empty is fine._
 - **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
+- **pbr-material-workflow** — claimed 2026-07-11 by Codex
+- **normal-mapping-explained** — claimed 2026-07-11 by Codex
+- **linear-vs-srgb-color-space** — claimed 2026-07-11 by Codex
+- **anti-aliasing-techniques** — claimed 2026-07-11 by Codex
+- **deferred-vs-forward-rendering** — claimed 2026-07-11 by Codex
+- **transport-udp-tcp-webrtc** — claimed 2026-07-11 by Codex
+- **entity-interpolation-extrapolation** — claimed 2026-07-11 by Codex
+- **nat-traversal-and-relays** — claimed 2026-07-11 by Codex
+- **utility-ai** — claimed 2026-07-11 by Codex
+- **flow-field-pathfinding** — claimed 2026-07-11 by Codex
+- **inventory-system-design** — claimed 2026-07-11 by Codex
+- **dialogue-system-design** — claimed 2026-07-11 by Codex
+- **ability-and-cooldown-systems** — claimed 2026-07-11 by Codex
+- **status-effects-and-buffs** — claimed 2026-07-11 by Codex
+- **inverse-kinematics** — claimed 2026-07-11 by Codex
+- **battle-pass-design** — claimed 2026-07-11 by Codex
+- **ftue-onboarding-design** — claimed 2026-07-11 by Codex
+- **accessibility-in-games** — claimed 2026-07-11 by Codex
+- **wave-function-collapse** — claimed 2026-07-11 by Codex
+- **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
 
