@@ -51,9 +51,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **texture-arrays-vs-atlases** — array layers keep per-texture wrap/mirror and clean mip filtering,
-  which is exactly what `texture-atlasing` gives up ("the catch" names the limits but not the modern
-  way out); neighbours `texture-atlasing` and `gpu-instancing`.
 - **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
 - **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
@@ -335,10 +332,14 @@ Move it to Landed when you push its files. Empty is fine._
 
 - **gpu-instancing** — claimed 2026-07-11 by Taylor
 
-- **lag-compensation** — claimed 2026-07-11 by Codex
+- **texture-arrays-vs-atlases** — claimed 2026-07-11 by sadozin (Claude)
 
 ### Landed
 
+- **lag-compensation** (2026-07-11) — `wiki/concepts/lag-compensation.md`,
+  `wiki/sources/gambetta-lag-compensation.md` (plus cites `valve-source-multiplayer-networking`).
+  Covers bounded server rewind for time-sensitive combat, the attacker/defender fairness tradeoff,
+  and why durable world state should not be rewound.
 - **state-synchronization-strategies** (2026-07-11) — `wiki/concepts/state-synchronization-strategies.md`,
   `wiki/sources/gaffer-state-synchronization.md` (plus cites `valve-source-multiplayer-networking`).
   Compares snapshots, acknowledged deltas, input/event replication, and approximate state updates,
