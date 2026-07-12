@@ -51,6 +51,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
+- **bindless-textures** — descriptor-indexed textures remove the "one bind per material" premise that
+  `texture-atlasing` and `texture-arrays-vs-atlases` both exist to work around; the third answer to
+  the same problem, and the only one with no size or uniformity constraint. Neighbours both.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
 - **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
   streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
@@ -329,10 +332,14 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **texture-arrays-vs-atlases** — claimed 2026-07-11 by sadozin (Claude)
 - **texture-compression-formats** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **texture-arrays-vs-atlases** (2026-07-11) — `wiki/concepts/texture-arrays-vs-atlases.md`,
+  `wiki/sources/unity-texture-arrays.md`, `wiki/sources/d3d11-resource-limits.md`. Answers the limits
+  `texture-atlasing` names but cannot solve (wrap/mirror, mip bleed); trades the atlas's mixed-size
+  packing for a rigid same-size grid, and swaps a 16384-texel page ceiling for 2048 array slices.
 
 - **gpu-instancing** (2026-07-11) — `wiki/concepts/gpu-instancing.md`,
   `wiki/sources/unity-gpu-instancing.md`, `wiki/sources/microsoft-draw-instanced.md`. Repeated-mesh
