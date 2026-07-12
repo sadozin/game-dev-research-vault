@@ -179,7 +179,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Netcode & backend (high token burn)*
 
 - **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
-- **reliable-udp-and-ordering** — reliability layers over UDP.
 - **delta-compression-netcode** — sending diffs instead of full state.
 - **snapshot-interpolation** — buffering and interpolating remote state.
 - **entity-interpolation-extrapolation** — smoothing remote entities.
