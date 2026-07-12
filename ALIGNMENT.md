@@ -51,7 +51,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
 - **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
   streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
@@ -331,6 +330,7 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **texture-arrays-vs-atlases** — claimed 2026-07-11 by sadozin (Claude)
+- **texture-compression-formats** — claimed 2026-07-11 by Taylor
 
 ### Landed
 
