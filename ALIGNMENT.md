@@ -287,7 +287,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
 - **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
 - **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
 - **texture-channel-packing** — claimed 2026-07-11 by Taylor
@@ -307,6 +306,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **overdraw-and-transparency-cost** (2026-07-11) — `wiki/concepts/overdraw-and-transparency-cost.md`,
+  `wiki/sources/unreal-transparency-overdraw.md`, `wiki/sources/unreal-shader-complexity-view.md`.
+  Screen-space cost of layered transparency, with coverage, shader, masking, and diagnostic tradeoffs.
 
 - **virtual-texturing** (2026-07-11) — `wiki/concepts/virtual-texturing.md`,
   `wiki/sources/unreal-virtual-texturing.md`, `wiki/sources/unity-streaming-virtual-texturing.md`.
