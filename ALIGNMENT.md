@@ -276,7 +276,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-netcode-for-gameobjects** — claimed 2026-07-11 by Taylor
 - **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
@@ -302,6 +301,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **unity-netcode-for-gameobjects** (2026-07-11) — `wiki/concepts/unity-netcode-for-gameobjects.md`,
+  `wiki/sources/unity-netcode-for-gameobjects-overview.md`, `wiki/sources/unity-netcode-networkobjects.md`.
+  GameObject-level replication, authority, object lifecycle, bandwidth, and transport boundaries.
 
 - **unity-scriptable-objects** (2026-07-11) — `wiki/concepts/unity-scriptable-objects.md`,
   `wiki/sources/unity-scriptableobject-manual.md`, `wiki/sources/unity-scriptableobject-api.md`.
