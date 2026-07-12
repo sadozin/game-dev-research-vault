@@ -217,7 +217,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **blender-to-engine-scale-and-axis** — claimed 2026-07-11 by Taylor
 - **mcp-editor-tool-design** — claimed 2026-07-11 by Taylor
 - **reviewing-ai-generated-assets** — claimed 2026-07-11 by Taylor
 - **unity-mcp-scene-authoring** — claimed 2026-07-11 by Taylor
@@ -263,6 +262,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **blender-to-engine-scale-and-axis** (2026-07-11) — `wiki/concepts/blender-to-engine-scale-and-axis.md`,
+  `wiki/sources/unreal-blender-fbx-import-scale.md`, `wiki/sources/blender-scene-units-and-transforms.md`.
+  Units, transforms, axis conversion, FBX settings, and reimport verification.
 
 - **vrchat-avatar-shaders** (2026-07-11) — `wiki/concepts/vrchat-avatar-shaders.md`,
   `wiki/sources/vrchat-android-content-optimization.md`, `wiki/sources/vrchat-avatar-optimization-tips.md`.
