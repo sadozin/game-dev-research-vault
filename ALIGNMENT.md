@@ -217,7 +217,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-mcp-scene-authoring** — claimed 2026-07-11 by Taylor
 - **unity-mcp-prefab-workflow** — claimed 2026-07-11 by Taylor
 - **unity-mcp-material-setup** — claimed 2026-07-11 by Taylor
 - **unity-mcp-test-and-playmode** — claimed 2026-07-11 by Taylor
@@ -260,6 +259,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **unity-mcp-scene-authoring** (2026-07-11) — `wiki/concepts/unity-mcp-scene-authoring.md`,
+  `wiki/sources/mcp-tools-scene-authoring-safety.md`, `wiki/sources/unity-editor-scene-saving.md`.
+  Structured scene edits, stable targets, approvals, checkpoints, and save boundaries.
 
 - **reviewing-ai-generated-assets** (2026-07-11) — `wiki/concepts/reviewing-ai-generated-assets.md`,
   `wiki/sources/unity-importing-assets.md`, `wiki/sources/blender-asset-browser-and-linked-data.md`.
