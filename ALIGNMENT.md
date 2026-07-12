@@ -217,7 +217,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **blender-mcp-material-nodes** — claimed 2026-07-11 by Taylor
 - **blender-mcp-bake-and-uv** — claimed 2026-07-11 by Taylor
 
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
@@ -253,6 +252,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **blender-mcp-material-nodes** (2026-07-11) — `wiki/concepts/blender-mcp-material-nodes.md`,
+  `wiki/sources/blender-shader-editor-and-nodes.md`, `wiki/sources/mcp-tools-blender-material-safety.md`.
+  Typed node graphs, engine context, output validation, and scoped material edits.
 
 - **blender-mcp-modeling-workflow** (2026-07-11) — `wiki/concepts/blender-mcp-modeling-workflow.md`,
   `wiki/sources/blender-bmesh-api.md`, `wiki/sources/mcp-tools-blender-modeling-safety.md`.
