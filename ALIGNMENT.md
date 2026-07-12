@@ -45,9 +45,6 @@ having pushed your claim first—that single rule is what prevents duplicate wor
   `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
 - **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
-- **pool-warmup-and-budgeting** — sizing, prewarm timing, and memory caps for pools; neighbours
-  `object-pooling` (concept covers the pattern; this would cover measuring peak concurrent use and
-  load-time prewarm without hitching).
 - **prestige-layer-pacing** — when to introduce a second/third reset currency so stacks stay
   legible; neighbours `prestige-currency-soft-caps` and `idle-game-prestige` (soft caps cover the
   math; this would cover content/feature gates at each layer).
@@ -338,6 +335,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **pool-warmup-and-budgeting** — claimed 2026-07-11 by sadozin (Claude)
 
 ### Landed
 
