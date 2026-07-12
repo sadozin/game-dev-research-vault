@@ -296,7 +296,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **economy-sinks-and-faucets** — claimed 2026-07-11 by Taylor
 - **crafting-system-design** — claimed 2026-07-11 by Taylor
 - **quest-and-objective-systems** — claimed 2026-07-11 by Taylor
 - **unity-input-system** — claimed 2026-07-11 by Taylor
@@ -310,6 +309,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **snapshot-interpolation** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **economy-sinks-and-faucets** (2026-07-11) — `wiki/concepts/economy-sinks-and-faucets.md`,
+  `wiki/sources/ludgate-mmo-faucets.md`, `wiki/sources/virtual-currency-endowments-experiment.md`.
+  Currency flow, inflation, cohort effects, and useful-versus-punitive sink design.
 
 - **mmo-itemization-and-loot** (2026-07-11) — `wiki/concepts/mmo-itemization-and-loot.md`,
   `wiki/sources/unreal-data-driven-items.md`, `wiki/sources/defining-loot-tables-arpg.md`. Data-driven
