@@ -52,12 +52,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Gameplay systems & AI (engine-agnostic)*
 
-- **animation-compression** — clip memory and quality tradeoffs; the animation cluster
-  (`character-animation-graphs`, `root-motion-vs-inplace`) never states what a clip costs to store.
-- **desync-detection-and-recovery** — state checksums, divergence logging, and what to do after a
-  desync; `deterministic-lockstep` says lockstep needs this but stops at naming it.
-- **network-relevancy-and-interest-management** — engine-agnostic view of what `unreal-replication`
-  covers as relevancy/priority/dormancy: how large worlds decide who hears about what.
 
 
 *Procedural generation*
@@ -93,12 +87,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unity — engine depth & pain points*
 
-- **unity-execution-order** — Awake/OnEnable/Start/Update/FixedUpdate ordering and gotchas.
-- **unity-coroutines-and-async** — coroutines vs async/await vs UniTask; recurring confusion.
-- **unity-serialization-rules** — what serializes, references, and ScriptableObject data pitfalls.
 - **unity-editor-scripting** — custom inspectors, property drawers, EditorWindow.
-- **unity-assembly-definitions** — asmdef boundaries and compile speed.
-- **unity-render-pipelines-urp-hdrp** — choosing and converting Built-in vs URP vs HDRP.
 - **unity-shader-graph** — node-based shaders and their limits.
 - **unity-vfx-graph-vs-particles** — GPU VFX Graph vs the built-in particle system.
 - **unity-timeline-and-cinemachine** — cutscenes and procedural cameras.
@@ -108,7 +97,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **unity-animation-rigging** — runtime IK and constraints package.
 - **unity-audio-mixer** — mixer groups, snapshots, and ducking.
 - **unity-localization-package** — string tables and locale switching.
-- **unity-memory-profiler** — capturing and reading memory snapshots.
 - **unity-il2cpp-and-aot** — IL2CPP builds, AOT limits, and code stripping.
 - **unity-webgl-limits** — WebGL build constraints and threading/memory gotchas.
 - **unity-mobile-optimization** — battery, thermal, and draw-call budgets on mobile.
@@ -116,11 +104,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unreal — engine depth & pain points*
 
-- **unreal-actors-and-components** — the actor/component model and lifecycle.
 - **unreal-blueprint-communication** — interfaces, event dispatchers, and casting.
-- **unreal-enhanced-input** — setting up the Enhanced Input system.
 - **unreal-anim-montages-and-notifies** — montages, notifies, and anim slots.
-- **unreal-material-instances** — parameterized materials and MID performance.
 - **unreal-niagara-vfx** — Niagara systems and emitters.
 - **unreal-landscape-and-foliage** — terrain and foliage tooling.
 - **unreal-behavior-trees-and-eqs** — AI behavior trees and environment queries.
@@ -128,7 +113,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **unreal-chaos-physics** — Chaos physics and destruction.
 - **unreal-umg-ui** — UMG widget UI workflow.
 - **unreal-data-assets-and-datatables** — data-driven design in Unreal.
-- **unreal-save-game** — SaveGame objects and serialization.
 - **unreal-online-subsystem** — sessions, friends, and platform services.
 - **unreal-packaging-and-cook** — cooking content and packaging builds.
 - **unreal-insights-profiling** — Unreal Insights traces and analysis.
@@ -144,27 +128,22 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
-- **specular-vs-metallic-workflow** — the two PBR conventions and conversions.
 - **ambient-occlusion-maps** — AO baking and how engines consume it.
-- **hdr-and-tonemapping** — the HDR pipeline and tonemappers.
 - **screen-space-reflections** — SSR cost and artifacts.
 - **volumetric-fog-and-lighting** — volumetrics cost vs quality.
 - **decals-and-projection** — decal systems and their performance.
-- **post-processing-stack** — bloom/tonemap/vignette pipeline and cost.
 - **vertex-animation-textures** — baking animation into textures for perf.
 - **impostors-and-billboards** — far-LOD impostor techniques.
 - **skinned-mesh-performance** — GPU skinning cost and bone limits.
 
 *Netcode & backend (high token burn)*
 
-- **lobby-and-session-management** — creating and joining sessions.
 - **dedicated-server-scaling** — fleet and orchestration for game servers.
 - **cloud-save-and-leaderboards** — backend persistence basics.
 - **player-auth-and-accounts** — identity and auth for games.
 
 *Gameplay systems & AI*
 
-- **goap-planning** — goal-oriented action planning.
 - **crowd-avoidance-rvo** — local avoidance for crowds.
 - **damage-and-hitbox-systems** — hitboxes, hurtboxes, and the damage pipeline.
 - **ragdoll-and-physics-animation** — ragdoll blending and recovery.
@@ -177,7 +156,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design, economy, live-ops*
 
-- **season-and-liveops-cadence** — content cadence and events.
 - **tutorial-design-patterns** — teaching without walls of text.
 - **reward-schedules-variable-ratio** — reinforcement scheduling.
 - **dual-currency-design** — soft vs hard currency balance.
@@ -194,7 +172,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Procedural generation*
 
-- **terrain-heightmap-generation** — heightmaps and erosion.
 - **biome-and-climate-generation** — biome distribution.
 - **cellular-automata-caves** — cave generation.
 - **procedural-mesh-generation** — building meshes at runtime.
@@ -288,6 +265,26 @@ Move it to Landed when you push its files. Empty is fine._
 - **accessibility-in-games** — claimed 2026-07-11 by Codex
 - **wave-function-collapse** — claimed 2026-07-11 by Codex
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
+- **animation-compression** — claimed 2026-07-11 by Codex
+- **desync-detection-and-recovery** — claimed 2026-07-11 by Codex
+- **network-relevancy-and-interest-management** — claimed 2026-07-11 by Codex
+- **unity-execution-order** — claimed 2026-07-11 by Codex
+- **unity-coroutines-and-async** — claimed 2026-07-11 by Codex
+- **unity-serialization-rules** — claimed 2026-07-11 by Codex
+- **unity-assembly-definitions** — claimed 2026-07-11 by Codex
+- **unity-render-pipelines-urp-hdrp** — claimed 2026-07-11 by Codex
+- **unity-memory-profiler** — claimed 2026-07-11 by Codex
+- **unreal-actors-and-components** — claimed 2026-07-11 by Codex
+- **unreal-enhanced-input** — claimed 2026-07-11 by Codex
+- **unreal-material-instances** — claimed 2026-07-11 by Codex
+- **unreal-save-game** — claimed 2026-07-11 by Codex
+- **specular-vs-metallic-workflow** — claimed 2026-07-11 by Codex
+- **hdr-and-tonemapping** — claimed 2026-07-11 by Codex
+- **post-processing-stack** — claimed 2026-07-11 by Codex
+- **lobby-and-session-management** — claimed 2026-07-11 by Codex
+- **goap-planning** — claimed 2026-07-11 by Codex
+- **season-and-liveops-cadence** — claimed 2026-07-11 by Codex
+- **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
 
 ### Landed
 
