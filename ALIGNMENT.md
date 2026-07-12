@@ -178,7 +178,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Netcode & backend (high token burn)*
 
 - **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
-- **snapshot-interpolation** — buffering and interpolating remote state.
 - **entity-interpolation-extrapolation** — smoothing remote entities.
 - **nat-traversal-and-relays** — connectivity behind NATs.
 - **lobby-and-session-management** — creating and joining sessions.
@@ -203,8 +202,19 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **root-motion-vs-inplace** — animation-driven vs code-driven movement.
 - **tweening-and-easing** — easing curves and tween systems.
 - **event-bus-messaging** — decoupled gameplay messaging patterns.
-- **game-loop-and-update-order** — fixed vs variable update and determinism.
-- **replay-and-recording-systems** — deterministic replays and recordings.
+- **game-loop-and-update-order** — the *engine-specific* half only: `fixed-timestep-and-determinism`
+  now covers the fixed-vs-variable loop and the determinism limits, so what is left is per-engine
+  callback ordering (overlaps `unity-execution-order`; consider merging the two).
+- **replay-and-recording-systems** — deterministic replays and recordings; its precondition and the
+  bit-exactness caveats now live in `fixed-timestep-and-determinism`.
+- **deterministic-lockstep** — the netcode model a fixed step makes possible (send inputs, not state).
+  The netcode cluster documents only the non-deterministic side — `state-synchronization-strategies`,
+  `client-prediction-and-reconciliation`, `delta-compression-netcode` — and
+  `fixed-timestep-and-determinism` now states the float caveats but stops short of the protocol:
+  turn delay, input rollback, desync detection and recovery.
+- **continuous-collision-detection** — the other half of the tunnelling story: `game-collision-design`
+  and `fixed-timestep-and-determinism` both name tunnelling as the cost of a coarse step, but no page
+  covers sweeps, speculative contacts, and when CCD is cheaper than shrinking the timestep.
 
 *Game design, economy, live-ops*
 
@@ -297,6 +307,8 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
+- **snapshot-interpolation** — claimed 2026-07-11 by Codex
+
 ### Landed
 
 - **mmo-itemization-and-loot** (2026-07-11) — `wiki/concepts/mmo-itemization-and-loot.md`,
@@ -310,6 +322,22 @@ Move it to Landed when you push its files. Empty is fine._
 - **player-retention-loops** (2026-07-11) — `wiki/concepts/player-retention-loops.md`,
   `wiki/sources/unity-retention-metrics.md`, `wiki/sources/frommel-mandryk-daily-quests.md`. Cadence,
   cohort metrics, and the retention-versus-obligation tradeoff.
+
+- **fixed-timestep-and-determinism** (2026-07-11) — `wiki/concepts/fixed-timestep-and-determinism.md`,
+  `wiki/sources/gaffer-fix-your-timestep.md`, `wiki/sources/unity-fixed-timestep.md`,
+  `wiki/sources/gaffer-floating-point-determinism.md`. The accumulator loop and render-state
+  interpolation that give `frame-pacing` a stable simulation underneath it; the frame-time clamp that
+  stops the spiral of death, and the price it quietly charges (past `Time.maximumDeltaTime` Unity
+  simply discards the overflow, so game time falls behind real time); and why a fixed step buys
+  repeatability but not the cross-platform bit-exactness that lockstep needs.
+
+- **action-combat-roles** (2026-07-11) — `wiki/concepts/action-combat-roles.md` and its sources
+  (commit f5552fb). *Entry reconstructed 2026-07-11:* the files are on `main`, but a later board edit
+  dropped the item from every section, so the board went on advertising it as Open.
+
+- **reliable-udp-and-ordering** (2026-07-11) — `wiki/concepts/reliable-udp-and-ordering.md`,
+  `wiki/sources/gaffer-reliability-over-udp.md`. *Entry reconstructed 2026-07-11:* same cause — the
+  concept is on `main`, but its claim and Landed entry were lost in a board rewrite.
 
 - **idle-game-monetization** (2026-07-11) — `wiki/concepts/idle-game-monetization.md`,
   `wiki/sources/google-play-payments-and-ads.md`, `wiki/sources/apple-app-review-guidelines-monetization.md`.
