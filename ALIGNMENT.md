@@ -296,7 +296,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-addressables** — claimed 2026-07-11 by Taylor
 - **unity-scriptable-objects** — claimed 2026-07-11 by Taylor
 - **unity-netcode-for-gameobjects** — claimed 2026-07-11 by Taylor
 - **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
@@ -304,6 +303,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **unity-addressables** (2026-07-11) — `wiki/concepts/unity-addressables.md`,
+  `wiki/sources/unity-addressables-manual.md`, `wiki/sources/unity-addressables-catalogs.md`. Async
+  address-based loading, dependency lifetimes, catalogs, cache updates, and bundle hazards.
 
 - **quest-and-objective-systems** (2026-07-11) — `wiki/concepts/quest-and-objective-systems.md`,
   `wiki/sources/fortnite-quests-persistent-data.md`, `wiki/sources/quest-definition-context-purpose.md`.
