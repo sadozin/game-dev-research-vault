@@ -144,11 +144,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design, economy, live-ops*
 
-- **telemetry-and-kpis** — the metrics that matter and how to log them.
-- **churn-and-winback** — retention analytics and re-engagement.
-- **leaderboard-design** — ranking, seasons, and anti-abuse.
-- **guild-and-social-systems** — social features and retention.
-- **auction-house-design** — player trading economies.
 - **loot-table-design** — weighted drops and pity.
 - **game-feel-and-juice** — screenshake, hitstop, and feedback.
 - **difficulty-dynamic-adjustment** — DDA approaches and pitfalls.
@@ -206,6 +201,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **telemetry-and-kpis** — claimed 2026-07-11 by Taylor
+- **churn-and-winback** — claimed 2026-07-11 by Taylor
+- **leaderboard-design** — claimed 2026-07-11 by Taylor
+- **guild-and-social-systems** — claimed 2026-07-11 by Taylor
+- **auction-house-design** — claimed 2026-07-11 by Taylor
 
 
 
