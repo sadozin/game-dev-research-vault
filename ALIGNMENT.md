@@ -64,35 +64,15 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unreal depth (under-covered vs Godot)*
 
-- **unreal-gameplay-ability-system** — GAS structure and when to use it; no concept.
-- **unreal-world-partition** — large-world streaming; no concept.
-- **unreal-blueprint-vs-cpp** — performance and architecture tradeoffs; compiles the existing `unreal-blueprint-cpp` source.
 
 *Blender / assets / VRChat depth*
 
-- **blender-uv-unwrapping** — seams, packing, and texel density for games; neighbours `blender-game-asset-pipeline`.
-- **blender-retopology** — high-to-low-poly for game meshes; neighbours `texture-baking-for-games`.
-- **gltf-vs-fbx-tradeoffs** — choosing an interchange format; neighbours `blender-gltf-export`.
-- **blendshapes-for-avatars** — shape keys for faces and visemes; neighbours `vrchat-humanoid-rigging`.
-- **vrchat-avatar-shaders** — lilToon/Poiyomi cost and setup; neighbours `vrchat-avatar-optimization`.
-- **blender-to-engine-scale-and-axis** — unit and axis gotchas on import; neighbours `blender-game-asset-pipeline`.
 
 *AI-assisted gamedev / MCP*
 
-- **mcp-editor-tool-design** — safe, high-level tools over raw code execution; neighbours `editor-mcp-safety`.
-- **reviewing-ai-generated-assets** — validating AI-made meshes/materials before commit; neighbours `editor-mcp-safety`, `blender-game-asset-pipeline`.
 
 *Editor MCP & AI-assisted gamedev (Unity / Blender / Unreal / Godot)*
 
-- **unity-mcp-scene-authoring** — building scenes and hierarchies through MCP; neighbours `unity-mcp-integration`.
-- **unity-mcp-prefab-workflow** — creating and editing prefabs via an agent without corrupting variants.
-- **unity-mcp-material-setup** — assigning materials/shaders and property blocks through MCP.
-- **unity-mcp-test-and-playmode** — running edit/play-mode tests from an agent; neighbours `editor-mcp-safety`.
-- **unity-mcp-build-automation** — triggering builds safely via MCP.
-- **unity-mcp-import-settings** — automating texture/model import presets through MCP.
-- **blender-mcp-modeling-workflow** — primitive and mesh ops via BlenderMCP; neighbours `blender-mcp`.
-- **blender-mcp-material-nodes** — building shader-node graphs through MCP.
-- **blender-mcp-bake-and-uv** — automating UV and bake steps via MCP; neighbours `texture-baking-for-games`.
 - **blender-mcp-export-validation** — MCP-driven export plus validation; neighbours `blender-game-asset-pipeline`.
 - **blender-mcp-scene-cleanup** — batch naming, cleanup, and origin fixes via MCP.
 - **unreal-mcp-blueprint-authoring** — authoring Blueprints via MCP; neighbours `unreal-mcp-integration`.
@@ -262,6 +242,27 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **unreal-gameplay-ability-system** — claimed 2026-07-11 by Taylor
+- **unreal-world-partition** — claimed 2026-07-11 by Taylor
+- **unreal-blueprint-vs-cpp** — claimed 2026-07-11 by Taylor
+- **blender-uv-unwrapping** — claimed 2026-07-11 by Taylor
+- **blender-retopology** — claimed 2026-07-11 by Taylor
+- **gltf-vs-fbx-tradeoffs** — claimed 2026-07-11 by Taylor
+- **blendshapes-for-avatars** — claimed 2026-07-11 by Taylor
+- **vrchat-avatar-shaders** — claimed 2026-07-11 by Taylor
+- **blender-to-engine-scale-and-axis** — claimed 2026-07-11 by Taylor
+- **mcp-editor-tool-design** — claimed 2026-07-11 by Taylor
+- **reviewing-ai-generated-assets** — claimed 2026-07-11 by Taylor
+- **unity-mcp-scene-authoring** — claimed 2026-07-11 by Taylor
+- **unity-mcp-prefab-workflow** — claimed 2026-07-11 by Taylor
+- **unity-mcp-material-setup** — claimed 2026-07-11 by Taylor
+- **unity-mcp-test-and-playmode** — claimed 2026-07-11 by Taylor
+- **unity-mcp-build-automation** — claimed 2026-07-11 by Taylor
+- **unity-mcp-import-settings** — claimed 2026-07-11 by Taylor
+- **blender-mcp-modeling-workflow** — claimed 2026-07-11 by Taylor
+- **blender-mcp-material-nodes** — claimed 2026-07-11 by Taylor
+- **blender-mcp-bake-and-uv** — claimed 2026-07-11 by Taylor
 
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
 - **normal-mapping-explained** — claimed 2026-07-11 by Codex
