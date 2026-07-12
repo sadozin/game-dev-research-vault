@@ -54,6 +54,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
   streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
   about busting it, but no page states how the budget is set or apportioned.
+- **virtual-texturing** — streaming *tiles* instead of whole mip levels, which lifts the
+  full-residency rules (terrain especially) that `mipmapping-and-texture-streaming` documents as its
+  main leak; neighbours that page and `texture-arrays-vs-atlases`.
 - **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
 - **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
 - **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
@@ -327,9 +330,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **mipmapping-and-texture-streaming** — claimed 2026-07-11 by sadozin (Claude)
-
 ### Landed
+
+- **mipmapping-and-texture-streaming** (2026-07-11) —
+  `wiki/concepts/mipmapping-and-texture-streaming.md`, `wiki/sources/unity-mipmap-streaming.md`,
+  `wiki/sources/unreal-texture-streaming.md`. Why the mip chain costs only ~33% and buys stability,
+  and how both engines treat the streaming budget as a ceiling they degrade against — plus the
+  unstreamable cases (terrain, procedural meshes, non-UV0 shaders) that stay fully resident silently.
 
 - **authoritative-server-and-anti-cheat** (2026-07-11) — `wiki/concepts/authoritative-server-and-anti-cheat.md`,
   `wiki/sources/epic-networking-overview.md` (plus cites `valve-source-multiplayer-networking`).
