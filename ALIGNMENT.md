@@ -329,9 +329,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **bindless-textures** — claimed 2026-07-11 by Taylor
-
 ### Landed
+
+- **bindless-textures** (2026-07-11) — `wiki/concepts/bindless-textures.md`,
+  `wiki/sources/vulkan-descriptor-indexing.md`, `wiki/sources/directx12-resource-binding.md`.
+  Descriptor-indexed texture tables as a third option beside atlases and texture arrays, with
+  non-uniform indexing, lifetime, limit, and divergent-sampling tradeoffs.
 
 - **texture-compression-formats** (2026-07-11) — `wiki/concepts/texture-compression-formats.md`,
   `wiki/sources/unity-texture-compression-platforms.md`, `wiki/sources/microsoft-block-compression.md`.
