@@ -123,6 +123,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
+- **ambient-occlusion-maps** — AO baking and how engines consume it.
+- **screen-space-reflections** — SSR cost and artifacts.
+- **volumetric-fog-and-lighting** — volumetrics cost vs quality.
+- **decals-and-projection** — decal systems and their performance.
+- **vertex-animation-textures** — baking animation into textures for perf.
+- **impostors-and-billboards** — far-LOD impostor techniques.
+- **skinned-mesh-performance** — GPU skinning cost and bone limits.
 
 *Netcode & backend (high token burn)*
 
@@ -183,6 +190,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 - **fmod-and-wwise-integration** — middleware setup and tradeoffs.
 - **sfx-design-and-variation** — layering and randomization to avoid repetition.
+- **spatial-audio-attenuation** — 3D audio falloff and occlusion.
+- **adaptive-and-dynamic-music** — interactive music systems.
+- **audio-memory-and-streaming** — audio compression and streaming budgets.
 
 *Platform, build, tooling*
 
@@ -205,38 +215,6 @@ Move it to Landed when you push its files. Empty is fine._
 
 
 
-
-- **pbr-material-workflow** — claimed 2026-07-11 by Codex
-- **normal-mapping-explained** — claimed 2026-07-11 by Codex
-- **linear-vs-srgb-color-space** — claimed 2026-07-11 by Codex
-- **anti-aliasing-techniques** — claimed 2026-07-11 by Codex
-- **deferred-vs-forward-rendering** — claimed 2026-07-11 by Codex
-- **transport-udp-tcp-webrtc** — claimed 2026-07-11 by Codex
-- **entity-interpolation-extrapolation** — claimed 2026-07-11 by Codex
-- **nat-traversal-and-relays** — claimed 2026-07-11 by Codex
-- **utility-ai** — claimed 2026-07-11 by Codex
-- **flow-field-pathfinding** — claimed 2026-07-11 by Codex
-- **inventory-system-design** — claimed 2026-07-11 by Codex
-- **dialogue-system-design** — claimed 2026-07-11 by Codex
-- **ability-and-cooldown-systems** — claimed 2026-07-11 by Codex
-- **status-effects-and-buffs** — claimed 2026-07-11 by Codex
-- **inverse-kinematics** — claimed 2026-07-11 by Codex
-- **battle-pass-design** — claimed 2026-07-11 by Codex
-- **ftue-onboarding-design** — claimed 2026-07-11 by Codex
-- **accessibility-in-games** — claimed 2026-07-11 by Codex
-- **wave-function-collapse** — claimed 2026-07-11 by Codex
-- **poisson-disk-sampling** — claimed 2026-07-11 by Codex
-
-- **ambient-occlusion-maps** — claimed 2026-07-11 by Claude
-- **screen-space-reflections** — claimed 2026-07-11 by Claude
-- **volumetric-fog-and-lighting** — claimed 2026-07-11 by Claude
-- **decals-and-projection** — claimed 2026-07-11 by Claude
-- **vertex-animation-textures** — claimed 2026-07-11 by Claude
-- **impostors-and-billboards** — claimed 2026-07-11 by Claude
-- **skinned-mesh-performance** — claimed 2026-07-11 by Claude
-- **spatial-audio-attenuation** — claimed 2026-07-11 by Claude
-- **adaptive-and-dynamic-music** — claimed 2026-07-11 by Claude
-- **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
 
