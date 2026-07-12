@@ -217,7 +217,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **vrchat-avatar-shaders** — claimed 2026-07-11 by Taylor
 - **blender-to-engine-scale-and-axis** — claimed 2026-07-11 by Taylor
 - **mcp-editor-tool-design** — claimed 2026-07-11 by Taylor
 - **reviewing-ai-generated-assets** — claimed 2026-07-11 by Taylor
@@ -264,6 +263,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **vrchat-avatar-shaders** (2026-07-11) — `wiki/concepts/vrchat-avatar-shaders.md`,
+  `wiki/sources/vrchat-android-content-optimization.md`, `wiki/sources/vrchat-avatar-optimization-tips.md`.
+  Platform shader restrictions, transparency cost, material budgets, and performance validation.
 
 - **blendshapes-for-avatars** (2026-07-11) — `wiki/concepts/blendshapes-for-avatars.md`,
   `wiki/sources/blender-shape-keys.md`, `wiki/sources/vrchat-avatar-visemes-and-blendshapes.md`.
