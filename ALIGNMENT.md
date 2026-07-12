@@ -286,7 +286,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **player-retention-loops** — claimed 2026-07-11 by Taylor
 - **gacha-and-pity-math** — claimed 2026-07-11 by Taylor
 - **mmo-itemization-and-loot** — claimed 2026-07-11 by Taylor
 - **economy-sinks-and-faucets** — claimed 2026-07-11 by Taylor
@@ -301,6 +300,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **player-retention-loops** (2026-07-11) — `wiki/concepts/player-retention-loops.md`,
+  `wiki/sources/unity-retention-metrics.md`, `wiki/sources/frommel-mandryk-daily-quests.md`. Cadence,
+  cohort metrics, and the retention-versus-obligation tradeoff.
 
 - **idle-game-monetization** (2026-07-11) — `wiki/concepts/idle-game-monetization.md`,
   `wiki/sources/google-play-payments-and-ads.md`, `wiki/sources/apple-app-review-guidelines-monetization.md`.
