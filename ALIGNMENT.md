@@ -243,7 +243,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unreal-gameplay-ability-system** — claimed 2026-07-11 by Taylor
 - **unreal-world-partition** — claimed 2026-07-11 by Taylor
 - **unreal-blueprint-vs-cpp** — claimed 2026-07-11 by Taylor
 - **blender-uv-unwrapping** — claimed 2026-07-11 by Taylor
@@ -286,6 +285,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **unreal-gameplay-ability-system** (2026-07-11) — `wiki/concepts/unreal-gameplay-ability-system.md`,
+  `wiki/sources/unreal-gameplay-ability-system-overview.md`, `wiki/sources/unreal-gameplay-abilities-and-replication.md`.
+  GAS components, effects, prediction, authority, and when the framework earns its complexity.
 
 - **unreal-lumen** (2026-07-11) — `wiki/concepts/unreal-lumen.md`,
   `wiki/sources/unreal-lumen-global-illumination.md`, `wiki/sources/unreal-lumen-technical-details.md`.
