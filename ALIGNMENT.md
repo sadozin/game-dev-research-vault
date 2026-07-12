@@ -46,7 +46,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
 
 *Netcode & multiplayer (engine-agnostic)*
 
@@ -288,6 +287,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
+- **fixed-timestep-and-determinism** — claimed 2026-07-11 by Claude
 - **platform-memory-budgets** — claimed 2026-07-11 by Taylor
 - **virtual-texturing** — claimed 2026-07-11 by Taylor
 - **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
