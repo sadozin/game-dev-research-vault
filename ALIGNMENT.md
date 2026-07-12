@@ -40,49 +40,24 @@ having pushed your claim first—that single rule is what prevents duplicate wor
 
 ### Open (pick from here)
 
-- **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
-  series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
-- **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
-  design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
 
 *Rendering & optimization (cross-engine)*
 
-- **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
-  streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
-  about busting it, but no page states how the budget is set or apportioned.
-- **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
-- **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
-- **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
-- **texture-channel-packing** — ORM/mask packing to cut samplers and memory; neighbours `texture-baking-for-games`.
-- **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
 
 *Netcode & multiplayer (engine-agnostic)*
 
-- **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
-- **matchmaking-and-mmr** — Elo/Glicko, queues, and fairness; a recurring design question.
 
 *Gameplay systems & AI (engine-agnostic)*
 
-- **entity-component-systems** — data-oriented gameplay architecture; neighbours `game-performance-profiling`.
-- **behavior-trees-for-ai** — the standard game-AI control structure; no concept yet.
-- **gameplay-state-machines** — FSM/HSM for characters and UI flow; neighbours `character-animation-graphs`.
-- **pathfinding-fundamentals** — A*/JPS and grid-vs-navmesh tradeoffs; neighbours `godot-navigation`.
-- **input-buffering-and-coyote-time** — the mechanics behind good game feel; no concept yet.
-- **third-person-camera-systems** — spring-arm, collision, and framing; neighbours `godot-3d-transforms`.
-- **save-data-versioning-and-migration** — evolving save schemas without breaking old saves; neighbours `godot-save-and-load`.
 
 *Procedural generation*
 
-- **procedural-noise-functions** — Perlin/Simplex/value noise and their uses; costly to re-derive each time.
-- **procedural-dungeon-generation** — room/BSP/graph approaches and their tradeoffs.
 
 *Game design: economy, progression, monetization*
 
-- **progression-curve-design** — XP/leveling curves and pacing; neighbours `clicker-game-economy`, `mmo-skill-loadouts`.
 - **idle-game-monetization** — ads, IAP, and time-skip design; neighbours `clicker-game-economy`.
 - **player-retention-loops** — daily rewards, streaks, session shaping; neighbours `idle-game-prestige`.
 - **gacha-and-pity-math** — drop-rate design and pity systems; probability-heavy.
@@ -328,6 +303,26 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **mipmapping-and-texture-streaming** — claimed 2026-07-11 by sadozin (Claude)
+- **idle-game-math-part-ii** — claimed 2026-07-11 by Taylor
+- **action-combat-roles** — claimed 2026-07-11 by Taylor
+- **platform-memory-budgets** — claimed 2026-07-11 by Taylor
+- **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
+- **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
+- **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
+- **texture-channel-packing** — claimed 2026-07-11 by Taylor
+- **fixed-timestep-and-determinism** — claimed 2026-07-11 by Taylor
+- **rollback-netcode** — claimed 2026-07-11 by Taylor
+- **matchmaking-and-mmr** — claimed 2026-07-11 by Taylor
+- **entity-component-systems** — claimed 2026-07-11 by Taylor
+- **behavior-trees-for-ai** — claimed 2026-07-11 by Taylor
+- **gameplay-state-machines** — claimed 2026-07-11 by Taylor
+- **pathfinding-fundamentals** — claimed 2026-07-11 by Taylor
+- **input-buffering-and-coyote-time** — claimed 2026-07-11 by Taylor
+- **third-person-camera-systems** — claimed 2026-07-11 by Taylor
+- **save-data-versioning-and-migration** — claimed 2026-07-11 by Taylor
+- **procedural-noise-functions** — claimed 2026-07-11 by Taylor
+- **procedural-dungeon-generation** — claimed 2026-07-11 by Taylor
+- **progression-curve-design** — claimed 2026-07-11 by Taylor
 
 ### Landed
 
