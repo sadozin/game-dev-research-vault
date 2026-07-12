@@ -207,11 +207,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **tutorial-design-patterns** — claimed 2026-07-11 by Taylor
-- **reward-schedules-variable-ratio** — claimed 2026-07-11 by Taylor
-- **dual-currency-design** — claimed 2026-07-11 by Taylor
-- **iap-pricing-tiers** — claimed 2026-07-11 by Taylor
-- **ab-testing-for-games** — claimed 2026-07-11 by Taylor
 
 
 
@@ -248,6 +243,17 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **tutorial-design-patterns** (2026-07-11) — `wiki/concepts/tutorial-design-patterns.md`, `wiki/sources/apple-onboarding-guidance.md`.
+  Contextual teaching, optionality, replayable help, and first-session comprehension.
+- **reward-schedules-variable-ratio** (2026-07-11) — `wiki/concepts/reward-schedules-variable-ratio.md`, `wiki/sources/player-centered-reward-schedules.md`.
+  Fixed versus variable reward pacing, bounded variance, and player agency.
+- **dual-currency-design** (2026-07-11) — `wiki/concepts/dual-currency-design.md`, `wiki/sources/virtual-economy-faucets-and-sinks.md`.
+  Currency roles, conversion boundaries, inflation, and cohort flow audits.
+- **iap-pricing-tiers** (2026-07-11) — `wiki/concepts/iap-pricing-tiers.md`, `wiki/sources/apple-iap-pricing.md`.
+  Transparent bundles, regional tiers, leftover currency, and storefront compliance.
+- **ab-testing-for-games** (2026-07-11) — `wiki/concepts/ab-testing-for-games.md`, `wiki/sources/firebase-ab-testing.md`.
+  Randomized cohorts, guardrails, practical effect size, and live-ops rollout.
 
 - **unreal-mcp-blueprint-authoring** (2026-07-11) — `wiki/concepts/unreal-mcp-blueprint-authoring.md`,
   `wiki/sources/unreal-blueprint-editor-and-components.md`, `wiki/sources/mcp-tools-authoring-safety.md`.
