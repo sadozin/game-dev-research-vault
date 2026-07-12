@@ -302,13 +302,15 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
-- **delta-compression-netcode** — claimed 2026-07-11 by Codex
-
 ### Landed
 
 - **lightmap-baking-and-uv2** (2026-07-11) — `wiki/concepts/lightmap-baking-and-uv2.md`,
   `wiki/sources/unreal-lightmapping.md`, `wiki/sources/unreal-lightmap-uv-generation.md`. Dedicated
   baked-light UV layout, padding, resolution, and chart-generation tradeoffs.
+- **delta-compression-netcode** (2026-07-11) — `wiki/concepts/delta-compression-netcode.md`,
+  `wiki/sources/gaffer-snapshot-compression.md` (plus cites `valve-source-multiplayer-networking`).
+  Covers per-client acknowledged baselines, quantization, changed-field encodings, and full-state
+  recovery after loss.
 
 - **shadow-map-budgeting** (2026-07-11) — `wiki/concepts/shadow-map-budgeting.md`,
   `wiki/sources/unreal-shadowing.md`, `wiki/sources/unreal-virtual-shadow-maps.md`. Cascade and
