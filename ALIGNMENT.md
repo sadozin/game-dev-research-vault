@@ -263,7 +263,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
 - **normal-mapping-explained** — claimed 2026-07-11 by Codex
@@ -287,6 +286,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **unreal-nanite** (2026-07-11) — `wiki/concepts/unreal-nanite.md`,
+  `wiki/sources/unreal-nanite-virtualized-geometry.md`, `wiki/sources/unreal-nanite-technical-details.md`.
+  Clustered virtualized geometry, streaming pools, fallback paths, material limits, and profiling.
 
 - **unity-dots-jobs-and-burst** (2026-07-11) — `wiki/concepts/unity-dots-jobs-and-burst.md`,
   `wiki/sources/unity-burst-compilation.md`, `wiki/sources/unity-job-system-overview.md`. Parallel
