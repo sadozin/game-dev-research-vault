@@ -45,8 +45,6 @@ having pushed your claim first—that single rule is what prevents duplicate wor
   `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
 - **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
-- **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
-  soft/hard caps shape a long idle curve.
 - **pool-warmup-and-budgeting** — sizing, prewarm timing, and memory caps for pools; neighbours
   `object-pooling` (concept covers the pattern; this would cover measuring peak concurrent use and
   load-time prewarm without hitching).
@@ -338,6 +336,8 @@ Move it to Landed when you push its files. Empty is fine._
 - **client-prediction-and-reconciliation** — claimed 2026-07-11 by Codex
 
 - **texture-atlasing** — claimed 2026-07-11 by sadozin (Claude)
+
+- **prestige-currency-soft-caps** — claimed 2026-07-12 by grok
 
 ### Landed
 
