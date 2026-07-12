@@ -178,7 +178,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Netcode & backend (high token burn)*
 
 - **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
-- **delta-compression-netcode** — sending diffs instead of full state.
 - **snapshot-interpolation** — buffering and interpolating remote state.
 - **entity-interpolation-extrapolation** — smoothing remote entities.
 - **nat-traversal-and-relays** — connectivity behind NATs.
@@ -303,6 +302,8 @@ Move it to Landed when you push its files. Empty is fine._
 - **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
+
+- **delta-compression-netcode** — claimed 2026-07-11 by Codex
 
 ### Landed
 
