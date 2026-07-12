@@ -131,9 +131,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design, economy, live-ops*
 
-- **loot-table-design** — weighted drops and pity.
-- **game-feel-and-juice** — screenshake, hitstop, and feedback.
-- **difficulty-dynamic-adjustment** — DDA approaches and pitfalls.
 
 *Procedural generation*
 
@@ -191,6 +188,10 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **loot-table-design** — claimed 2026-07-11 by Taylor
+- **game-feel-and-juice** — claimed 2026-07-11 by Taylor
+- **difficulty-dynamic-adjustment** — claimed 2026-07-11 by Taylor
 
 - **mcp-editor-checkpointing** — claimed 2026-07-11 by Codex
 - **mcp-tool-permission-scoping** — claimed 2026-07-11 by Codex
