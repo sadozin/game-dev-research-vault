@@ -220,7 +220,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Netcode & backend (high token burn)*
 
 - **transport-udp-tcp-webrtc** — choosing a transport; a recurring decision.
-- **reliable-udp-and-ordering** — reliability layers over UDP.
 - **delta-compression-netcode** — sending diffs instead of full state.
 - **snapshot-interpolation** — buffering and interpolating remote state.
 - **entity-interpolation-extrapolation** — smoothing remote entities.
@@ -329,6 +328,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **reliable-udp-and-ordering** — claimed 2026-07-11 by Codex
 
 ### Landed
 
