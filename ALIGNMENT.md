@@ -286,7 +286,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **gacha-and-pity-math** — claimed 2026-07-11 by Taylor
 - **mmo-itemization-and-loot** — claimed 2026-07-11 by Taylor
 - **economy-sinks-and-faucets** — claimed 2026-07-11 by Taylor
 - **crafting-system-design** — claimed 2026-07-11 by Taylor
@@ -300,6 +299,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **gacha-and-pity-math** (2026-07-11) — `wiki/concepts/gacha-and-pity-math.md`,
+  `wiki/sources/gacha-pricing-pity-research.md` (plus cites `apple-app-review-guidelines-monetization`).
+  Stateful pity probability, expected and worst-case pulls, duplicate outcomes, and disclosure.
 
 - **player-retention-loops** (2026-07-11) — `wiki/concepts/player-retention-loops.md`,
   `wiki/sources/unity-retention-metrics.md`, `wiki/sources/frommel-mandryk-daily-quests.md`. Cadence,
