@@ -264,26 +264,6 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
-- **pbr-material-workflow** — claimed 2026-07-11 by Codex
-- **normal-mapping-explained** — claimed 2026-07-11 by Codex
-- **linear-vs-srgb-color-space** — claimed 2026-07-11 by Codex
-- **anti-aliasing-techniques** — claimed 2026-07-11 by Codex
-- **deferred-vs-forward-rendering** — claimed 2026-07-11 by Codex
-- **transport-udp-tcp-webrtc** — claimed 2026-07-11 by Codex
-- **entity-interpolation-extrapolation** — claimed 2026-07-11 by Codex
-- **nat-traversal-and-relays** — claimed 2026-07-11 by Codex
-- **utility-ai** — claimed 2026-07-11 by Codex
-- **flow-field-pathfinding** — claimed 2026-07-11 by Codex
-- **inventory-system-design** — claimed 2026-07-11 by Codex
-- **dialogue-system-design** — claimed 2026-07-11 by Codex
-- **ability-and-cooldown-systems** — claimed 2026-07-11 by Codex
-- **status-effects-and-buffs** — claimed 2026-07-11 by Codex
-- **inverse-kinematics** — claimed 2026-07-11 by Codex
-- **battle-pass-design** — claimed 2026-07-11 by Codex
-- **ftue-onboarding-design** — claimed 2026-07-11 by Codex
-- **accessibility-in-games** — claimed 2026-07-11 by Codex
-- **wave-function-collapse** — claimed 2026-07-11 by Codex
-- **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
 
@@ -302,6 +282,12 @@ Move it to Landed when you push its files. Empty is fine._
 - **unity-scriptable-objects** (2026-07-11) — `wiki/concepts/unity-scriptable-objects.md`,
   `wiki/sources/unity-scriptableobject-manual.md`, `wiki/sources/unity-scriptableobject-api.md`.
   Shared asset-backed data, authoring, serialization, mutation, and save-state boundaries.
+- **pbr-material-workflow**, **normal-mapping-explained**, **linear-vs-srgb-color-space**, **anti-aliasing-techniques**, **deferred-vs-forward-rendering** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/khronos-gltf-pbr.md` and `wiki/sources/unity-rendering-paths-antialiasing.md`.
+- **transport-udp-tcp-webrtc**, **entity-interpolation-extrapolation**, **nat-traversal-and-relays** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/rfc-transports-and-webrtc.md` and `wiki/sources/gaffer-networked-physics.md`.
+- **utility-ai**, **flow-field-pathfinding** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/utility-ai-and-flow-fields.md`.
+- **inventory-system-design**, **dialogue-system-design**, **ability-and-cooldown-systems**, **status-effects-and-buffs**, **inverse-kinematics** (2026-07-11) — `wiki/concepts/` notes with their linked source pages.
+- **battle-pass-design**, **ftue-onboarding-design**, **accessibility-in-games** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/game-economy-and-battle-pass.md`, `wiki/sources/ftue-game-user-research.md`, and `wiki/sources/xbox-accessibility-guidelines.md`.
+- **wave-function-collapse**, **poisson-disk-sampling** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/mxgmn-wave-function-collapse.md` and `wiki/sources/bridson-poisson-disk.md`.
 
 - **unity-addressables** (2026-07-11) — `wiki/concepts/unity-addressables.md`,
   `wiki/sources/unity-addressables-manual.md`, `wiki/sources/unity-addressables-catalogs.md`. Async
