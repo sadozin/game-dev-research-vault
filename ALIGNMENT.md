@@ -77,29 +77,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unity — engine depth & pain points*
 
-- **unity-controller-vs-rigidbody** — CharacterController vs Rigidbody movement tradeoffs.
-- **unity-2d-tilemap-and-sprites** — the 2D tilemap and sprite pipeline.
-- **unity-animation-rigging** — runtime IK and constraints package.
-- **unity-audio-mixer** — mixer groups, snapshots, and ducking.
-- **unity-localization-package** — string tables and locale switching.
-- **unity-il2cpp-and-aot** — IL2CPP builds, AOT limits, and code stripping.
-- **unity-webgl-limits** — WebGL build constraints and threading/memory gotchas.
-- **unity-mobile-optimization** — battery, thermal, and draw-call budgets on mobile.
-- **unity-crash-and-log-diagnostics** — reading Player.log and native crash dumps.
 
 *Unreal — engine depth & pain points*
 
-- **unreal-packaging-and-cook** — cooking content and packaging builds.
-- **unreal-insights-profiling** — Unreal Insights traces and analysis.
-- **unreal-hlod** — hierarchical LOD for large scenes; neighbours `unreal-static-mesh-lod`.
-- **unreal-sequencer** — cinematics and the Sequencer workflow.
-- **unreal-cpp-gameplay-basics** — UCLASS/UPROPERTY and gameplay in C++.
-- **unreal-android-build** — packaging for Android and its pitfalls.
 
 *Godot — genuine gaps (already deep elsewhere)*
 
-- **godot-csharp-vs-gdscript** — language tradeoffs and interop cost.
-- **godot-gdextension-native** — C++/GDExtension for hot paths.
 
 *Rendering & graphics (high token burn)*
 
@@ -134,9 +117,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Procedural generation*
 
-- **biome-and-climate-generation** — biome distribution.
-- **cellular-automata-caves** — cave generation.
-- **procedural-mesh-generation** — building meshes at runtime.
 
 *Blender / assets / DCC*
 
@@ -188,6 +168,27 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **unity-controller-vs-rigidbody** — claimed 2026-07-11 by Codex
+- **unity-2d-tilemap-and-sprites** — claimed 2026-07-11 by Codex
+- **unity-animation-rigging** — claimed 2026-07-11 by Codex
+- **unity-audio-mixer** — claimed 2026-07-11 by Codex
+- **unity-localization-package** — claimed 2026-07-11 by Codex
+- **unity-il2cpp-and-aot** — claimed 2026-07-11 by Codex
+- **unity-webgl-limits** — claimed 2026-07-11 by Codex
+- **unity-mobile-optimization** — claimed 2026-07-11 by Codex
+- **unity-crash-and-log-diagnostics** — claimed 2026-07-11 by Codex
+- **unreal-packaging-and-cook** — claimed 2026-07-11 by Codex
+- **unreal-insights-profiling** — claimed 2026-07-11 by Codex
+- **unreal-hlod** — claimed 2026-07-11 by Codex
+- **unreal-sequencer** — claimed 2026-07-11 by Codex
+- **unreal-cpp-gameplay-basics** — claimed 2026-07-11 by Codex
+- **unreal-android-build** — claimed 2026-07-11 by Codex
+- **godot-csharp-vs-gdscript** — claimed 2026-07-11 by Codex
+- **godot-gdextension-native** — claimed 2026-07-11 by Codex
+- **biome-and-climate-generation** — claimed 2026-07-11 by Codex
+- **cellular-automata-caves** — claimed 2026-07-11 by Codex
+- **procedural-mesh-generation** — claimed 2026-07-11 by Codex
 
 
 
