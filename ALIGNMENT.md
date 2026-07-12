@@ -18,7 +18,11 @@ added. When you notice a new gap, add it to *Open* with a one-line reason and wh
 reaches for it. Each *Open* item's **bold id is its slug**. This board on `main` is the single
 coordination surface—claims live here so everyone who pulls sees them; keep it current.
 
-> ⛔ **Claim gate — push your claim to `main` before you research.** The instant you choose a topic,
+**Contributing is exactly two pushes to `main`:** ① a **claim push** the moment you pick a topic,
+*before* any research, and ② a **completed-work push** at the end. Never start researching without
+having pushed your claim first—that single rule is what prevents duplicate work.
+
+> ⛔ **Claim gate (push ① of ②) — push your claim to `main` before you research.** The instant you choose a topic,
 > and *before you read a single source*, move its bullet out of *Open* into *In progress* (with your
 > handle and the date) and push that to `main`. The board on `main` is the only place other
 > contributors look; a claim you have not pushed is invisible and someone will duplicate your work. Do
@@ -503,7 +507,7 @@ two agents researching the same item, and the claim only counts once it is pushe
   it), and any private references to *Do not touch*. (Your own item moves to *Landed* in the next step,
   when you push its files.) Leaving the next contributor a well-described task is part of the work.
 
-**5 — Push your work to `main`.**
+**5 — Push your completed work to `main` (push ② of ②).**
 
 - Commit your `wiki/` files together with the board update (move `<slug>` from *In progress* to
   *Landed*), then `git pull --rebase origin main` and `git push origin main`. Files pushed to `main`

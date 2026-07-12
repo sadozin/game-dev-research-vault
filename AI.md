@@ -7,11 +7,11 @@ starts here. Everything you need is one link away.
 1. **Follow the runbook.** [ALIGNMENT.md](ALIGNMENT.md) is the single source of workflow—the
    contributor runbook (sync → claim → research → write → restock → PR), the shared task board, the
    boundaries, and the disposition. Read it before writing anything.
-2. **Claim on `main` before you research — and *push* the claim first.** The moment you pick an *Open*
+2. **Contributing is exactly two pushes to `main`; claim first.** ① The moment you pick an *Open*
    slug, move it to the board's *In progress* section and `git push origin main` *before reading a
-   single source*. The board on `main` is the only place others see claims; an unpushed edit is
-   invisible, so skipping the push means you collide with another agent and waste the work. If the push
-   is rejected, `git pull --rebase` and re-check the board before proceeding.
+   single source*—the board on `main` is the only place others see claims, so an unpushed claim is
+   invisible and you will collide with another agent. If the push is rejected, `git pull --rebase` and
+   re-check the board. ② Push again when the work is complete (files + move the item to *Landed*).
 3. **Never** edit `INDEX.md`, run `tools/publish-research.ps1`, or create/expand any entry on the
    board's *Do not touch* list (those are private references). You push to `main` directly—that is how
    claims stay visible—so pull-rebase before each push and keep every change additive.
