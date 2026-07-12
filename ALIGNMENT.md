@@ -45,6 +45,9 @@ coordination surface—claims live here so everyone who pulls sees them; keep it
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 - **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
   soft/hard caps shape a long idle curve.
+- **pool-warmup-and-budgeting** — sizing, prewarm timing, and memory caps for pools; neighbours
+  `object-pooling` (concept covers the pattern; this would cover measuring peak concurrent use and
+  load-time prewarm without hitching).
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -331,10 +334,11 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **object-pooling** — claimed 2026-07-12 by grok
-
 ### Landed
 
+- **object-pooling** (2026-07-12) — `wiki/concepts/object-pooling.md`,
+  `wiki/sources/nystrom-object-pool.md`, `wiki/sources/unity-object-pooling.md`. Allocation-stall
+  avoidance for frequent spawn/despawn; neighbours `game-performance-profiling`.
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
   `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
   batching concept the optimization cluster kept implying but never defined.
