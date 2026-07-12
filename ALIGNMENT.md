@@ -217,7 +217,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-mcp-test-and-playmode** — claimed 2026-07-11 by Taylor
 - **unity-mcp-build-automation** — claimed 2026-07-11 by Taylor
 - **unity-mcp-import-settings** — claimed 2026-07-11 by Taylor
 - **blender-mcp-modeling-workflow** — claimed 2026-07-11 by Taylor
@@ -257,6 +256,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **unity-mcp-test-and-playmode** (2026-07-11) — `wiki/concepts/unity-mcp-test-and-playmode.md`,
+  `wiki/sources/unity-test-framework-edit-and-playmode.md`, `wiki/sources/mcp-tools-test-confirmation.md`.
+  Edit/Play Mode selection, bounded runs, structured results, and side-effect safety.
 
 - **unity-mcp-material-setup** (2026-07-11) — `wiki/concepts/unity-mcp-material-setup.md`,
   `wiki/sources/unity-material-property-blocks.md`, `wiki/sources/mcp-tools-material-safety.md`.
