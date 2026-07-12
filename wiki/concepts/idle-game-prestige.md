@@ -7,6 +7,7 @@ updated: 2026-07-11
 verified: 2026-07-11
 sources:
   - "[[idle-game-math-part-i]]"
+  - "[[idle-game-math-part-ii]]"
   - "[[idle-game-math-part-iii]]"
 tags: [game-design, clicker, idle, prestige]
 ---
@@ -23,7 +24,10 @@ shorter, more powerful next run.
 The reset both creates a visible "go farther this time" arc and compresses a runaway primary
 currency into a slower meta-progression scale. Reward should derive from meaningful run progress
 and grow more slowly than the run's headline currency—fractional-exponent curves are common—so
-each reset accelerates the next run without instantly trivialising all future content.
+each reset accelerates the next run without instantly trivialising all future content. Cascading
+generator models from [[clicker-game-economy]] do not remove the need for prestige: a finite
+derivative ladder still grows slower than exponential costs, so the same wall—and the same
+reset-as-relief—eventually reappears.
 
 Offer prestige when the next meaningful purchase has slowed enough that resetting is attractive,
 then make the early rebuild noticeably faster. The player must understand three values at the
