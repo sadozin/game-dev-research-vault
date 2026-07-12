@@ -227,7 +227,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **blender-retopology** — claimed 2026-07-11 by Taylor
 - **gltf-vs-fbx-tradeoffs** — claimed 2026-07-11 by Taylor
 - **blendshapes-for-avatars** — claimed 2026-07-11 by Taylor
 - **vrchat-avatar-shaders** — claimed 2026-07-11 by Taylor
@@ -286,6 +285,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **blender-retopology** (2026-07-11) — `wiki/concepts/blender-retopology.md`,
+  `wiki/sources/blender-retopology-remeshing.md`, `wiki/sources/blender-retopology-multiresolution.md`.
+  High-to-low topology, deformation flow, remeshing limits, snapping, and bake readiness.
 
 - **blender-uv-unwrapping** (2026-07-11) — `wiki/concepts/blender-uv-unwrapping.md`,
   `wiki/sources/blender-uv-operators.md`, `wiki/sources/blender-uv-layout-workflow.md`.
