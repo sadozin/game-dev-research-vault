@@ -144,11 +144,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design, economy, live-ops*
 
-- **tutorial-design-patterns** — teaching without walls of text.
-- **reward-schedules-variable-ratio** — reinforcement scheduling.
-- **dual-currency-design** — soft vs hard currency balance.
-- **iap-pricing-tiers** — price points and bundles.
-- **ab-testing-for-games** — experiment design and pitfalls.
 - **telemetry-and-kpis** — the metrics that matter and how to log them.
 - **churn-and-winback** — retention analytics and re-engagement.
 - **leaderboard-design** — ranking, seasons, and anti-abuse.
@@ -211,6 +206,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **tutorial-design-patterns** — claimed 2026-07-11 by Taylor
+- **reward-schedules-variable-ratio** — claimed 2026-07-11 by Taylor
+- **dual-currency-design** — claimed 2026-07-11 by Taylor
+- **iap-pricing-tiers** — claimed 2026-07-11 by Taylor
+- **ab-testing-for-games** — claimed 2026-07-11 by Taylor
 
 
 
