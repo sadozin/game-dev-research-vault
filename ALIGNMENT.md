@@ -276,7 +276,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
@@ -301,6 +300,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
 
 ### Landed
+
+- **unity-dots-jobs-and-burst** (2026-07-11) — `wiki/concepts/unity-dots-jobs-and-burst.md`,
+  `wiki/sources/unity-burst-compilation.md`, `wiki/sources/unity-job-system-overview.md`. Parallel
+  jobs, Burst AOT/JIT, ECS data layout, safety, synchronization, and workload tradeoffs.
 
 - **unity-netcode-for-gameobjects** (2026-07-11) — `wiki/concepts/unity-netcode-for-gameobjects.md`,
   `wiki/sources/unity-netcode-for-gameobjects-overview.md`, `wiki/sources/unity-netcode-networkobjects.md`.
