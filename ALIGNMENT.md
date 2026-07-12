@@ -86,31 +86,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
-- **ambient-occlusion-maps** — AO baking and how engines consume it.
-- **screen-space-reflections** — SSR cost and artifacts.
-- **volumetric-fog-and-lighting** — volumetrics cost vs quality.
-- **decals-and-projection** — decal systems and their performance.
-- **vertex-animation-textures** — baking animation into textures for perf.
-- **impostors-and-billboards** — far-LOD impostor techniques.
-- **skinned-mesh-performance** — GPU skinning cost and bone limits.
 
 *Netcode & backend (high token burn)*
 
-- **dedicated-server-scaling** — fleet and orchestration for game servers.
-- **cloud-save-and-leaderboards** — backend persistence basics.
-- **player-auth-and-accounts** — identity and auth for games.
 
 *Gameplay systems & AI*
 
-- **crowd-avoidance-rvo** — local avoidance for crowds.
-- **damage-and-hitbox-systems** — hitboxes, hurtboxes, and the damage pipeline.
-- **ragdoll-and-physics-animation** — ragdoll blending and recovery.
-- **procedural-animation** — spring and procedural motion.
-- **tweening-and-easing** — easing curves and tween systems.
-- **event-bus-messaging** — decoupled gameplay messaging patterns.
-- **game-loop-and-update-order** — the *engine-specific* half only: `fixed-timestep-and-determinism`
-  now covers the fixed-vs-variable loop and the determinism limits, so what is left is per-engine
-  callback ordering (overlaps `unity-execution-order`; consider merging the two).
 
 *Game design, economy, live-ops*
 
@@ -120,9 +101,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Blender / assets / DCC*
 
-- **blender-hard-surface-modeling** — clean hard-surface modeling for games.
-- **blender-geometry-nodes** — procedural geometry for game assets.
-- **blender-modifiers-for-games** — the modifier stack and applying for export.
 - **blender-rigify-workflow** — Rigify rigs and baking for game export.
 - **blender-cloth-and-hair-sim** — sim-to-mesh for game assets.
 - **trim-sheets-and-modular-kits** — modular environment art.
@@ -168,6 +146,27 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **ambient-occlusion-maps** — claimed 2026-07-11 by Codex
+- **screen-space-reflections** — claimed 2026-07-11 by Codex
+- **volumetric-fog-and-lighting** — claimed 2026-07-11 by Codex
+- **decals-and-projection** — claimed 2026-07-11 by Codex
+- **vertex-animation-textures** — claimed 2026-07-11 by Codex
+- **impostors-and-billboards** — claimed 2026-07-11 by Codex
+- **skinned-mesh-performance** — claimed 2026-07-11 by Codex
+- **dedicated-server-scaling** — claimed 2026-07-11 by Codex
+- **cloud-save-and-leaderboards** — claimed 2026-07-11 by Codex
+- **player-auth-and-accounts** — claimed 2026-07-11 by Codex
+- **crowd-avoidance-rvo** — claimed 2026-07-11 by Codex
+- **damage-and-hitbox-systems** — claimed 2026-07-11 by Codex
+- **ragdoll-and-physics-animation** — claimed 2026-07-11 by Codex
+- **procedural-animation** — claimed 2026-07-11 by Codex
+- **tweening-and-easing** — claimed 2026-07-11 by Codex
+- **event-bus-messaging** — claimed 2026-07-11 by Codex
+- **game-loop-and-update-order** — claimed 2026-07-11 by Codex
+- **blender-hard-surface-modeling** — claimed 2026-07-11 by Codex
+- **blender-geometry-nodes** — claimed 2026-07-11 by Codex
+- **blender-modifiers-for-games** — claimed 2026-07-11 by Codex
 
 ### Landed
 
