@@ -46,7 +46,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
 
 *Netcode & multiplayer (engine-agnostic)*
 
