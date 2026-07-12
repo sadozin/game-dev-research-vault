@@ -128,13 +128,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & graphics (high token burn)*
 
-- **ambient-occlusion-maps** — AO baking and how engines consume it.
-- **screen-space-reflections** — SSR cost and artifacts.
-- **volumetric-fog-and-lighting** — volumetrics cost vs quality.
-- **decals-and-projection** — decal systems and their performance.
-- **vertex-animation-textures** — baking animation into textures for perf.
-- **impostors-and-billboards** — far-LOD impostor techniques.
-- **skinned-mesh-performance** — GPU skinning cost and bone limits.
 
 *Netcode & backend (high token burn)*
 
@@ -204,10 +197,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Audio*
 
 - **fmod-and-wwise-integration** — middleware setup and tradeoffs.
-- **adaptive-and-dynamic-music** — interactive music systems.
-- **spatial-audio-attenuation** — 3D audio falloff and occlusion.
 - **sfx-design-and-variation** — layering and randomization to avoid repetition.
-- **audio-memory-and-streaming** — audio compression and streaming budgets.
 
 *Platform, build, tooling*
 
@@ -282,6 +272,17 @@ Move it to Landed when you push its files. Empty is fine._
 - **goap-planning** — claimed 2026-07-11 by Codex
 - **season-and-liveops-cadence** — claimed 2026-07-11 by Codex
 - **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
+
+- **ambient-occlusion-maps** — claimed 2026-07-11 by Claude
+- **screen-space-reflections** — claimed 2026-07-11 by Claude
+- **volumetric-fog-and-lighting** — claimed 2026-07-11 by Claude
+- **decals-and-projection** — claimed 2026-07-11 by Claude
+- **vertex-animation-textures** — claimed 2026-07-11 by Claude
+- **impostors-and-billboards** — claimed 2026-07-11 by Claude
+- **skinned-mesh-performance** — claimed 2026-07-11 by Claude
+- **spatial-audio-attenuation** — claimed 2026-07-11 by Claude
+- **adaptive-and-dynamic-music** — claimed 2026-07-11 by Claude
+- **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
 
