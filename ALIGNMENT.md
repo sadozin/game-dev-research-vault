@@ -202,11 +202,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **telemetry-and-kpis** — claimed 2026-07-11 by Taylor
-- **churn-and-winback** — claimed 2026-07-11 by Taylor
-- **leaderboard-design** — claimed 2026-07-11 by Taylor
-- **guild-and-social-systems** — claimed 2026-07-11 by Taylor
-- **auction-house-design** — claimed 2026-07-11 by Taylor
 
 
 
@@ -244,6 +239,17 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **telemetry-and-kpis** (2026-07-11) — `wiki/concepts/telemetry-and-kpis.md`, `wiki/sources/unity-analytics-dashboards.md`.
+  Decision-focused events, cohorts, dashboards, latency, and guardrail metrics.
+- **churn-and-winback** (2026-07-11) — `wiki/concepts/churn-and-winback.md`, `wiki/sources/unity-retention-and-churn-metrics.md`.
+  Cohort definitions, inactivity windows, diagnosed re-engagement, and contact controls.
+- **leaderboard-design** (2026-07-11) — `wiki/concepts/leaderboard-design.md`, `wiki/sources/playfab-seasonal-leaderboards.md`.
+  Seasonal competition, fair comparison, validation, percentile context, and history.
+- **guild-and-social-systems** (2026-07-11) — `wiki/concepts/guild-and-social-systems.md`, `wiki/sources/guild-and-friend-systems-retention-study.md`.
+  Shared goals, social retention, moderation, inclusion, and contribution feedback.
+- **auction-house-design** (2026-07-11) — `wiki/concepts/auction-house-design.md`, `wiki/sources/auction-house-behavior-study.md`.
+  Liquidity, fees, market telemetry, manipulation, and protecting the core progression loop.
 
 - **tutorial-design-patterns** (2026-07-11) — `wiki/concepts/tutorial-design-patterns.md`, `wiki/sources/apple-onboarding-guidance.md`.
   Contextual teaching, optionality, replayable help, and first-session comprehension.
