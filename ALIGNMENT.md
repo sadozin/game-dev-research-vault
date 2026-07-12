@@ -65,7 +65,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Unreal depth (under-covered vs Godot)*
 
 - **unreal-gameplay-ability-system** — GAS structure and when to use it; no concept.
-- **unreal-replication** — properties, RPCs, and roles for multiplayer; no concept.
 - **unreal-world-partition** — large-world streaming; no concept.
 - **unreal-blueprint-vs-cpp** — performance and architecture tradeoffs; compiles the existing `unreal-blueprint-cpp` source.
 
@@ -130,7 +129,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Unreal — engine depth & pain points*
 
-- **unreal-gameplay-framework** — GameMode/GameState/PlayerController/Pawn/Character roles.
 - **unreal-actors-and-components** — the actor/component model and lifecycle.
 - **unreal-blueprint-communication** — interfaces, event dispatchers, and casting.
 - **unreal-enhanced-input** — setting up the Enhanced Input system.
@@ -184,22 +182,11 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **damage-and-hitbox-systems** — hitboxes, hurtboxes, and the damage pipeline.
 - **ragdoll-and-physics-animation** — ragdoll blending and recovery.
 - **procedural-animation** — spring and procedural motion.
-- **root-motion-vs-inplace** — animation-driven vs code-driven movement.
 - **tweening-and-easing** — easing curves and tween systems.
 - **event-bus-messaging** — decoupled gameplay messaging patterns.
 - **game-loop-and-update-order** — the *engine-specific* half only: `fixed-timestep-and-determinism`
   now covers the fixed-vs-variable loop and the determinism limits, so what is left is per-engine
   callback ordering (overlaps `unity-execution-order`; consider merging the two).
-- **replay-and-recording-systems** — deterministic replays and recordings; its precondition and the
-  bit-exactness caveats now live in `fixed-timestep-and-determinism`.
-- **deterministic-lockstep** — the netcode model a fixed step makes possible (send inputs, not state).
-  The netcode cluster documents only the non-deterministic side — `state-synchronization-strategies`,
-  `client-prediction-and-reconciliation`, `delta-compression-netcode` — and
-  `fixed-timestep-and-determinism` now states the float caveats but stops short of the protocol:
-  turn delay, input rollback, desync detection and recovery.
-- **continuous-collision-detection** — the other half of the tunnelling story: `game-collision-design`
-  and `fixed-timestep-and-determinism` both name tunnelling as the cost of a coarse step, but no page
-  covers sweeps, speculative contacts, and when CCD is cheaper than shrinking the timestep.
 
 *Game design, economy, live-ops*
 
@@ -276,6 +263,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
+- **unreal-replication** — claimed 2026-07-11 by Claude
+- **unreal-gameplay-framework** — claimed 2026-07-11 by Claude
+- **root-motion-vs-inplace** — claimed 2026-07-11 by Claude
+- **replay-and-recording-systems** — claimed 2026-07-11 by Claude
+- **deterministic-lockstep** — claimed 2026-07-11 by Claude
+- **continuous-collision-detection** — claimed 2026-07-11 by Claude
 - **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
