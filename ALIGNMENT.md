@@ -46,6 +46,17 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
+- **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
+  streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
+  about busting it, but no page states how the budget is set or apportioned.
+- **virtual-texturing** — streaming *tiles* instead of whole mip levels, which lifts the
+  full-residency rules (terrain especially) that `mipmapping-and-texture-streaming` documents as its
+  main leak; neighbours that page and `texture-arrays-vs-atlases`.
+- **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
+- **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
+- **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
+- **texture-channel-packing** — ORM/mask packing to cut samplers and memory; neighbours `texture-baking-for-games`.
+- **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
 
 *Netcode & multiplayer (engine-agnostic)*
 
@@ -302,29 +313,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **mipmapping-and-texture-streaming** — claimed 2026-07-11 by sadozin (Claude)
-- **idle-game-math-part-ii** — claimed 2026-07-11 by Taylor
-- **action-combat-roles** — claimed 2026-07-11 by Taylor
-- **platform-memory-budgets** — claimed 2026-07-11 by Taylor
-- **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
-- **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
-- **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
-- **texture-channel-packing** — claimed 2026-07-11 by Taylor
-- **fixed-timestep-and-determinism** — claimed 2026-07-11 by Taylor
-- **rollback-netcode** — claimed 2026-07-11 by Taylor
-- **matchmaking-and-mmr** — claimed 2026-07-11 by Taylor
-- **entity-component-systems** — claimed 2026-07-11 by Taylor
-- **behavior-trees-for-ai** — claimed 2026-07-11 by Taylor
-- **gameplay-state-machines** — claimed 2026-07-11 by Taylor
-- **pathfinding-fundamentals** — claimed 2026-07-11 by Taylor
-- **input-buffering-and-coyote-time** — claimed 2026-07-11 by Taylor
-- **third-person-camera-systems** — claimed 2026-07-11 by Taylor
-- **save-data-versioning-and-migration** — claimed 2026-07-11 by Taylor
-- **procedural-noise-functions** — claimed 2026-07-11 by Taylor
-- **procedural-dungeon-generation** — claimed 2026-07-11 by Taylor
-- **progression-curve-design** — claimed 2026-07-11 by Taylor
-
 ### Landed
+
+- **mipmapping-and-texture-streaming** (2026-07-11) —
+  `wiki/concepts/mipmapping-and-texture-streaming.md`, `wiki/sources/unity-mipmap-streaming.md`,
+  `wiki/sources/unreal-texture-streaming.md`. Why the mip chain costs only ~33% and buys stability,
+  and how both engines treat the streaming budget as a ceiling they degrade against — plus the
+  unstreamable cases (terrain, procedural meshes, non-UV0 shaders) that stay fully resident silently.
 
 - **authoritative-server-and-anti-cheat** (2026-07-11) — `wiki/concepts/authoritative-server-and-anti-cheat.md`,
   `wiki/sources/epic-networking-overview.md` (plus cites `valve-source-multiplayer-networking`).
