@@ -15,8 +15,24 @@ worse than none.
 **Pick a topic from *Open* below, then follow the [Contributor runbook](#contributor-runbook)** (or
 its autonomous quick path). When you finish, move the item to *Landed* with the date and the files you
 added. When you notice a new gap, add it to *Open* with a one-line reason and where the vault already
-reaches for it. Each *Open* item's **bold id is its slug**; claim it on a `contrib/<slug>` branch.
-Keep this board current—it is the point of coordination between contributors.
+reaches for it. Each *Open* item's **bold id is its slug**. This board on `main` is the single
+coordination surface—claims live here so everyone who pulls sees them; keep it current.
+
+> ⛔ **Claim gate — push your claim to `main` before you research.** The instant you choose a topic,
+> and *before you read a single source*, move its bullet out of *Open* into *In progress* (with your
+> handle and the date) and push that to `main`. The board on `main` is the only place other
+> contributors look; a claim you have not pushed is invisible and someone will duplicate your work. Do
+> this first, every time:
+>
+> ```bash
+> git switch main && git pull --ff-only origin main   # get the current board
+> # edit ALIGNMENT.md: cut the item's bullet from "### Open", paste it under "### In progress" as
+> #   - **<slug>** — claimed <YYYY-MM-DD> by <your handle>
+> git commit -am "claim <slug>"
+> git push origin main            # rejected? git pull --rebase, re-check the board, then push
+> ```
+> If the push is rejected or `<slug>` is already under *In progress* after a rebase, someone beat you to
+> it—pick another. Only once your claim is on `main` do you begin research.
 
 ### Open (pick from here)
 
@@ -112,6 +128,11 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 - **mcp-editor-tool-design** — safe, high-level tools over raw code execution; neighbours `editor-mcp-safety`.
 - **reviewing-ai-generated-assets** — validating AI-made meshes/materials before commit; neighbours `editor-mcp-safety`, `blender-game-asset-pipeline`.
 
+### In progress (claimed — do not take)
+
+_Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
+Move it to Landed when you push its files. Empty is fine._
+
 ### Landed
 
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
@@ -187,8 +208,8 @@ name a file that does not exist. Everything else about the form stays identical.
   a public export; if a note references a private project or workspace, leave it out or generalise it.
 - No third-party source text unless its license clearly permits redistribution. Store attribution,
   URLs, and original summaries—not the works themselves.
-- Generated pages under `wiki/` originate from the private brain. As an outside contributor you add
-  new files under `wiki/` for a direct public pull request; the maintainer folds them into the brain.
+- Generated pages under `wiki/` originate from the private brain. Contributors add new files under
+  `wiki/` and push them to `main`; the maintainer folds them into the brain (see Durability below).
 - **Do not run `tools/publish-research.ps1`.** It is the maintainer's export tool: it wipes and
   regenerates `wiki/` and `INDEX.md` from a private brain that is not part of this repository, so
   running it would delete unmerged contributions. Leave `INDEX.md` untouched too—it is generated.
@@ -198,53 +219,41 @@ When in doubt, the smaller, better-sourced, more clearly-linked change is the ri
 ## Contributor runbook
 
 A fresh agent—human or AI, working for any developer—should be able to run these steps in order and
-contribute cleanly. Coordination happens through **pull requests against `main`** and the task board
-below. **Never commit research directly to `main`**: it is the maintainer's publish target and is
-overwritten wholesale by the export tool, so a direct commit there is unsafe and likely lost.
+contribute cleanly. **Coordination happens on `main` itself:** you claim a task by editing the board
+on `main` and pushing, so every contributor who pulls immediately sees what is taken. There are no
+per-task branches or pull requests—work is pushed straight to `main`.
 
-**You need GitHub access to contribute.** Reading and pulling a public repo needs nothing special,
-but *landing* work needs an account that can open a pull request here—either write access (ask the
-maintainer to add you) or your own fork (`gh repo fork`). With no GitHub credentials at all you can
-research and draft locally but cannot submit; hand the files to someone who can. The maintainer sets
-this—see [Access model](#access-model).
+**You need write access to contribute.** Because claims are recorded on `main`, a contributor must be
+able to push to `main` (a repo collaborator). A fork cannot work here—a claim on your fork is invisible
+to everyone pulling `main`. If you lack push access, ask the maintainer to add you (see
+[Access model](#access-model)); with none you can only research and draft locally and hand off.
 
-**The claim is an open pull request, not a branch on the main repo.** A draft PR against `main` is
-visible to every contributor—collaborator or forker—through `gh pr list`; a branch pushed to your
-fork is not. The lock keys off PRs for exactly that reason.
+**The claim is a board edit on `main`, nothing else.** Moving an item from *Open* to *In progress* and
+pushing it is the lock: `git push` rejects a stale push, and two agents cutting the same *Open* line
+conflict on rebase—so the board on `main` is always the single truth about who holds what.
 
 **Autonomous quick path.** If a user simply says *"check ALIGNMENT.md and contribute,"* run the whole
-loop below yourself—sync, claim, research, write, and open the pull request—**without stopping to
-ask**. Only pause if (a) you have no GitHub credentials, (b) the *Open* list is empty, or (c) you
-cannot verify a source. When done, report the PR link and what you shipped. The annotated steps 0–5
-that follow explain each command; this block is the executable distillation.
+loop below yourself—sync, claim on `main`, research, write, and push—**without stopping to ask**. Only
+pause if (a) you have no push access, (b) the *Open* list is empty, or (c) you cannot verify a source.
+When done, report what you shipped and the commit. The annotated steps 0–5 that follow explain each
+command; this block is the executable distillation.
 
 ```bash
-REPO=sadozin/game-dev-research-vault
-
-# 0. Sync to the latest board and landed work.
+# 0. Sync to the latest board.
 git switch main && git pull --ff-only origin main
 
-# Decide where you can push: WRITE/ADMIN -> origin; otherwise fork.
-ACCESS=$(gh repo view $REPO --json viewerPermission -q .viewerPermission)
-if [ "$ACCESS" = "WRITE" ] || [ "$ACCESS" = "ADMIN" ]; then REMOTE=origin; \
-  else gh repo fork $REPO --remote --remote-name fork; REMOTE=fork; fi
+# 1. Pick an unclaimed Open slug (one NOT under "### In progress"), then CLAIM ON MAIN before
+#    researching: edit ALIGNMENT.md — cut the item's bullet from "### Open" and paste it under
+#    "### In progress" as:  - **<slug>** — claimed <date> by <handle>
+git commit -am "claim <slug>"
+git push origin main    # ⛔ rejected? git pull --rebase, re-check the board; if <slug> is already
+                        #    In progress someone beat you—pick another. Do NOT research until this lands.
 
-# 1. See what is already claimed, then pick an unclaimed Open slug from the board.
-gh pr list --repo $REPO --state open
+# 2-3. Research with cited sources; write new wiki/ files in the existing form (steps 2-3 below).
 
-# 2. Claim BEFORE researching: branch, push, open a draft PR (the claim).
-git switch -c contrib/<slug>
-git commit --allow-empty -m "contrib/<slug>: claim"
-git push -u $REMOTE contrib/<slug>
-gh pr create --repo $REPO --draft --base main \
-  --title "contrib/<slug>: <short title>" --body "Claiming <slug> per ALIGNMENT.md; research in progress."
-
-# 3-4. Research with cited sources; write new wiki/ files in the existing form (steps 2-3 below).
-
-# 5. Finish: restock the board, commit, push, mark the PR ready.
-git commit -am "contrib/<slug>: add notes and restock board"
-git push
-gh pr ready "$(gh pr list --repo $REPO --head contrib/<slug> --json number -q '.[0].number')"
+# 4. Finish: move <slug> from "### In progress" to "### Landed" (with the files), then push.
+git add wiki && git commit -am "<slug>: add notes; move to Landed"
+git pull --rebase origin main && git push origin main
 ```
 
 **0 — Sync and read.**
@@ -256,20 +265,19 @@ gh pr ready "$(gh pr list --repo $REPO --head contrib/<slug> --json number -q '.
 - Re-read the [Shared task board](#shared-task-board) *after* pulling—an item you remember as open
   may already have landed.
 
-**1 — Claim *before* you spend research tokens.** Claiming first is the one rule that stops two
-agents researching the same item.
+**1 — Claim on `main` *before* you spend research tokens.** Claiming first is the one rule that stops
+two agents researching the same item, and the claim only counts once it is pushed to `main`.
 
-- Each *Open* item has a **slug** (its bolded id). Use it for both your branch (`contrib/<slug>`) and
-  your PR title (begin the title with `contrib/<slug>`), so the claim is unambiguous.
-- Check what is taken: `gh pr list --repo sadozin/game-dev-research-vault --state open`. If an open PR
-  already carries your slug, it is claimed—pick another. (`git ls-remote --heads origin 'contrib/*'`
-  is a quick extra check, but it only sees branches on the main repo, never forks, so it is not
-  sufficient on its own.)
-- Claim it: branch `git switch -c contrib/<slug>`, make a first commit (moving the item out of *Open*
-  is fine), push it—to `origin` if you have write access, otherwise to your fork—and immediately open
-  a **draft PR** against `main`. That draft PR is your lock; open it *before* you research.
-- Stale claim: a draft PR with no new commits for 7 days is abandoned. Say so on it, then take the
-  item. If two claims still race, the first merged wins and the other rebases onto `main` and repicks.
+- Each *Open* item's **bold id is its slug**. Confirm it is not already listed under *In progress* on
+  the board you just pulled.
+- Claim it: `git pull --ff-only origin main`, then edit this file—cut the item's bullet out of
+  *### Open* and paste it under *### In progress* as `- **<slug>** — claimed <date> by <handle>`.
+  Commit and `git push origin main`.
+- **Push the claim before reading a single source.** An unpushed edit is invisible; the board on
+  `main` is the only place others look. If the push is rejected, `git pull --rebase` and re-read the
+  board: if `<slug>` is now under *In progress*, someone beat you—pick another.
+- Stale claim: an *In progress* entry older than 7 days with nothing landed is abandoned; take it over
+  and update the date.
 
 **2 — Research and verify.**
 
@@ -287,44 +295,44 @@ agents researching the same item.
 
 **4 — Restock the board.**
 
-- Move your item to *Landed* with date and files. Add any new gaps to *Open* (one line: the reason
-  and where the vault already reaches for it), and any private references you found to *Do not touch*.
-  Leaving the next contributor a well-described task is part of the contribution.
+- Add any new gaps you noticed to *Open* (one line: the reason and where the vault already reaches for
+  it), and any private references to *Do not touch*. (Your own item moves to *Landed* in the next step,
+  when you push its files.) Leaving the next contributor a well-described task is part of the work.
 
-**5 — Open the pull request.**
+**5 — Push your work to `main`.**
 
-- Commit your `wiki/` files and the board update together, push the branch, and mark the PR ready
-  against `main`. Merged files are provisional until the maintainer folds them into the private brain
-  (see [Durability of contributions](#durability-of-contributions)); expect your exact wording may be
+- Commit your `wiki/` files together with the board update (move `<slug>` from *In progress* to
+  *Landed*), then `git pull --rebase origin main` and `git push origin main`. Files pushed to `main`
+  are provisional until the maintainer folds them into the private brain (see
+  [Durability of contributions](#durability-of-contributions)); expect your exact wording may be
   revised there.
 
 ## Access model
 
-*Maintainer: confirm which of these applies and delete this line.*
+This vault coordinates on `main`, so **contributors must be repo collaborators with write access**—the
+claim (moving a task to *In progress*) and the work are both pushed straight to `main`, and a claim on
+a fork would be invisible to everyone else. The maintainer grants write access to the specific people
+or agents who contribute, and keeps the list here.
 
-**Default — fork and pull request.** Any agent or person with a GitHub account forks the repo
-(`gh repo fork sadozin/game-dev-research-vault --clone`), pushes their `contrib/<slug>` branch to that
-fork, and opens a PR against `main`. No one gets write access to the main repo; the maintainer merges.
-This needs no admin step and is why the claim keys off the PR (visible to all) rather than a branch on
-the main repo (only visible to people who can push there).
+*Maintainer: grant with* `gh api -X PUT repos/sadozin/game-dev-research-vault/collaborators/<user> -f permission=push`*;
+revoke with the same path and* `-X DELETE`*.*
 
-**Optional — named collaborators.** The maintainer may instead grant specific people or agents write
-access, letting them push `contrib/<slug>` branches straight to the main repo. The claim is still the
-open PR. If you use this, list here who has access and how to request it.
-
-Either way, an agent with **no** GitHub credentials cannot land work—it can only draft locally and
-hand off. That is a property of GitHub, not of this workflow.
+The trade-off, chosen deliberately: this drops open fork-and-PR contributions and the safety of a
+review gate, in exchange for claims that everyone sees on `main`. Because no PR gates a change, the
+**maintainer is the review step**—via the brain-mirror pass and by reverting anything that does not
+fit. An agent with no write access can still research and draft locally, then hand the files to a
+collaborator to push.
 
 ## Durability of contributions
 
 *A note for the maintainer. Suggestions only—nothing here changes the export tool, and contributors
 must not touch it.*
 
-Merged contributions on `main` are currently **provisional**. `tools/publish-research.ps1` rebuilds
-`wiki/` by deleting every note and re-copying from the private brain, so a merged pull request that
-has not also been added to the brain is silently removed by the next publish—no conflict, no warning.
-The *Landed* list can then claim files that no longer exist on `main`. Contributors cannot fix this;
-the runbook only tells them to expect it.
+Contributions pushed to `main` are currently **provisional**. `tools/publish-research.ps1` rebuilds
+`wiki/` by deleting every note and re-copying from the private brain, so any contributed file that has
+not also been added to the brain is silently removed by the next publish—no conflict, no warning. The
+*Landed* list can then claim files that no longer exist on `main`. Contributors cannot fix this; the
+runbook only tells them to expect it.
 
 Two ways to close the gap, in order of preference:
 
@@ -334,10 +342,10 @@ Two ways to close the gap, in order of preference:
    as "unmanaged: fold into the brain to keep it." This ends silent deletion while still letting the
    brain prune its own renamed or removed notes.
 2. **Mirror-before-publish checklist.** If the tool stays destructive, then before every publish
-   confirm that each pull request merged since the last publish is present in the brain. This works
+   confirm that each contribution pushed since the last publish is present in the brain. This works
    but relies on discipline; option 1 makes the safety automatic.
 
-Until one of these is in place, fold each merged pull request into the brain promptly, and keep the
+Until one of these is in place, fold each pushed contribution into the brain promptly, and keep the
 *Landed* list honest by removing any entry whose files a publish has dropped.
 
 When in doubt, the smaller, better-sourced, more clearly-linked change is the right one.
