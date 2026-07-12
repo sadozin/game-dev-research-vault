@@ -330,11 +330,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **gpu-instancing** — claimed 2026-07-11 by Taylor
-
 - **texture-arrays-vs-atlases** — claimed 2026-07-11 by sadozin (Claude)
 
 ### Landed
+
+- **gpu-instancing** (2026-07-11) — `wiki/concepts/gpu-instancing.md`,
+  `wiki/sources/unity-gpu-instancing.md`, `wiki/sources/microsoft-draw-instanced.md`. Repeated-mesh
+  rendering through per-instance data, with the culling, small-mesh, shader, and batcher tradeoffs.
 
 - **lag-compensation** (2026-07-11) — `wiki/concepts/lag-compensation.md`,
   `wiki/sources/gambetta-lag-compensation.md` (plus cites `valve-source-multiplayer-networking`).
