@@ -46,16 +46,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
-  streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
-  about busting it, but no page states how the budget is set or apportioned.
-- **virtual-texturing** — streaming *tiles* instead of whole mip levels, which lifts the
-  full-residency rules (terrain especially) that `mipmapping-and-texture-streaming` documents as its
-  main leak; neighbours that page and `texture-arrays-vs-atlases`.
-- **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
-- **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
-- **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
-- **texture-channel-packing** — ORM/mask packing to cut samplers and memory; neighbours `texture-baking-for-games`.
 - **fixed-timestep-and-determinism** — decoupling simulation from render for stable physics; neighbours `frame-pacing`.
 
 *Netcode & multiplayer (engine-agnostic)*
@@ -69,26 +59,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Game design: economy, progression, monetization*
 
-- **idle-game-monetization** — ads, IAP, and time-skip design; neighbours `clicker-game-economy`.
-- **player-retention-loops** — daily rewards, streaks, session shaping; neighbours `idle-game-prestige`.
-- **gacha-and-pity-math** — drop-rate design and pity systems; probability-heavy.
-- **mmo-itemization-and-loot** — rarity tiers, affixes, power budget; neighbours `mmo-class-economics`.
-- **economy-sinks-and-faucets** — controlling virtual-economy inflation; neighbours `mmo-class-economics`.
-- **crafting-system-design** — recipes, gates, and material loops; neighbours the MMO cluster.
-- **quest-and-objective-systems** — data-driven quests and tracking; neighbours the MMO cluster.
 
 *Unity depth (under-covered vs Godot)*
 
-- **unity-input-system** — the new Input System package vs legacy input; no Unity input concept yet.
-- **unity-addressables** — async asset loading and memory control; no concept yet.
-- **unity-scriptable-objects** — data-as-asset architecture pattern; no concept yet.
-- **unity-netcode-for-gameobjects** — first-party multiplayer stack; no Unity netcode concept.
-- **unity-dots-jobs-and-burst** — the data-oriented performance path; neighbours `entity-component-systems`.
 
 *Unreal depth (under-covered vs Godot)*
 
-- **unreal-nanite** — virtualized geometry and its limits; high interest, no concept.
-- **unreal-lumen** — dynamic GI/reflections and their cost; no concept.
 - **unreal-gameplay-ability-system** — GAS structure and when to use it; no concept.
 - **unreal-replication** — properties, RPCs, and roles for multiplayer; no concept.
 - **unreal-world-partition** — large-world streaming; no concept.
@@ -312,6 +288,27 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **platform-memory-budgets** — claimed 2026-07-11 by Taylor
+- **virtual-texturing** — claimed 2026-07-11 by Taylor
+- **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
+- **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
+- **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
+- **texture-channel-packing** — claimed 2026-07-11 by Taylor
+- **idle-game-monetization** — claimed 2026-07-11 by Taylor
+- **player-retention-loops** — claimed 2026-07-11 by Taylor
+- **gacha-and-pity-math** — claimed 2026-07-11 by Taylor
+- **mmo-itemization-and-loot** — claimed 2026-07-11 by Taylor
+- **economy-sinks-and-faucets** — claimed 2026-07-11 by Taylor
+- **crafting-system-design** — claimed 2026-07-11 by Taylor
+- **quest-and-objective-systems** — claimed 2026-07-11 by Taylor
+- **unity-input-system** — claimed 2026-07-11 by Taylor
+- **unity-addressables** — claimed 2026-07-11 by Taylor
+- **unity-scriptable-objects** — claimed 2026-07-11 by Taylor
+- **unity-netcode-for-gameobjects** — claimed 2026-07-11 by Taylor
+- **unity-dots-jobs-and-burst** — claimed 2026-07-11 by Taylor
+- **unreal-nanite** — claimed 2026-07-11 by Taylor
+- **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
 
