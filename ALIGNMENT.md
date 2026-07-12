@@ -67,7 +67,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Netcode & multiplayer (engine-agnostic)*
 
-- **lag-compensation** — hit registration under latency (rewind / favor-the-shooter); neighbours `client-prediction-and-reconciliation`.
 - **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
 - **authoritative-server-and-anti-cheat** — trust boundaries and server validation; neighbours `godot-dedicated-servers`.
 - **matchmaking-and-mmr** — Elo/Glicko, queues, and fairness; a recurring design question.
@@ -335,6 +334,8 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **gpu-instancing** — claimed 2026-07-11 by Taylor
+
+- **lag-compensation** — claimed 2026-07-11 by Codex
 
 ### Landed
 
