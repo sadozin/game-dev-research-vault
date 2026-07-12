@@ -212,7 +212,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **blender-mcp-export-validation** — claimed 2026-07-11 by Taylor
 - **blender-mcp-scene-cleanup** — claimed 2026-07-11 by Taylor
 - **unreal-mcp-blueprint-authoring** — claimed 2026-07-11 by Taylor
 - **unreal-mcp-level-scripting** — claimed 2026-07-11 by Taylor
@@ -252,6 +251,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **blender-mcp-export-validation** (2026-07-11) — `wiki/concepts/blender-mcp-export-validation.md`,
+  `wiki/sources/blender-gltf-export-validation.md`, `wiki/sources/mcp-tools-export-safety.md`.
+  Export scope, format fidelity, staging, round-trip checks, and overwrite safety.
 
 - **blender-mcp-bake-and-uv** (2026-07-11) — `wiki/concepts/blender-mcp-bake-and-uv.md`,
   `wiki/sources/blender-cycles-baking.md`, `wiki/sources/mcp-tools-bake-safety.md`.
