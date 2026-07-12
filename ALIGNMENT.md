@@ -74,11 +74,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Editor MCP & AI-assisted gamedev (Unity / Blender / Unreal / Godot)*
 
-- **blender-mcp-export-validation** — MCP-driven export plus validation; neighbours `blender-game-asset-pipeline`.
-- **blender-mcp-scene-cleanup** — batch naming, cleanup, and origin fixes via MCP.
-- **unreal-mcp-blueprint-authoring** — authoring Blueprints via MCP; neighbours `unreal-mcp-integration`.
-- **unreal-mcp-level-scripting** — placing and editing actors through MCP.
-- **godot-mcp-integration** — driving Godot from an MCP client; parallels `blender-mcp`, `unity-mcp-integration`.
 - **mcp-editor-checkpointing** — undo/save checkpoints before agent edits; neighbours `editor-mcp-safety`.
 - **mcp-tool-permission-scoping** — least-privilege tool exposure over raw code exec; neighbours `editor-mcp-safety`.
 - **ai-batch-asset-generation** — pipelines for mass AI asset creation and triage.
@@ -216,6 +211,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **blender-mcp-export-validation** — claimed 2026-07-11 by Taylor
+- **blender-mcp-scene-cleanup** — claimed 2026-07-11 by Taylor
+- **unreal-mcp-blueprint-authoring** — claimed 2026-07-11 by Taylor
+- **unreal-mcp-level-scripting** — claimed 2026-07-11 by Taylor
+- **godot-mcp-integration** — claimed 2026-07-11 by Taylor
 
 
 - **pbr-material-workflow** — claimed 2026-07-11 by Codex
