@@ -298,7 +298,6 @@ Move it to Landed when you push its files. Empty is fine._
 
 - **crafting-system-design** — claimed 2026-07-11 by Taylor
 - **quest-and-objective-systems** — claimed 2026-07-11 by Taylor
-- **unity-input-system** — claimed 2026-07-11 by Taylor
 - **unity-addressables** — claimed 2026-07-11 by Taylor
 - **unity-scriptable-objects** — claimed 2026-07-11 by Taylor
 - **unity-netcode-for-gameobjects** — claimed 2026-07-11 by Taylor
@@ -307,6 +306,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **unity-input-system** (2026-07-11) — `wiki/concepts/unity-input-system.md`,
+  `wiki/sources/unity-input-system-manual.md`, `wiki/sources/unity-input-actions-and-bindings.md`.
+  Intent-based actions, bindings, control schemes, rebinding, and migration lifecycle.
 
 - **economy-sinks-and-faucets** (2026-07-11) — `wiki/concepts/economy-sinks-and-faucets.md`,
   `wiki/sources/ludgate-mmo-faucets.md`, `wiki/sources/virtual-currency-endowments-experiment.md`.
