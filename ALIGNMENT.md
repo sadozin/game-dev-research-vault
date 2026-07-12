@@ -332,9 +332,11 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **texture-compression-formats** — claimed 2026-07-11 by Taylor
-
 ### Landed
+
+- **texture-compression-formats** (2026-07-11) — `wiki/concepts/texture-compression-formats.md`,
+  `wiki/sources/unity-texture-compression-platforms.md`, `wiki/sources/microsoft-block-compression.md`.
+  BCn, ASTC, and ETC2 selection by channel and platform, including runtime fallback and artifact costs.
 
 - **texture-arrays-vs-atlases** (2026-07-11) — `wiki/concepts/texture-arrays-vs-atlases.md`,
   `wiki/sources/unity-texture-arrays.md`, `wiki/sources/d3d11-resource-limits.md`. Answers the limits
