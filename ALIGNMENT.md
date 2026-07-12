@@ -307,13 +307,15 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-nanite** — claimed 2026-07-11 by Taylor
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
-- **snapshot-interpolation** — claimed 2026-07-11 by Codex
-
 ### Landed
 
 - **mmo-itemization-and-loot** (2026-07-11) — `wiki/concepts/mmo-itemization-and-loot.md`,
   `wiki/sources/unreal-data-driven-items.md`, `wiki/sources/defining-loot-tables-arpg.md`. Data-driven
   item definitions, staged loot rolls, affix pools, power budgets, and junk-loot failure modes.
+- **snapshot-interpolation** (2026-07-11) — `wiki/concepts/snapshot-interpolation.md`,
+  `wiki/sources/gaffer-snapshot-interpolation.md` (plus cites `valve-source-multiplayer-networking`).
+  Covers buffered remote rendering, packet-loss tolerance, interpolation delay, and why extrapolation
+  must be bounded around collisions and nonlinear motion.
 
 - **gacha-and-pity-math** (2026-07-11) — `wiki/concepts/gacha-and-pity-math.md`,
   `wiki/sources/gacha-pricing-pity-research.md` (plus cites `apple-app-review-guidelines-monetization`).
