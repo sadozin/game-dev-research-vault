@@ -330,10 +330,13 @@ Move it to Landed when you push its files. Empty is fine._
 - **bindless-textures** — claimed 2026-07-11 by Taylor
 
 - **mipmapping-and-texture-streaming** — claimed 2026-07-11 by sadozin (Claude)
-- **authoritative-server-and-anti-cheat** — claimed 2026-07-11 by Codex
 
 ### Landed
 
+- **authoritative-server-and-anti-cheat** (2026-07-11) — `wiki/concepts/authoritative-server-and-anti-cheat.md`,
+  `wiki/sources/epic-networking-overview.md` (plus cites `valve-source-multiplayer-networking`).
+  Defines server trust boundaries, per-command validation, selective replication, and why authority
+  is necessary but not sufficient as an anti-cheat system.
 - **texture-compression-formats** (2026-07-11) — `wiki/concepts/texture-compression-formats.md`,
   `wiki/sources/unity-texture-compression-platforms.md`, `wiki/sources/microsoft-block-compression.md`.
   BCn, ASTC, and ETC2 selection by channel and platform, including runtime fallback and artifact costs.
