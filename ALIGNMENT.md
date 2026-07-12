@@ -252,26 +252,6 @@ Move it to Landed when you push its files. Empty is fine._
 - **accessibility-in-games** — claimed 2026-07-11 by Codex
 - **wave-function-collapse** — claimed 2026-07-11 by Codex
 - **poisson-disk-sampling** — claimed 2026-07-11 by Codex
-- **animation-compression** — claimed 2026-07-11 by Codex
-- **desync-detection-and-recovery** — claimed 2026-07-11 by Codex
-- **network-relevancy-and-interest-management** — claimed 2026-07-11 by Codex
-- **unity-execution-order** — claimed 2026-07-11 by Codex
-- **unity-coroutines-and-async** — claimed 2026-07-11 by Codex
-- **unity-serialization-rules** — claimed 2026-07-11 by Codex
-- **unity-assembly-definitions** — claimed 2026-07-11 by Codex
-- **unity-render-pipelines-urp-hdrp** — claimed 2026-07-11 by Codex
-- **unity-memory-profiler** — claimed 2026-07-11 by Codex
-- **unreal-actors-and-components** — claimed 2026-07-11 by Codex
-- **unreal-enhanced-input** — claimed 2026-07-11 by Codex
-- **unreal-material-instances** — claimed 2026-07-11 by Codex
-- **unreal-save-game** — claimed 2026-07-11 by Codex
-- **specular-vs-metallic-workflow** — claimed 2026-07-11 by Codex
-- **hdr-and-tonemapping** — claimed 2026-07-11 by Codex
-- **post-processing-stack** — claimed 2026-07-11 by Codex
-- **lobby-and-session-management** — claimed 2026-07-11 by Codex
-- **goap-planning** — claimed 2026-07-11 by Codex
-- **season-and-liveops-cadence** — claimed 2026-07-11 by Codex
-- **terrain-heightmap-generation** — claimed 2026-07-11 by Codex
 
 - **ambient-occlusion-maps** — claimed 2026-07-11 by Claude
 - **screen-space-reflections** — claimed 2026-07-11 by Claude
@@ -285,6 +265,13 @@ Move it to Landed when you push its files. Empty is fine._
 - **audio-memory-and-streaming** — claimed 2026-07-11 by Claude
 
 ### Landed
+
+- **animation-compression**, **desync-detection-and-recovery**, **network-relevancy-and-interest-management** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-animation-compression.md` and `wiki/sources/netcode-desync-and-relevancy.md`.
+- **unity-execution-order**, **unity-coroutines-and-async**, **unity-serialization-rules**, **unity-assembly-definitions** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-lifecycle-serialization-architecture.md`.
+- **unity-render-pipelines-urp-hdrp**, **unity-memory-profiler** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-render-pipelines-tonemapping.md` and `wiki/sources/unity-memory-profiler-docs.md`.
+- **unreal-actors-and-components**, **unreal-enhanced-input**, **unreal-save-game**, **unreal-material-instances** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unreal-actors-input-and-save.md` and `wiki/sources/unreal-material-instances.md`.
+- **specular-vs-metallic-workflow**, **hdr-and-tonemapping**, **post-processing-stack** (2026-07-11) — `wiki/concepts/` notes with linked rendering sources.
+- **lobby-and-session-management**, **goap-planning**, **season-and-liveops-cadence**, **terrain-heightmap-generation** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-multiplayer-sessions.md`, `wiki/sources/jeff-orkin-goap.md`, `wiki/sources/liveops-season-cadence.md`, and `wiki/sources/terrain-heightmap-reference.md`.
 
 - **gltf-vs-fbx-tradeoffs** (2026-07-11) — `wiki/concepts/gltf-vs-fbx-tradeoffs.md`,
   `wiki/sources/khronos-gltf-runtime-delivery.md`, `wiki/sources/autodesk-fbx-sdk-and-animation.md`.
