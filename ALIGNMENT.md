@@ -335,12 +335,12 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **prestige-layer-pacing** — claimed 2026-07-11 by Taylor
-
-- **state-synchronization-strategies** — claimed 2026-07-11 by Codex
-
 ### Landed
 
+- **state-synchronization-strategies** (2026-07-11) — `wiki/concepts/state-synchronization-strategies.md`,
+  `wiki/sources/gaffer-state-synchronization.md` (plus cites `valve-source-multiplayer-networking`).
+  Compares snapshots, acknowledged deltas, input/event replication, and approximate state updates,
+  with a hybrid protocol recommendation for persistent multiplayer worlds.
 - **pool-warmup-and-budgeting** (2026-07-11) — `wiki/concepts/pool-warmup-and-budgeting.md`,
   `wiki/sources/unity-object-pool-api.md`, `wiki/sources/unity-learn-object-pooling.md`. Sizing and
   prewarm for `object-pooling`: peak-concurrent measurement, and the trap that Unity's
