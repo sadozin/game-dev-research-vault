@@ -287,7 +287,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **virtual-texturing** — claimed 2026-07-11 by Taylor
 - **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
 - **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
 - **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
@@ -308,6 +307,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **virtual-texturing** (2026-07-11) — `wiki/concepts/virtual-texturing.md`,
+  `wiki/sources/unreal-virtual-texturing.md`, `wiki/sources/unity-streaming-virtual-texturing.md`.
+  Tile/page residency for large textures, with feedback, cache, border, and latency tradeoffs.
 
 - **platform-memory-budgets** (2026-07-11) — `wiki/concepts/platform-memory-budgets.md`,
   `wiki/sources/microsoft-video-memory-budget.md`, `wiki/sources/unreal-texture-memory-pools.md`.
