@@ -328,7 +328,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **bindless-textures** — claimed 2026-07-11 by Taylor
 - **authoritative-server-and-anti-cheat** — claimed 2026-07-11 by Codex
 
 ### Landed
