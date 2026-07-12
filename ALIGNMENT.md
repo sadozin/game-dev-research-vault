@@ -169,33 +169,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **unity-controller-vs-rigidbody** — claimed 2026-07-11 by Codex
-- **unity-2d-tilemap-and-sprites** — claimed 2026-07-11 by Codex
-- **unity-animation-rigging** — claimed 2026-07-11 by Codex
-- **unity-audio-mixer** — claimed 2026-07-11 by Codex
-- **unity-localization-package** — claimed 2026-07-11 by Codex
-- **unity-il2cpp-and-aot** — claimed 2026-07-11 by Codex
-- **unity-webgl-limits** — claimed 2026-07-11 by Codex
-- **unity-mobile-optimization** — claimed 2026-07-11 by Codex
-- **unity-crash-and-log-diagnostics** — claimed 2026-07-11 by Codex
-- **unreal-packaging-and-cook** — claimed 2026-07-11 by Codex
-- **unreal-insights-profiling** — claimed 2026-07-11 by Codex
-- **unreal-hlod** — claimed 2026-07-11 by Codex
-- **unreal-sequencer** — claimed 2026-07-11 by Codex
-- **unreal-cpp-gameplay-basics** — claimed 2026-07-11 by Codex
-- **unreal-android-build** — claimed 2026-07-11 by Codex
-- **godot-csharp-vs-gdscript** — claimed 2026-07-11 by Codex
-- **godot-gdextension-native** — claimed 2026-07-11 by Codex
-- **biome-and-climate-generation** — claimed 2026-07-11 by Codex
-- **cellular-automata-caves** — claimed 2026-07-11 by Codex
-- **procedural-mesh-generation** — claimed 2026-07-11 by Codex
-
-
-
-
-
-
 ### Landed
+
+- **unity-controller-vs-rigidbody**, **unity-2d-tilemap-and-sprites**, **unity-animation-rigging**, **unity-audio-mixer** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-movement-content-and-audio.md`.
+- **unity-localization-package**, **unity-il2cpp-and-aot**, **unity-webgl-limits**, **unity-mobile-optimization**, **unity-crash-and-log-diagnostics** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-platform-localization-diagnostics.md`.
+- **unreal-packaging-and-cook**, **unreal-insights-profiling**, **unreal-hlod**, **unreal-sequencer**, **unreal-cpp-gameplay-basics**, **unreal-android-build** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unreal-build-profiling-and-platforms.md`.
+- **godot-csharp-vs-gdscript**, **godot-gdextension-native** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/godot-languages-and-native-extensions.md`.
+- **biome-and-climate-generation**, **cellular-automata-caves**, **procedural-mesh-generation** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/procedural-biomes-caves-meshes.md`.
 
 - **loot-table-design** (2026-07-11) — `wiki/concepts/loot-table-design.md` (plus cites `defining-loot-tables-arpg`, `gacha-pricing-pity-research`).
   Weighted roll stages, variance, pity, duplicates, and reward-budget simulation.
