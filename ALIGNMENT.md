@@ -286,7 +286,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **idle-game-monetization** — claimed 2026-07-11 by Taylor
 - **player-retention-loops** — claimed 2026-07-11 by Taylor
 - **gacha-and-pity-math** — claimed 2026-07-11 by Taylor
 - **mmo-itemization-and-loot** — claimed 2026-07-11 by Taylor
@@ -302,6 +301,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **idle-game-monetization** (2026-07-11) — `wiki/concepts/idle-game-monetization.md`,
+  `wiki/sources/google-play-payments-and-ads.md`, `wiki/sources/apple-app-review-guidelines-monetization.md`.
+  Opt-in ads, paid pacing, economy integrity, and current storefront constraints.
 
 - **texture-channel-packing** (2026-07-11) — `wiki/concepts/texture-channel-packing.md`,
   `wiki/sources/unity-channel-packed-textures.md`, `wiki/sources/unreal-texture-masks.md`. Shared
