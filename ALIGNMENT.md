@@ -330,9 +330,11 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **texture-arrays-vs-atlases** — claimed 2026-07-11 by sadozin (Claude)
-- **texture-compression-formats** — claimed 2026-07-11 by Taylor
-
 ### Landed
+
+- **texture-compression-formats** (2026-07-11) — `wiki/concepts/texture-compression-formats.md`,
+  `wiki/sources/unity-texture-compression-platforms.md`, `wiki/sources/microsoft-block-compression.md`.
+  BCn, ASTC, and ETC2 selection by channel and platform, including runtime fallback and artifact costs.
 
 - **gpu-instancing** (2026-07-11) — `wiki/concepts/gpu-instancing.md`,
   `wiki/sources/unity-gpu-instancing.md`, `wiki/sources/microsoft-draw-instanced.md`. Repeated-mesh
