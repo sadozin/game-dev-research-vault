@@ -40,11 +40,12 @@ having pushed your claim first—that single rule is what prevents duplicate wor
 
 ### Open (pick from here)
 
-- **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
-  soft/hard caps shape a long idle curve.
 - **pool-warmup-and-budgeting** — sizing, prewarm timing, and memory caps for pools; neighbours
   `object-pooling` (concept covers the pattern; this would cover measuring peak concurrent use and
   load-time prewarm without hitching).
+- **prestige-layer-pacing** — when to introduce a second/third reset currency so stacks stay
+  legible; neighbours `prestige-currency-soft-caps` and `idle-game-prestige` (soft caps cover the
+  math; this would cover content/feature gates at each layer).
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -52,6 +53,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 *Rendering & optimization (cross-engine)*
 
 - **gpu-instancing** — one draw call for many copies of a mesh; neighbours `draw-call-batching`.
+- **texture-arrays-vs-atlases** — array layers keep per-texture wrap/mirror and clean mip filtering,
+  which is exactly what `texture-atlasing` gives up ("the catch" names the limits but not the modern
+  way out); neighbours `texture-atlasing` and `gpu-instancing`.
 - **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
 - **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
 - **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
@@ -62,7 +66,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Netcode & multiplayer (engine-agnostic)*
 
-- **client-prediction-and-reconciliation** — the core of responsive netcode; neighbours `godot-multiplayer`.
 - **lag-compensation** — hit registration under latency (rewind / favor-the-shooter); neighbours `client-prediction-and-reconciliation`.
 - **rollback-netcode** — deterministic action/fighting netplay; distinct from lockstep.
 - **authoritative-server-and-anti-cheat** — trust boundaries and server validation; neighbours `godot-dedicated-servers`.
@@ -336,12 +339,20 @@ Move it to Landed when you push its files. Empty is fine._
 - **action-combat-roles** (2026-07-12) — `wiki/concepts/action-combat-roles.md`,
   `wiki/sources/mcdonald-mmo-character-roles.md`, `wiki/sources/taugrim-action-combat.md`. Action-combat
   role design beyond the holy trinity; merged from a contributor branch.
-- **texture-atlasing** (2026-07-12) — `wiki/concepts/texture-atlasing.md`,
-  `wiki/sources/halladay-texture-atlas-mips.md`, `wiki/sources/unity-texture-atlasing.md`. Atlasing to
-  keep draw-call batches; merged from a contributor branch.
 - **idle-game-math-part-ii** (2026-07-12) — `wiki/sources/idle-game-math-part-ii.md`, threaded into
   `clicker-game-economy` and `idle-game-prestige`. Completes the cited Pecorella series; merged from a
   contributor branch.
+- **texture-atlasing** (2026-07-11) — `wiki/concepts/texture-atlasing.md`,
+  `wiki/sources/nvidia-texture-atlas-whitepaper.md`, `wiki/sources/unity-sprite-atlas.md`. The
+  texture-side precondition for `draw-call-batching` that seven pages reached for ("atlas your
+  textures") but none defined; carries the wrap/mirror and mip-filter limits that make it fail.
+- **client-prediction-and-reconciliation** (2026-07-11) — `wiki/concepts/client-prediction-and-reconciliation.md`,
+  `wiki/sources/valve-source-multiplayer-networking.md`, `wiki/sources/gaffer-client-prediction.md`.
+  Covers sequence-numbered input prediction, authoritative correction, rewind/replay, and the
+  tradeoff between responsive local movement and shared simulation rules.
+- **prestige-currency-soft-caps** (2026-07-12) — `wiki/concepts/prestige-currency-soft-caps.md`,
+  `wiki/sources/diminishing-returns-soft-caps.md` (plus cites `idle-game-math-part-iii`). Soft/hard
+  caps and stacked meta currencies deepening `idle-game-prestige`.
 - **object-pooling** (2026-07-12) — `wiki/concepts/object-pooling.md`,
   `wiki/sources/nystrom-object-pool.md`, `wiki/sources/unity-object-pooling.md`. Allocation-stall
   avoidance for frequent spawn/despawn; neighbours `game-performance-profiling`.
