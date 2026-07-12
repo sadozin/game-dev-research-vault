@@ -296,7 +296,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **quest-and-objective-systems** — claimed 2026-07-11 by Taylor
 - **unity-addressables** — claimed 2026-07-11 by Taylor
 - **unity-scriptable-objects** — claimed 2026-07-11 by Taylor
 - **unity-netcode-for-gameobjects** — claimed 2026-07-11 by Taylor
@@ -305,6 +304,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **quest-and-objective-systems** (2026-07-11) — `wiki/concepts/quest-and-objective-systems.md`,
+  `wiki/sources/fortnite-quests-persistent-data.md`, `wiki/sources/quest-definition-context-purpose.md`.
+  Event-driven progress, persistent state, objective clarity, and quest-tracker failure modes.
 
 - **crafting-system-design** (2026-07-11) — `wiki/concepts/crafting-system-design.md`,
   `wiki/sources/coster-unbroke-crafting-system.md` (plus cites `unreal-data-driven-items`). Recipe
