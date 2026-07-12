@@ -287,7 +287,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **lightmap-baking-and-uv2** — claimed 2026-07-11 by Taylor
 - **texture-channel-packing** — claimed 2026-07-11 by Taylor
 - **idle-game-monetization** — claimed 2026-07-11 by Taylor
 - **player-retention-loops** — claimed 2026-07-11 by Taylor
@@ -305,6 +304,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **lightmap-baking-and-uv2** (2026-07-11) — `wiki/concepts/lightmap-baking-and-uv2.md`,
+  `wiki/sources/unreal-lightmapping.md`, `wiki/sources/unreal-lightmap-uv-generation.md`. Dedicated
+  baked-light UV layout, padding, resolution, and chart-generation tradeoffs.
 
 - **shadow-map-budgeting** (2026-07-11) — `wiki/concepts/shadow-map-budgeting.md`,
   `wiki/sources/unreal-shadowing.md`, `wiki/sources/unreal-virtual-shadow-maps.md`. Cascade and
