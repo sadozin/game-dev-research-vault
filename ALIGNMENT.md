@@ -311,6 +311,11 @@ Move it to Landed when you push its files. Empty is fine._
 
 ### Landed
 
+- **reliable-udp-and-ordering** (2026-07-11) — `wiki/concepts/reliable-udp-and-ordering.md`,
+  `wiki/sources/gaffer-reliability-over-udp.md` (plus cites `valve-source-multiplayer-networking`).
+  Covers packet sequencing, redundant acknowledgements, idempotent retransmission, channel-specific
+  reliability, and RTT-driven congestion response.
+
 - **mipmapping-and-texture-streaming** (2026-07-11) —
   `wiki/concepts/mipmapping-and-texture-streaming.md`, `wiki/sources/unity-mipmap-streaming.md`,
   `wiki/sources/unreal-texture-streaming.md`. Why the mip chain costs only ~33% and buys stability,
