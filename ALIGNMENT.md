@@ -193,32 +193,20 @@ Move it to Landed when you push its files. Empty is fine._
 - **game-feel-and-juice** — claimed 2026-07-11 by Taylor
 - **difficulty-dynamic-adjustment** — claimed 2026-07-11 by Taylor
 
-- **mcp-editor-checkpointing** — claimed 2026-07-11 by Codex
-- **mcp-tool-permission-scoping** — claimed 2026-07-11 by Codex
-- **ai-batch-asset-generation** — claimed 2026-07-11 by Codex
-- **ai-gameplay-script-generation** — claimed 2026-07-11 by Codex
-- **llm-level-design-limits** — claimed 2026-07-11 by Codex
-- **unity-editor-scripting** — claimed 2026-07-11 by Codex
-- **unity-shader-graph** — claimed 2026-07-11 by Codex
-- **unity-vfx-graph-vs-particles** — claimed 2026-07-11 by Codex
-- **unity-timeline-and-cinemachine** — claimed 2026-07-11 by Codex
-- **unity-navmesh-agents** — claimed 2026-07-11 by Codex
-- **unreal-blueprint-communication** — claimed 2026-07-11 by Codex
-- **unreal-anim-montages-and-notifies** — claimed 2026-07-11 by Codex
-- **unreal-niagara-vfx** — claimed 2026-07-11 by Codex
-- **unreal-landscape-and-foliage** — claimed 2026-07-11 by Codex
-- **unreal-behavior-trees-and-eqs** — claimed 2026-07-11 by Codex
-- **unreal-navmesh-and-perception** — claimed 2026-07-11 by Codex
-- **unreal-chaos-physics** — claimed 2026-07-11 by Codex
-- **unreal-umg-ui** — claimed 2026-07-11 by Codex
-- **unreal-data-assets-and-datatables** — claimed 2026-07-11 by Codex
-- **unreal-online-subsystem** — claimed 2026-07-11 by Codex
-
 
 
 
 
 ### Landed
+
+- **mcp-editor-checkpointing**, **mcp-tool-permission-scoping**, **ai-batch-asset-generation**, **ai-gameplay-script-generation** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/mcp-agent-safety-workflows.md`.
+- **llm-level-design-limits** (2026-07-11) — `wiki/concepts/llm-level-design-limits.md`, `wiki/sources/llm-level-design-limitations.md`.
+- **unity-editor-scripting**, **unity-shader-graph**, **unity-vfx-graph-vs-particles**, **unity-timeline-and-cinemachine** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unity-editor-and-rendering-systems.md`.
+- **unity-navmesh-agents** (2026-07-11) — `wiki/concepts/unity-navmesh-agents.md`, `wiki/sources/unity-navigation-agents.md`.
+- **unreal-blueprint-communication**, **unreal-anim-montages-and-notifies** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unreal-communication-animation.md`.
+- **unreal-niagara-vfx**, **unreal-behavior-trees-and-eqs**, **unreal-navmesh-and-perception** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unreal-ai-and-effects.md`.
+- **unreal-landscape-and-foliage**, **unreal-umg-ui**, **unreal-data-assets-and-datatables**, **unreal-online-subsystem** (2026-07-11) — `wiki/concepts/` notes with `wiki/sources/unreal-world-ui-data-online.md`.
+- **unreal-chaos-physics** (2026-07-11) — `wiki/concepts/unreal-chaos-physics.md` with the official Unreal physics source.
 
 - **telemetry-and-kpis** (2026-07-11) — `wiki/concepts/telemetry-and-kpis.md`, `wiki/sources/unity-analytics-dashboards.md`.
   Decision-focused events, cohorts, dashboards, latency, and guardrail metrics.
