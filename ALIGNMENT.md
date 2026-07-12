@@ -51,7 +51,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **gpu-instancing** — one draw call for many copies of a mesh; neighbours `draw-call-batching`.
 - **texture-arrays-vs-atlases** — array layers keep per-texture wrap/mirror and clean mip filtering,
   which is exactly what `texture-atlasing` gives up ("the catch" names the limits but not the modern
   way out); neighbours `texture-atlasing` and `gpu-instancing`.
@@ -334,6 +333,8 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
+
+- **gpu-instancing** — claimed 2026-07-11 by Taylor
 
 ### Landed
 
