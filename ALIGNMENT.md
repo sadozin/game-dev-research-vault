@@ -51,7 +51,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Rendering & optimization (cross-engine)*
 
-- **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
 - **platform-memory-budgets** — the hard per-platform RAM/VRAM ceiling that pools, textures, and
   streaming all draw from; `pool-warmup-and-budgeting` and `vrchat-avatar-optimization` both warn
   about busting it, but no page states how the budget is set or apportioned.
@@ -329,6 +328,8 @@ _Move an item here from Open the moment you claim it, as `- **<slug>** — claim
 Move it to Landed when you push its files. Empty is fine._
 
 - **bindless-textures** — claimed 2026-07-11 by Taylor
+
+- **mipmapping-and-texture-streaming** — claimed 2026-07-11 by sadozin (Claude)
 - **authoritative-server-and-anti-cheat** — claimed 2026-07-11 by Codex
 
 ### Landed
