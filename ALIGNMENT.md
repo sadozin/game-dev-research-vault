@@ -22,15 +22,17 @@ Keep this board current—it is the point of coordination between contributors.
 
 - **idle-game-math-part-ii** — Parts I and III are cited sources; the middle of Pecorella's public
   series is missing. Add the source page and thread it into `clicker-game-economy` and
-  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.)
-- **texture-atlasing** — referenced in spirit by `draw-call-batching` and `vrchat-avatar-optimization`
-  (both say "atlas textures to keep batches") but never defined on its own.
+  `idle-game-prestige`. (Note: threading requires touching those two concept pages' `sources:`.
+  Claimed by open PR #1 on `contrib/idle-game-math-part-ii`.)
 - **action-combat-roles** — `mmo-combat-roles` sets up the holy trinity but not action-combat role
   design (aggro without a taunt, telegraphs, sustain vs. burst); a natural neighbour concept.
 - **prestige-currency-soft-caps** — deepens `idle-game-prestige`; how stacked reset currencies and
   soft/hard caps shape a long idle curve.
 - **object-pooling** — neighbours `game-performance-profiling`; allocation-stall avoidance for
   frequently spawned entities.
+- **atlas-uv-remapping-pipelines** — how DCC and engine tools rewrite UVs when charts move into a
+  sheet; neighbours `texture-atlasing` and `blender-game-asset-pipeline` (concept covers why, not
+  the end-to-end remesh/remap workflow).
 
 **Backlog — token-saving reference gaps (grouped; each is an evergreen topic agents keep re-deriving).**
 Godot is already deeply covered, so these lean to under-covered areas. Pick any; the slug is the bold id.
@@ -39,7 +41,7 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 - **gpu-instancing** — one draw call for many copies of a mesh; neighbours `draw-call-batching`.
 - **texture-compression-formats** — BCn/ASTC/ETC2 choice per platform; neighbours `texture-baking-for-games` and VRChat texture-memory limits.
-- **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling`.
+- **mipmapping-and-texture-streaming** — sampling quality and memory; neighbours `game-performance-profiling` and `texture-atlasing` (atlas mips are the hard case).
 - **overdraw-and-transparency-cost** — why layered/transparent fills wreck fill-rate; neighbours `frame-pacing`, `vrchat-avatar-optimization`.
 - **shadow-map-budgeting** — cascade count, resolution, and cost; neighbours `real-time-lighting-budget`.
 - **lightmap-baking-and-uv2** — baked GI workflow and the second UV set; neighbours `real-time-lighting-budget`, `texture-baking-for-games`.
@@ -114,6 +116,9 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 ### Landed
 
+- **texture-atlasing** (2026-07-12) — `wiki/concepts/texture-atlasing.md`,
+  `wiki/sources/unity-texture-atlasing.md`, `wiki/sources/halladay-texture-atlas-mips.md`. Defines
+  the atlas technique that `draw-call-batching` and `vrchat-avatar-optimization` only named.
 - **draw-call-batching** (2026-07-11) — `wiki/concepts/draw-call-batching.md`,
   `wiki/sources/nvidia-batch-batch-batch.md`, `wiki/sources/unity-draw-call-batching.md`. The
   batching concept the optimization cluster kept implying but never defined.
