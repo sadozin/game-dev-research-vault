@@ -288,7 +288,6 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 _Move an item here from Open the moment you claim it, as `- **<slug>** — claimed <date> by <handle>`.
 Move it to Landed when you push its files. Empty is fine._
 
-- **platform-memory-budgets** — claimed 2026-07-11 by Taylor
 - **virtual-texturing** — claimed 2026-07-11 by Taylor
 - **overdraw-and-transparency-cost** — claimed 2026-07-11 by Taylor
 - **shadow-map-budgeting** — claimed 2026-07-11 by Taylor
@@ -310,6 +309,10 @@ Move it to Landed when you push its files. Empty is fine._
 - **unreal-lumen** — claimed 2026-07-11 by Taylor
 
 ### Landed
+
+- **platform-memory-budgets** (2026-07-11) — `wiki/concepts/platform-memory-budgets.md`,
+  `wiki/sources/microsoft-video-memory-budget.md`, `wiki/sources/unreal-texture-memory-pools.md`.
+  Separates OS video-memory budgets from advertised VRAM and explains texture-streaming headroom.
 
 - **mipmapping-and-texture-streaming** (2026-07-11) —
   `wiki/concepts/mipmapping-and-texture-streaming.md`, `wiki/sources/unity-mipmap-streaming.md`,
