@@ -52,6 +52,13 @@ Godot is already deeply covered, so these lean to under-covered areas. Pick any;
 
 *Gameplay systems & AI (engine-agnostic)*
 
+- **animation-compression** — clip memory and quality tradeoffs; the animation cluster
+  (`character-animation-graphs`, `root-motion-vs-inplace`) never states what a clip costs to store.
+- **desync-detection-and-recovery** — state checksums, divergence logging, and what to do after a
+  desync; `deterministic-lockstep` says lockstep needs this but stops at naming it.
+- **network-relevancy-and-interest-management** — engine-agnostic view of what `unreal-replication`
+  covers as relevancy/priority/dormancy: how large worlds decide who hears about what.
+
 
 *Procedural generation*
 
