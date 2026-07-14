@@ -6,11 +6,14 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[plants-vs-zombies-onboarding-gdc]]
-  - [[procedural-generation-of-tower-defense-levels]]
-  - [[kingdom-rush-press-kit]]
-  - [[dungeon-defenders-store-description]]
-  - [[kingdom-rush-battles-beginners-guide]]
+  - [[wiki/sources/plants-vs-zombies-onboarding-gdc|plants-vs-zombies-onboarding-gdc]]
+  - [[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]
+  - [[wiki/sources/kingdom-rush-press-kit|kingdom-rush-press-kit]]
+  - [[wiki/sources/dungeon-defenders-store-description|dungeon-defenders-store-description]]
+  - [[wiki/sources/kingdom-rush-battles-beginners-guide|kingdom-rush-battles-beginners-guide]]
+  - [[wiki/sources/bloons-td6-store-description|bloons-td6-store-description]]
+  - [[wiki/sources/orcs-must-die-official-description|orcs-must-die-official-description]]
+  - [[wiki/sources/legion-td2-official-description|legion-td2-official-description]]
 tags: [game, design, tower-defense, genre, taxonomy]
 ---
 
@@ -38,9 +41,11 @@ making player placement alter navigation.
 
 Planning-heavy games emphasize placement and upgrades, while active-ability designs add spells,
 heroes, retargeting, or manual triggers. Action hybrids add a directly controlled combat character;
-[[dungeon-defenders-store-description]] demonstrates that this also adds character feel, gear,
-camera, encounters, and often co-op. Competitive variants add adversarial balance, networking,
-matchmaking, synchronization, and live operations ([[kingdom-rush-battles-beginners-guide]]).
+[[wiki/sources/dungeon-defenders-store-description|dungeon-defenders-store-description]] illustrates one package that also includes character classes,
+gear, varied missions, and co-op. Those features imply additional camera, combat, networking, and
+balance work. Competitive variants likewise add adversarial economy, synchronization, matchmaking,
+anti-cheat considerations, and live balance work; [[wiki/sources/kingdom-rush-battles-beginners-guide|kingdom-rush-battles-beginners-guide]] is one current
+competitive example, while the production implications are derived.
 
 Co-op is not simply “single player with more cursors.” Shared currency, ownership, build permissions,
 pause rules, role division, disconnect recovery, scaling, and grief prevention all need a contract.
@@ -64,6 +69,14 @@ whether the base game is balanced.
 offense/PvP,” “roguelite tower defense,” and “survival-defense hybrid” are useful market labels, but
 the three-axis description is the production truth. Two games with the same store tag may need
 fundamentally different pathing, UI, test harnesses, and content pipelines.
+
+The major lineages are broader than three famous examples. Bloons TD represents roster, branching
+upgrade, hero, co-op, meta-progression, and live-content breadth
+([[wiki/sources/bloons-td6-store-description|bloons-td6-store-description]]). Orcs Must Die represents weapon-and-trap action defense
+([[wiki/sources/orcs-must-die-official-description|orcs-must-die-official-description]]). Legion TD 2 represents the send-creep PvP economy in which
+defense, offense, and growth compete for attention ([[wiki/sources/legion-td2-official-description|legion-td2-official-description]]). Reverse/tower-offense,
+RTS-colony defense, merge/idle defense, and automation-defense hybrids sit at the genre edges and
+should be described by their added decision system rather than folded into “classic TD.”
 
 ## First-project recommendation
 

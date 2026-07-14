@@ -6,6 +6,7 @@ wiki/concepts/classic-doom-engine-internals.md
 wiki/concepts/classic-doom-engine-quirks-and-bugs.md
 wiki/concepts/classless-mmo-progression.md
 wiki/concepts/clicker-game-economy.md
+wiki/concepts/difficulty-dynamic-adjustment.md
 wiki/concepts/doom-style-shooter-combat-profiles.md
 wiki/concepts/doom-style-shooter-level-and-encounter-design.md
 wiki/concepts/doom-style-shooter-testing-and-architecture.md
@@ -92,8 +93,6 @@ wiki/sources/doom-engine-internals-doomwiki.md
 wiki/sources/doom-full-body-animation-gdc.md
 wiki/sources/doom-open-source-release.md
 wiki/sources/doom-push-forward-combat-gdc.md
-wiki/sources/dungeon-defenders-store-description.md
-wiki/sources/fix-your-timestep.md
 wiki/sources/godot-animation-docs.md
 wiki/sources/godot-design-philosophy.md
 wiki/sources/godot-export-docs.md
@@ -102,7 +101,6 @@ wiki/sources/godot-importing-3d-scenes.md
 wiki/sources/godot-introduction-to-3d.md
 wiki/sources/godot-key-concepts.md
 wiki/sources/godot-navigation-docs.md
-wiki/sources/godot-navigation-documentation.md
 wiki/sources/godot-nodes-and-scenes.md
 wiki/sources/godot-nodes-scene-instances.md
 wiki/sources/godot-physics-docs.md
@@ -116,17 +114,9 @@ wiki/sources/guild-wars-2-build-templates.md
 wiki/sources/guild-wars-2-weapon-skills.md
 wiki/sources/idle-game-math-part-i.md
 wiki/sources/idle-game-math-part-iii.md
-wiki/sources/kingdom-rush-battles-beginners-guide.md
-wiki/sources/kingdom-rush-press-kit.md
-wiki/sources/mda-game-design-framework.md
 wiki/sources/mmo-class-economics.md
 wiki/sources/mmo-trinity-design.md
-wiki/sources/neat-tower-defense-wave-generation.md
 wiki/sources/nvidia-texture-atlas-whitepaper.md
-wiki/sources/plants-vs-zombies-onboarding-gdc.md
-wiki/sources/procedural-generation-of-tower-defense-levels.md
-wiki/sources/tower-defense-flow-field-pathfinding.md
-wiki/sources/tower-defense-strategic-control-agents.md
 wiki/sources/unity-engine-architecture.md
 wiki/sources/unity-learn-object-pooling.md
 wiki/sources/unity-lighting-workflow.md
@@ -134,7 +124,6 @@ wiki/sources/unity-mipmap-streaming.md
 wiki/sources/unity-object-pool-api.md
 wiki/sources/unity-occlusion-culling.md
 wiki/sources/unity-profiling-target-device.md
-wiki/sources/unity-scriptableobject.md
 wiki/sources/unity-sprite-atlas.md
 wiki/sources/unity-texture-arrays.md
 wiki/sources/unreal-animation-blueprints.md

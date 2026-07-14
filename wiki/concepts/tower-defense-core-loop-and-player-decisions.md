@@ -6,9 +6,9 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[mda-game-design-framework]]
-  - [[plants-vs-zombies-onboarding-gdc]]
-  - [[kingdom-rush-press-kit]]
+  - [[wiki/sources/mda-game-design-framework|mda-game-design-framework]]
+  - [[wiki/sources/plants-vs-zombies-onboarding-gdc|plants-vs-zombies-onboarding-gdc]]
+  - [[wiki/sources/kingdom-rush-press-kit|kingdom-rush-press-kit]]
 tags: [game, design, tower-defense, core-loop, strategy]
 ---
 
@@ -45,7 +45,7 @@ considering the next wave, the layer is busywork rather than strategy.
 
 ## Causal design with MDA
 
-[[mda-game-design-framework]] provides a useful chain. Costs, ranges, wave schedules, targeting, and
+[[wiki/sources/mda-game-design-framework|mda-game-design-framework]] provides a useful chain. Costs, ranges, wave schedules, targeting, and
 refunds are mechanics. They produce dynamics such as kill zones, hoarding, greed, specialization,
 panic selling, and recovery. Those dynamics create anticipation, mastery, relief, discovery, or
 frustration. Design backward from the desired experience and test forward from the implemented rule.

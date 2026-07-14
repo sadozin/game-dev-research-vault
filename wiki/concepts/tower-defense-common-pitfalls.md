@@ -6,13 +6,14 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[plants-vs-zombies-onboarding-gdc]]
-  - [[procedural-generation-of-tower-defense-levels]]
-  - [[tower-defense-strategic-control-agents]]
-  - [[neat-tower-defense-wave-generation]]
-  - [[fix-your-timestep]]
-  - [[dungeon-defenders-store-description]]
-  - [[kingdom-rush-battles-beginners-guide]]
+  - [[wiki/sources/plants-vs-zombies-onboarding-gdc|plants-vs-zombies-onboarding-gdc]]
+  - [[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]
+  - [[wiki/sources/tower-defense-strategic-control-agents|tower-defense-strategic-control-agents]]
+  - [[wiki/sources/neat-tower-defense-wave-generation|neat-tower-defense-wave-generation]]
+  - [[wiki/sources/fix-your-timestep|fix-your-timestep]]
+  - [[wiki/sources/dungeon-defenders-store-description|dungeon-defenders-store-description]]
+  - [[wiki/sources/kingdom-rush-battles-beginners-guide|kingdom-rush-battles-beginners-guide]]
+  - [[wiki/sources/dynamic-difficulty-adjustment-in-tower-defence|dynamic-difficulty-adjustment-in-tower-defence]]
 tags: [game, design, tower-defense, pitfalls, debugging, production]
 ---
 
@@ -48,6 +49,7 @@ outcome, while the developer cannot reproduce or measure the run.
 | Event-order ambiguity | Double rewards, double leaks, save/load changes outcome | Publish one tick order and golden-test simultaneous events |
 | Render objects own game truth | Frame rate and VFX change combat | Keep authoritative state in the simulation layer |
 | Fixed step assumed to guarantee determinism | Same seed diverges across runs or devices | Stabilize order, RNG, math, callbacks, commands, and hashes |
+| Speed multiplier enlarges `dt` | A defense holds at 1× and leaks at 2× | Run additional ordinary fixed steps; never scale the logical step |
 | Pooling without reset contracts | Old target/status state reappears | Centralize spawn/despawn reset and test lifecycle invariants |
 | Optimizing average load only | Boss or death wave hitches | Profile p95/p99 and worst concurrent entity/effect counts |
 
@@ -64,6 +66,8 @@ outcome, while the developer cannot reproduce or measure the run.
 | Procedural generation used as a hook alone | Infinite levels repeat the same decision or create unfair seeds | Generate meaningful constraints, validate, curate, and communicate |
 | Hidden adaptive waves counter the player | Planning feels rigged | Use explicit presets or bounded, promised adaptation |
 | Balancing before rules are legible | Tuning compensates for confusion | Fix preview, feedback, and attribution before numbers |
+| Refund has no exploit contract | Rebuild timing bypasses commitment or prints value | Define sell window, refund basis, cooldown, and upgrade accounting |
+| Pause grants unintended perfect micro | Real-time pressure disappears or differs by platform | Decide whether pause permits building, targeting, abilities, and preview |
 | No diagnostic capture | Bugs disappear when developers watch | Save seed, commands, data version, path version, IDs, and hashes |
 
 ## The pre-mortem questions

@@ -6,12 +6,13 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[mda-game-design-framework]]
-  - [[procedural-generation-of-tower-defense-levels]]
-  - [[neat-tower-defense-wave-generation]]
-  - [[tower-defense-strategic-control-agents]]
-  - [[unity-scriptableobject]]
-  - [[kingdom-rush-press-kit]]
+  - [[wiki/sources/mda-game-design-framework|mda-game-design-framework]]
+  - [[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]
+  - [[wiki/sources/neat-tower-defense-wave-generation|neat-tower-defense-wave-generation]]
+  - [[wiki/sources/tower-defense-strategic-control-agents|tower-defense-strategic-control-agents]]
+  - [[wiki/sources/unity-scriptableobject|unity-scriptableobject]]
+  - [[wiki/sources/kingdom-rush-press-kit|kingdom-rush-press-kit]]
+  - [[wiki/sources/bloons-td6-store-description|bloons-td6-store-description]]
 tags: [game, design, tower-defense, production, balance, playtesting]
 ---
 
@@ -30,7 +31,8 @@ strategy can interact. Data-driven definitions make this surface editable; they 
 5. Add swarm and runner roles to test area damage and coverage.
 6. Add one control/support role and one armor or trait interaction.
 7. Author six waves: teach, repeat, combine, recover, pressure, mastery.
-8. Add headless replay, telemetry, state hashing, and canonical strategies.
+8. Add a seeded smoke replay, event log, and basic metrics. Treat state hashing, headless strategy
+   portfolios, and search agents as an advanced harness tier rather than a beginner prerequisite.
 9. Validate readability and onboarding with new players.
 10. Multiply maps and content only after failures are attributable.
 
@@ -52,17 +54,17 @@ upgrade marginal value, and theoretical coverage—then test actual scenarios. U
 runner, armor, split-lane, support, boss, and low-capital recovery cases. Run economy-first,
 tower-spam, upgrade-first, counter-aware, random-valid, and search-based policies across many seeds.
 
-Track distributions: win/leak, first leak, resources, spend time, tower contribution, overkill,
+Track distributions as the project matures: win/leak, first leak, resources, spend time, tower contribution, overkill,
 control uptime, overlap, sells, strategy diversity, restarts, and p95/p99 performance. A 50-percent
 win rate from one agent is neither fair nor diverse. EA SEED found useful automated performance but
-poor unseen-level generalization ([[tower-defense-strategic-control-agents]]).
+poor unseen-level generalization ([[wiki/sources/tower-defense-strategic-control-agents|tower-defense-strategic-control-agents]]).
 
 ## Procedural and adaptive content
 
 Procedural generation can produce candidates quickly, but path, tower sites, waves, economy, and
-strategy interact ([[procedural-generation-of-tower-defense-levels]]). Hind and Harvey found no
+strategy interact ([[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]). Hind and Harvey found no
 discernible reported-experience difference between their NEAT-generated and human waves, while the
-engagement result remained inconclusive ([[neat-tower-defense-wave-generation]]). Generate, validate,
+engagement result remained inconclusive ([[wiki/sources/neat-tower-defense-wave-generation|neat-tower-defense-wave-generation]]). Generate, validate,
 curate, and teach; do not equate novelty with quality.
 
 Hidden adaptation is especially dangerous in a planning game because it can punish the build the
@@ -77,6 +79,24 @@ moderate because they expand the interaction matrix. New route rules, mazing, pr
 heroes, co-op, PvP, action combat, and persistent loot are high-cost because each changes core
 systems or adds a new product layer. Budget UI, audio, tutorial, tools, accessibility, performance,
 save/replay, and testing alongside visible content.
+
+## Engine and production choice
+
+For a first 2D or simple 3D learning project, Godot keeps iteration and distribution light; Unity is
+a strong fit when C# and its mature asset/tool ecosystem are already familiar; Unreal becomes more
+attractive when the identity depends on high-end 3D action, but brings more engine surface than a
+small classic defense needs. The architecture above transfers between them, so familiarity and the
+chosen interaction model matter more than a universal engine ranking.
+
+A mechanical graybox can take days or several weekends; a small polished commercial game usually
+takes months, and action/co-op/live-service hybrids can take years. These are order-of-magnitude
+planning bands, not estimates: art, platform count, online services, content volume, experience, and
+whether tooling already exists dominate the schedule.
+
+Choose the business model early enough to shape the product honestly. Premium, ad-supported,
+free-to-play unlock economies, expansions, and live-service events demand different progression,
+analytics, consent/privacy, content cadence, server, support, and balance work. A learning project
+should usually defer monetization systems until the core loop is trustworthy.
 
 ## Related
 

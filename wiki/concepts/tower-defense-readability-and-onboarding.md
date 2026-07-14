@@ -6,8 +6,8 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[plants-vs-zombies-onboarding-gdc]]
-  - [[kingdom-rush-press-kit]]
+  - [[wiki/sources/plants-vs-zombies-onboarding-gdc|plants-vs-zombies-onboarding-gdc]]
+  - [[wiki/sources/kingdom-rush-press-kit|kingdom-rush-press-kit]]
 tags: [game, design, tower-defense, user-interface, onboarding, accessibility]
 ---
 
@@ -35,7 +35,7 @@ state. A lightweight combat breakdown is more educational than a generic “defe
 
 ## Teach through safe action
 
-George Fan's Plants vs. Zombies talk ([[plants-vs-zombies-onboarding-gdc]]) shows why a tooltip is not
+George Fan's Plants vs. Zombies talk ([[wiki/sources/plants-vs-zombies-onboarding-gdc|plants-vs-zombies-onboarding-gdc]]) shows why a tooltip is not
 enough when players do not value a resource producer: the introduction, payoff timing, and wider
 balance all matter. Introduce one concept in a safe situation, let the player act, make the result
 visible, repeat with variation, combine it with a known concept, then test mastery.

@@ -6,9 +6,9 @@ created: 2026-07-14
 updated: 2026-07-14
 verified: 2026-07-14
 sources:
-  - [[tower-defense-flow-field-pathfinding]]
-  - [[procedural-generation-of-tower-defense-levels]]
-  - [[godot-navigation-documentation]]
+  - [[wiki/sources/tower-defense-flow-field-pathfinding|tower-defense-flow-field-pathfinding]]
+  - [[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]
+  - [[wiki/sources/godot-navigation-documentation|godot-navigation-documentation]]
 tags: [game, design, tower-defense, pathfinding, level-design]
 ---
 
@@ -20,7 +20,7 @@ counters; hybrids combine those decisions at a much higher communication and val
 
 For many enemies sharing a goal, compute one reverse BFS or Dijkstra distance field rather than A*
 per enemy. BFS fits equal-cost grids and Dijkstra supports weighted edges. Enemies follow decreasing
-cost, with stable tie-breaking at equal-cost branches. [[tower-defense-flow-field-pathfinding]]
+cost, with stable tie-breaking at equal-cost branches. [[wiki/sources/tower-defense-flow-field-pathfinding|tower-defense-flow-field-pathfinding]]
 documents the shared-field construction.
 
 Maze placement must be transactional: apply occupancy tentatively, recompute reachability, validate
@@ -30,13 +30,13 @@ minimum corridor width, multiple exits, and path-rule breakers such as flying en
 
 Engine navigation is a mechanism, not the movement contract. Godot, for example, exposes graphs,
 navigation maps, regions, meshes, paths, agents, obstacles, links, layers, and debug tools
-([[godot-navigation-documentation]]); the game must still choose which representation matches its
+([[wiki/sources/godot-navigation-documentation|godot-navigation-documentation]]); the game must still choose which representation matches its
 rules and when a topology change becomes authoritative.
 
 Path length, turns, branches, and tower coverage are balance controls. Procedural-level research finds
 that longer or more turning routes often increase exposure and cross-coverage, but topology, tower
 positions, waves, and play strategy interact; no path metric alone proves difficulty
-([[procedural-generation-of-tower-defense-levels]]).
+([[wiki/sources/procedural-generation-of-tower-defense-levels|procedural-generation-of-tower-defense-levels]]).
 
 ## Related
 
