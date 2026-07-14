@@ -7,7 +7,6 @@ updated: 2026-07-11
 verified: 2026-07-11
 sources:
   - "[[idle-game-math-part-i]]"
-  - "[[idle-game-math-part-ii]]"
   - "[[idle-game-math-part-iii]]"
 tags: [game-design, clicker, idle, economy]
 ---
@@ -32,14 +31,6 @@ Multiple generators create decisions when their cost and production scale differ
 income-to-cost ratio as a balancing diagnostic, not as a command that the human must calculate on
 every click. Bulk-buy options and obvious milestone bonuses preserve readability; a perfectly
 optimal but twitchy purchase sequence turns the genre into bookkeeping.
-
-An alternative layout is a *cascade*: higher tiers produce lower-tier generators rather than the
-primary currency itself. Approximating that chain continuously yields successive integrals over
-time; a finite ladder approaches—but stays below—true exponential growth, so exponential costs can
-still outrun production. Cascades feel good when lower tiers balloon visibly, but free auto-spawned
-buildings can make manual purchases of those tiers feel worthless. Price from the *purchased*
-count (not the inflated owned count) and attach a small permanent boost per purchase if you want
-those buys to stay relevant.
 
 ## The catch
 

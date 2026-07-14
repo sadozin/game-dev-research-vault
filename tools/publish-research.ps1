@@ -13,20 +13,14 @@ $conceptSource = Join-Path $brainRoot 'wiki\concepts'
 $sourceSource = Join-Path $brainRoot 'wiki\sources'
 $conceptTarget = Join-Path $repoRoot 'wiki\concepts'
 $sourceTarget = Join-Path $repoRoot 'wiki\sources'
+$manifestPath = Join-Path $repoRoot '.brain-export-manifest.txt'
 
 if (-not (Test-Path -LiteralPath $conceptSource)) {
     throw "Expected private brain concepts at $conceptSource."
 }
 
-function Reset-PublishDirectory {
-    param([string]$Path)
-
-    New-Item -ItemType Directory -Force -Path $Path | Out-Null
-    Get-ChildItem -LiteralPath $Path -File -Filter '*.md' | Remove-Item -Force
-}
-
-Reset-PublishDirectory -Path $conceptTarget
-Reset-PublishDirectory -Path $sourceTarget
+New-Item -ItemType Directory -Force -Path $conceptTarget | Out-Null
+New-Item -ItemType Directory -Force -Path $sourceTarget | Out-Null
 
 $tagPattern = '(?im)^tags:\s*\[[^\]]*\b(game|mmo|vrchat|unity|unreal|godot|blender|optimization|clicker|idle|assets|textures|rigging|avatars|mcp)\b'
 $publishedConcepts = @()
@@ -37,6 +31,11 @@ Get-ChildItem -LiteralPath $conceptSource -File -Filter '*.md' | ForEach-Object 
         Copy-Item -LiteralPath $_.FullName -Destination $conceptTarget -Force
         $publishedConcepts += [PSCustomObject]@{ Name = $_.BaseName; Content = $content }
     }
+}
+
+$currentExports = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+foreach ($concept in $publishedConcepts) {
+    [void]$currentExports.Add(('wiki/concepts/' + $concept.Name + '.md'))
 }
 
 $sourceNames = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
@@ -51,7 +50,27 @@ foreach ($concept in $publishedConcepts) {
 
 foreach ($sourceName in $sourceNames) {
     Copy-Item -LiteralPath (Join-Path $sourceSource ($sourceName + '.md')) -Destination $sourceTarget -Force
+    [void]$currentExports.Add(('wiki/sources/' + $sourceName + '.md'))
 }
+
+# Delete only stale files that a previous brain export owned. Public pages contributed directly to
+# this repository are deliberately outside the manifest and survive every publish.
+if (Test-Path -LiteralPath $manifestPath) {
+    Get-Content -LiteralPath $manifestPath | ForEach-Object {
+        $relativePath = $_.Trim()
+        if ($relativePath -and -not $currentExports.Contains($relativePath)) {
+            $ownedPath = Join-Path $repoRoot ($relativePath -replace '/', '\')
+            if (Test-Path -LiteralPath $ownedPath) {
+                Remove-Item -LiteralPath $ownedPath -Force
+            }
+        }
+    }
+}
+
+$allConceptNames = Get-ChildItem -LiteralPath $conceptTarget -File -Filter '*.md' |
+    ForEach-Object { $_.BaseName } | Sort-Object -Unique
+$allSourceNames = Get-ChildItem -LiteralPath $sourceTarget -File -Filter '*.md' |
+    ForEach-Object { $_.BaseName } | Sort-Object -Unique
 
 $index = @(
     '# Game Dev Research Index'
@@ -62,14 +81,15 @@ $index = @(
     ''
     '## Concepts'
     ''
-) + ($publishedConcepts.Name | Sort-Object | ForEach-Object { '- [[' + $_ + ']]' }) + @(
+) + ($allConceptNames | ForEach-Object { '- [[' + $_ + ']]' }) + @(
     ''
     '## Source summaries'
     ''
-) + ($sourceNames | Sort-Object | ForEach-Object { '- [[' + $_ + ']]' })
+) + ($allSourceNames | ForEach-Object { '- [[' + $_ + ']]' })
 
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $repoRoot 'INDEX.md'), (($index -join "`n") + "`n"), $utf8)
+[System.IO.File]::WriteAllLines($manifestPath, ($currentExports | Sort-Object), $utf8)
 
 if (-not (Test-Path -LiteralPath (Join-Path $repoRoot '.git'))) {
     & git -C $repoRoot init -b main
