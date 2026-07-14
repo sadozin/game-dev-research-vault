@@ -1,3 +1,4 @@
+wiki/concepts/ai-assisted-game-development.md
 wiki/concepts/avatar-weight-painting.md
 wiki/concepts/blender-game-asset-pipeline.md
 wiki/concepts/building-mcp-servers.md
@@ -55,7 +56,15 @@ wiki/concepts/idle-game-prestige.md
 wiki/concepts/level-of-detail.md
 wiki/concepts/mipmapping-and-texture-streaming.md
 wiki/concepts/mmo-build-switching.md
+wiki/concepts/mmo-codebase-architecture.md
 wiki/concepts/mmo-combat-roles.md
+wiki/concepts/mmo-common-pitfalls.md
+wiki/concepts/mmo-content-economics.md
+wiki/concepts/mmo-durable-command-processing.md
+wiki/concepts/mmo-interest-management.md
+wiki/concepts/mmo-live-service-operations.md
+wiki/concepts/mmo-production-scope.md
+wiki/concepts/mmo-server-architecture.md
 wiki/concepts/mmo-skill-loadouts.md
 wiki/concepts/monado-envision-linux-troubleshooting.md
 wiki/concepts/pool-warmup-and-budgeting.md
@@ -81,8 +90,12 @@ wiki/concepts/vrchat-avatar-optimization.md
 wiki/concepts/vrchat-avatar-physics.md
 wiki/concepts/vrchat-clothing-workflow.md
 wiki/concepts/vrchat-humanoid-rigging.md
+wiki/sources/agones-fleets-and-autoscaling.md
 wiki/sources/android-game-optimization.md
+wiki/sources/anthropic-agent-evaluations.md
 wiki/sources/ascension-classless-progression.md
+wiki/sources/aws-idempotent-apis.md
+wiki/sources/aws-persistent-world-hosting-2025.md
 wiki/sources/blender-gltf-export.md
 wiki/sources/blender-vertex-weights.md
 wiki/sources/bloons-td6-store-description.md
@@ -96,6 +109,7 @@ wiki/sources/doom-open-source-release.md
 wiki/sources/doom-push-forward-combat-gdc.md
 wiki/sources/dungeon-defenders-store-description.md
 wiki/sources/dynamic-difficulty-adjustment-in-tower-defence.md
+wiki/sources/epic-replication-graph.md
 wiki/sources/fix-your-timestep.md
 wiki/sources/godot-animation-docs.md
 wiki/sources/godot-design-philosophy.md
@@ -123,11 +137,14 @@ wiki/sources/kingdom-rush-battles-beginners-guide.md
 wiki/sources/kingdom-rush-press-kit.md
 wiki/sources/legion-td2-official-description.md
 wiki/sources/mda-game-design-framework.md
+wiki/sources/metr-ai-developer-productivity.md
 wiki/sources/mmo-class-economics.md
 wiki/sources/mmo-trinity-design.md
 wiki/sources/neat-tower-defense-wave-generation.md
 wiki/sources/nvidia-texture-atlas-whitepaper.md
+wiki/sources/online-service-privacy-and-platform-duties.md
 wiki/sources/orcs-must-die-official-description.md
+wiki/sources/owasp-bot-management.md
 wiki/sources/plants-vs-zombies-onboarding-gdc.md
 wiki/sources/procedural-generation-of-tower-defense-levels.md
 wiki/sources/tower-defense-flow-field-pathfinding.md
