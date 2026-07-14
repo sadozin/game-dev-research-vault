@@ -36,5 +36,6 @@ viable low-resource recovery action ([[doom-push-forward-combat-gdc]]).
 
 - [[doom-style-shooter-combat-profiles]]
 - [[doom-style-shooter-weapon-and-enemy-design]]
+- [[classic-doom-engine-quirks-and-bugs]]
 - [[visibility-culling]]
 - [[real-time-lighting-budget]]

@@ -36,5 +36,6 @@ required robust and flexible AI-animation control rather than naive clip playbac
 
 - [[doom-style-shooter-combat-profiles]]
 - [[doom-style-shooter-level-and-encounter-design]]
+- [[classic-doom-engine-internals]]
 - [[character-animation-graphs]]
 - [[game-collision-design]]

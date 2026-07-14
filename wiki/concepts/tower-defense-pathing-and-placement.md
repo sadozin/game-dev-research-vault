@@ -8,6 +8,7 @@ verified: 2026-07-14
 sources:
   - [[tower-defense-flow-field-pathfinding]]
   - [[procedural-generation-of-tower-defense-levels]]
+  - [[godot-navigation-documentation]]
 tags: [game, design, tower-defense, pathfinding, level-design]
 ---
 
@@ -27,6 +28,11 @@ every required spawn-to-goal route and active ground unit, then commit both towe
 them together. The game must define full blockage, active-enemy rerouting, diagonal corner cutting,
 minimum corridor width, multiple exits, and path-rule breakers such as flying enemies.
 
+Engine navigation is a mechanism, not the movement contract. Godot, for example, exposes graphs,
+navigation maps, regions, meshes, paths, agents, obstacles, links, layers, and debug tools
+([[godot-navigation-documentation]]); the game must still choose which representation matches its
+rules and when a topology change becomes authoritative.
+
 Path length, turns, branches, and tower coverage are balance controls. Procedural-level research finds
 that longer or more turning routes often increase exposure and cross-coverage, but topology, tower
 positions, waves, and play strategy interact; no path metric alone proves difficulty
@@ -36,5 +42,6 @@ positions, waves, and play strategy interact; no path metric alone proves diffic
 
 - [[tower-defense-economy-and-wave-design]]
 - [[tower-defense-targeting-and-balance]]
+- [[tower-defense-simulation-architecture]]
 - [[godot-navigation]]
 - [[godot-navmesh-baking]]

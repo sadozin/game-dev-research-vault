@@ -9,6 +9,7 @@ sources:
   - [[plants-vs-zombies-onboarding-gdc]]
   - [[procedural-generation-of-tower-defense-levels]]
   - [[tower-defense-strategic-control-agents]]
+  - [[neat-tower-defense-wave-generation]]
 tags: [game, design, tower-defense, economy, difficulty, waves]
 ---
 
@@ -33,11 +34,14 @@ otherwise legal build.
 Automated play is useful for solvability and balance distributions but not a universal difficulty
 oracle. Procedural research combines road maps, tower locations, monster sequences, and automated
 playtesting; EA SEED's learned/scripted agent outperformed its heuristic baseline on tested levels
-but generalized poorly to unseen ones ([[tower-defense-strategic-control-agents]]). Use multiple
-strategy bots, seeds, telemetry, and humans.
+but generalized poorly to unseen ones ([[tower-defense-strategic-control-agents]]). Hind and Harvey
+found no discernible reported-experience difference between NEAT-generated and human waves, while
+the engagement result remained inconclusive ([[neat-tower-defense-wave-generation]]). Use multiple
+strategy bots, seeds, telemetry, and humans; generated waves are candidates, not a fairness proof.
 
 ## Related
 
 - [[tower-defense-pathing-and-placement]]
 - [[tower-defense-targeting-and-balance]]
+- [[tower-defense-content-production]]
 - [[difficulty-dynamic-adjustment]]

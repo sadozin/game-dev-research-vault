@@ -2,6 +2,8 @@ wiki/concepts/avatar-weight-painting.md
 wiki/concepts/blender-game-asset-pipeline.md
 wiki/concepts/building-mcp-servers.md
 wiki/concepts/character-animation-graphs.md
+wiki/concepts/classic-doom-engine-internals.md
+wiki/concepts/classic-doom-engine-quirks-and-bugs.md
 wiki/concepts/classless-mmo-progression.md
 wiki/concepts/clicker-game-economy.md
 wiki/concepts/doom-style-shooter-combat-profiles.md
@@ -9,6 +11,7 @@ wiki/concepts/doom-style-shooter-level-and-encounter-design.md
 wiki/concepts/doom-style-shooter-testing-and-architecture.md
 wiki/concepts/doom-style-shooter-weapon-and-enemy-design.md
 wiki/concepts/editor-mcp-safety.md
+wiki/concepts/fixed-timestep-and-determinism.md
 wiki/concepts/frame-pacing.md
 wiki/concepts/game-collision-design.md
 wiki/concepts/game-engine-selection.md
@@ -59,8 +62,14 @@ wiki/concepts/real-time-lighting-budget.md
 wiki/concepts/texture-arrays-vs-atlases.md
 wiki/concepts/texture-atlasing.md
 wiki/concepts/texture-baking-for-games.md
+wiki/concepts/tower-defense-common-pitfalls.md
+wiki/concepts/tower-defense-content-production.md
+wiki/concepts/tower-defense-core-loop-and-player-decisions.md
 wiki/concepts/tower-defense-economy-and-wave-design.md
+wiki/concepts/tower-defense-genre-taxonomy.md
 wiki/concepts/tower-defense-pathing-and-placement.md
+wiki/concepts/tower-defense-readability-and-onboarding.md
+wiki/concepts/tower-defense-simulation-architecture.md
 wiki/concepts/tower-defense-targeting-and-balance.md
 wiki/concepts/unity-engine-workflow.md
 wiki/concepts/unity-mcp-integration.md
@@ -77,10 +86,14 @@ wiki/sources/blender-gltf-export.md
 wiki/sources/blender-vertex-weights.md
 wiki/sources/coplay-unity-mcp.md
 wiki/sources/d3d11-resource-limits.md
+wiki/sources/doom-1993-ai-gamedeveloper.md
 wiki/sources/doom-at-30-romero-retrospective.md
+wiki/sources/doom-engine-internals-doomwiki.md
 wiki/sources/doom-full-body-animation-gdc.md
 wiki/sources/doom-open-source-release.md
 wiki/sources/doom-push-forward-combat-gdc.md
+wiki/sources/dungeon-defenders-store-description.md
+wiki/sources/fix-your-timestep.md
 wiki/sources/godot-animation-docs.md
 wiki/sources/godot-design-philosophy.md
 wiki/sources/godot-export-docs.md
@@ -89,6 +102,7 @@ wiki/sources/godot-importing-3d-scenes.md
 wiki/sources/godot-introduction-to-3d.md
 wiki/sources/godot-key-concepts.md
 wiki/sources/godot-navigation-docs.md
+wiki/sources/godot-navigation-documentation.md
 wiki/sources/godot-nodes-and-scenes.md
 wiki/sources/godot-nodes-scene-instances.md
 wiki/sources/godot-physics-docs.md
@@ -102,8 +116,12 @@ wiki/sources/guild-wars-2-build-templates.md
 wiki/sources/guild-wars-2-weapon-skills.md
 wiki/sources/idle-game-math-part-i.md
 wiki/sources/idle-game-math-part-iii.md
+wiki/sources/kingdom-rush-battles-beginners-guide.md
+wiki/sources/kingdom-rush-press-kit.md
+wiki/sources/mda-game-design-framework.md
 wiki/sources/mmo-class-economics.md
 wiki/sources/mmo-trinity-design.md
+wiki/sources/neat-tower-defense-wave-generation.md
 wiki/sources/nvidia-texture-atlas-whitepaper.md
 wiki/sources/plants-vs-zombies-onboarding-gdc.md
 wiki/sources/procedural-generation-of-tower-defense-levels.md
@@ -116,6 +134,7 @@ wiki/sources/unity-mipmap-streaming.md
 wiki/sources/unity-object-pool-api.md
 wiki/sources/unity-occlusion-culling.md
 wiki/sources/unity-profiling-target-device.md
+wiki/sources/unity-scriptableobject.md
 wiki/sources/unity-sprite-atlas.md
 wiki/sources/unity-texture-arrays.md
 wiki/sources/unreal-animation-blueprints.md

@@ -37,6 +37,8 @@ gameplay fidelity and judge p99 frame time rather than average FPS.
 ## Related
 
 - [[doom-style-shooter-combat-profiles]]
+- [[classic-doom-engine-internals]]
+- [[classic-doom-engine-quirks-and-bugs]]
 - [[game-performance-profiling]]
 - [[frame-pacing]]
 - [[pool-warmup-and-budgeting]]

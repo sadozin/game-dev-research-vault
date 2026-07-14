@@ -8,6 +8,7 @@ verified: 2026-07-14
 sources:
   - [[tower-defense-strategic-control-agents]]
   - [[procedural-generation-of-tower-defense-levels]]
+  - [[fix-your-timestep]]
 tags: [game, design, tower-defense, combat, balance, testing]
 ---
 
@@ -23,8 +24,10 @@ targeting uptime, projectile travel, overkill, enemy density, status caps, and s
 towers against canonical sparse, swarm, runner, armor, split-lane, support, boss, and recovery cases.
 Upgrade branches should change a decision, not only increase a percentage.
 
-Use a deterministic logical tick, seeded randomness, stable ordering, command logs, and state hashes
-for replayable balance simulation. Test formulas and event order, then assert invariants: accepted
+Use a fixed logical tick, seeded randomness, stable ordering, command logs, and state hashes for
+replayable balance simulation. Fixed stepping prevents render-frame duration from directly changing
+the simulation but does not alone guarantee cross-platform determinism ([[fix-your-timestep]]). Test
+formulas and event order, then assert invariants: accepted
 placement leaves required paths, dead enemies neither leak nor pay twice, currency stays nonnegative
 after valid commands, and the same seed plus commands reproduces the same state.
 
@@ -36,5 +39,6 @@ that agents can fail to generalize ([[tower-defense-strategic-control-agents]]).
 
 - [[tower-defense-economy-and-wave-design]]
 - [[tower-defense-pathing-and-placement]]
+- [[tower-defense-simulation-architecture]]
 - [[fixed-timestep-and-determinism]]
 - [[game-performance-profiling]]

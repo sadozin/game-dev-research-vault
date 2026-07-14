@@ -38,3 +38,5 @@ These mechanics explain classic Doom but are not universal modern requirements.
 - [[doom-style-shooter-combat-profiles]]
 - [[doom-style-shooter-weapon-and-enemy-design]]
 - [[doom-style-shooter-testing-and-architecture]]
+- [[classic-doom-engine-internals]]
+- [[classic-doom-engine-quirks-and-bugs]]
