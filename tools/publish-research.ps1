@@ -42,8 +42,13 @@ $sourceNames = [System.Collections.Generic.HashSet[string]]::new([System.StringC
 foreach ($concept in $publishedConcepts) {
     [regex]::Matches($concept.Content, '\[\[([^\]|#]+)') | ForEach-Object {
         $candidate = $_.Groups[1].Value.Trim()
-        if (Test-Path -LiteralPath (Join-Path $sourceSource ($candidate + '.md'))) {
-            [void]$sourceNames.Add($candidate)
+        # Obsidian links may be basename-only (`[[source]]`) or path-qualified
+        # (`[[wiki/sources/source|source]]`). The private vault uses qualified links when a raw
+        # provenance stub and compiled source summary share a basename, so always resolve the leaf
+        # name before checking the source-summary directory.
+        $candidateLeaf = Split-Path -Leaf ($candidate -replace '/', '\')
+        if (Test-Path -LiteralPath (Join-Path $sourceSource ($candidateLeaf + '.md'))) {
+            [void]$sourceNames.Add($candidateLeaf)
         }
     }
 }
