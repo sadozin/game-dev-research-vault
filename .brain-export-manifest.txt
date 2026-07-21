@@ -53,6 +53,7 @@ wiki/concepts/godot-ui-controls.md
 wiki/concepts/godot-web-export.md
 wiki/concepts/hybrid-class-balance.md
 wiki/concepts/idle-game-prestige.md
+wiki/concepts/ios-development.md
 wiki/concepts/level-of-detail.md
 wiki/concepts/mipmapping-and-texture-streaming.md
 wiki/concepts/mmo-build-switching.md
@@ -66,7 +67,13 @@ wiki/concepts/mmo-live-service-operations.md
 wiki/concepts/mmo-production-scope.md
 wiki/concepts/mmo-server-architecture.md
 wiki/concepts/mmo-skill-loadouts.md
+wiki/concepts/mobile-game-design-principles.md
+wiki/concepts/mobile-game-development.md
+wiki/concepts/mobile-game-monetization.md
+wiki/concepts/mobile-game-performance.md
+wiki/concepts/mobile-game-publishing.md
 wiki/concepts/monado-envision-linux-troubleshooting.md
+wiki/concepts/pixel-art-sprite-pipeline.md
 wiki/concepts/pool-warmup-and-budgeting.md
 wiki/concepts/real-time-lighting-budget.md
 wiki/concepts/texture-arrays-vs-atlases.md
@@ -81,10 +88,10 @@ wiki/concepts/tower-defense-pathing-and-placement.md
 wiki/concepts/tower-defense-readability-and-onboarding.md
 wiki/concepts/tower-defense-simulation-architecture.md
 wiki/concepts/tower-defense-targeting-and-balance.md
+wiki/concepts/trpg-design-reference.md
 wiki/concepts/unity-engine-workflow.md
 wiki/concepts/unity-mcp-integration.md
 wiki/concepts/unreal-engine-workflow.md
-wiki/concepts/unreal-mcp-integration.md
 wiki/concepts/visibility-culling.md
 wiki/concepts/vrchat-avatar-optimization.md
 wiki/concepts/vrchat-avatar-physics.md
